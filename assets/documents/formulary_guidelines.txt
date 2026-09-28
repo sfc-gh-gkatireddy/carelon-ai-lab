@@ -1,0 +1,109 @@
+Blue Advantage Formulary Guidelines
+Elevance Health — Plan Year 2026
+Document ID: FORM-2026-001
+Effective: January 1, 2026
+
+SECTION 1 — FORMULARY TIERS
+
+All covered outpatient drugs are assigned to one of four formulary tiers.
+Tier placement determines member cost sharing:
+
+Tier 1 — Preferred Generic: $10 copayment (30-day supply)
+Tier 2 — Preferred Brand: $45 copayment (30-day supply)
+Tier 3 — Non-Preferred Brand: $85 copayment (30-day supply)
+Tier 4 — Specialty: 25% coinsurance, $150 maximum per fill
+
+Examples by tier:
+Tier 1: Metformin, Lisinopril, Atorvastatin, Sertraline, Amlodipine, Furosemide, Prednisone
+Tier 2: Rosuvastatin, Escitalopram, Fluticasone/Salmeterol, Empagliflozin
+Tier 3: Liraglutide, Sitagliptin, Apixaban, Tiotropium
+Tier 4: Semaglutide, Tirzepatide, Insulin Glargine (brand), Insulin Lispro (brand)
+
+SECTION 2 — PRIOR AUTHORIZATION REQUIREMENTS
+
+The following drug classes require prior authorization (PA) before dispensing.
+PA requests are reviewed within 72 hours for standard requests and 24 hours
+for urgent requests. A completed PA is valid for 12 months from approval date.
+
+2.1 GLP-1 Agonists (Semaglutide, Liraglutide, Tirzepatide)
+GLP-1 medications require PA for all indications. Approval criteria:
+- Diagnosis of Type 2 diabetes mellitus (ICD-10 E11.x) with HbA1c >= 7.5% on two
+  consecutive readings within the past 6 months, OR
+- BMI >= 35 with at least one obesity-related comorbidity (hypertension,
+  hyperlipidemia, or obstructive sleep apnea)
+- Documented trial of at least two formulary alternatives (Metformin plus one
+  other oral antidiabetic) for at least 90 days at therapeutic dose, unless
+  contraindicated
+- For weight management indications: BMI >= 30 (or >= 27 with comorbidity) and
+  documented participation in a structured lifestyle modification program for
+  at least 6 months
+Note: GLP-1 agents for cosmetic or lifestyle use without qualifying diagnosis
+are not covered under any circumstance. Step therapy requirements are not
+waived for member convenience.
+
+2.2 Insulin Products (Brand)
+Brand-name insulins (Insulin Glargine, Insulin Lispro, Humalog Mix 75/25)
+require PA only when a biosimilar or preferred basal insulin is available
+on formulary and the member has no documented adverse reaction to the
+preferred product. Humalog Mix 75/25 requires step therapy through basal-bolus
+regimen evaluation.
+
+2.3 SGLT2 Inhibitors (Empagliflozin, Dapagliflozin)
+PA required when prescribed for indications other than Type 2 diabetes or
+heart failure. For heart failure indication (I50.x), PA is auto-approved with
+documented diagnosis.
+
+2.4 Anticoagulants (Apixaban)
+PA required for members newly starting therapy. Continuation of existing
+therapy is auto-approved with pharmacy claims history demonstrating at
+least 6 months of continuous use.
+
+2.5 Specialty Tier Drugs
+All Tier 4 drugs require PA and enrollment in the Blue Specialty Pharmacy
+program. Home delivery is available for maintenance fills.
+
+SECTION 3 — STEP THERAPY REQUIREMENTS
+
+Step therapy requires members to try preferred alternatives before
+non-preferred drugs are approved:
+
+Step 1 (Diabetes): Metformin or Metformin ER for 90 days
+Step 2 (Diabetes): Add a sulfonylurea, DPP-4 inhibitor, or SGLT2 inhibitor
+Step 3 (Diabetes): GLP-1 agonist or insulin therapy may be considered
+
+Failure on Step 1 or Step 2 is defined as: HbA1c reduction of less than
+0.5 percentage points after 90 days at maximally tolerated dose, or
+documented intolerance (GI side effects, lactic acidosis risk, hypoglycemia
+events requiring medical intervention).
+
+SECTION 4 — QUANTITY LIMITS
+
+- GLP-1 agonists: 1 pen per 28 days (max 30-day supply per fill)
+- Insulins: 2 vials or 2 boxes of pens per 28 days
+- All maintenance medications: up to 90-day supply permitted at retail
+  after second fill
+
+SECTION 5 — APPEALS PROCESS
+
+Members or prescribers may appeal a denied prior authorization:
+1. Level 1 appeal: Submit within 60 calendar days of the denial letter date.
+   Include clinical documentation supporting medical necessity. Standard
+   appeal decision issued within 30 calendar days; urgent appeals within
+   72 hours.
+2. Level 2 appeal: If Level 1 is upheld, members may request an independent
+   external review by the state Department of Insurance within 4 months of
+   the Level 1 decision.
+3. Peer-to-peer review: Prescribers may request a direct discussion with
+   the medical director before formal appeal submission. This does not
+   extend appeal deadlines.
+
+SECTION 6 — EXCLUSIONS
+
+- Over-the-counter medications unless specifically listed as covered
+- Fertility medications under non-infertility diagnoses
+- Weight loss supplements and over-the-counter weight management products
+- Compounded medications without FDA-approved equivalents
+- Drugs prescribed for off-label use without supporting PA documentation
+
+For questions, contact the Pharmacy Benefit Management unit or call the
+number on the member ID card.

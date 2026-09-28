@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build a Member Intelligence Agent on Snowflake — Elevance AI Lab</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2329B5E8'/%3E%3Cpath fill='white' d='M12 26l8-16 8 16-8-5z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sf-blue: #29B5E8;
+  --sf-navy: #11224D;
+  --sf-dark: #1B2740;
+  --sf-light-bg: #F7FAFD;
+  --sf-border: #DDE6EF;
+  --sf-text: #1A2332;
+  --sf-muted: #5A6A7E;
+  --sf-green: #00C569;
+  --sf-yellow: #FFC130;
+  --sf-red: #FF4B4B;
+  --sf-purple: #7B68EE;
+  --sf-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --sidebar-w: 280px;
+  --coco-bg: #0D1117;
+  --code-bg: #F3F7FA;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--sf-text);
+  background: var(--sf-light-bg);
+  line-height: 1.65;
+}
+/* ── TOP BAR ── */
+.topbar {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--sf-navy);
+  display: flex; align-items: center; gap: 14px;
+  padding: 0 28px; height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.topbar-logo { display: flex; align-items: center; gap: 10px; }
+.topbar-logo svg { width: 30px; height: 30px; }
+.topbar-title { font-size: 14px; font-weight: 600; color: #fff; letter-spacing: .3px; }
+.topbar-sep { color: rgba(255,255,255,.3); font-size: 18px; }
+.topbar-sub { font-size: 12px; color: rgba(255,255,255,.55); }
+.topbar-badge {
+  margin-left: auto;
+  background: var(--sf-blue); color: #fff;
+  font-size: 11px; font-weight: 700; padding: 3px 10px;
+  border-radius: 12px; letter-spacing: .4px;
+}
+/* ── LAYOUT ── */
+.layout { display: flex; min-height: calc(100vh - 56px); }
+.sidebar {
+  width: var(--sidebar-w); flex-shrink: 0;
+  background: #fff; border-right: 1px solid var(--sf-border);
+  padding: 24px 0; position: sticky; top: 56px;
+  height: calc(100vh - 56px); overflow-y: auto;
+}
+.sidebar-heading {
+  font-size: 11px; font-weight: 700; color: var(--sf-muted);
+  letter-spacing: 1px; text-transform: uppercase; padding: 0 24px; margin-bottom: 10px;
+}
+.step-item { list-style: none; }
+.step-item a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 24px; text-decoration: none;
+  color: var(--sf-text); font-size: 13px; font-weight: 500;
+  border-left: 3px solid transparent;
+  transition: all .15s;
+}
+.step-item a:hover { background: var(--sf-light-bg); }
+.step-item.active a {
+  border-left-color: var(--sf-blue);
+  background: #EAF7FD; color: var(--sf-blue); font-weight: 600;
+}
+.step-num {
+  width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+  background: var(--sf-border); color: var(--sf-muted);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700;
+}
+.step-item.active .step-num { background: var(--sf-blue); color: #fff; }
+.step-item a .step-title { flex: 1; }
+.step-item a .step-time { font-size: 10px; color: var(--sf-muted); font-weight: 400; }
+.sidebar-cortex-badge {
+  margin: 16px 24px 0; padding: 10px 12px;
+  background: linear-gradient(135deg, var(--sf-navy) 0%, #1B3A6B 100%);
+  border-radius: 8px; display: flex; align-items: center; gap: 8px;
+}
+.sidebar-cortex-badge span { font-size: 11px; font-weight: 700; color: #fff; letter-spacing: .3px; line-height: 1.3; }
+.main { flex: 1; padding: 40px 48px 80px; max-width: 900px; margin: 0 auto; }
+/* ── SECTIONS ── */
+.section { padding: 36px 0 12px; border-bottom: 1px solid var(--sf-border); }
+.section:first-child { padding-top: 0; }
+.section-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; }
+.section-num {
+  font-size: 44px; font-weight: 800; color: var(--sf-blue);
+  opacity: .18; line-height: 1; letter-spacing: -2px;
+}
+.section-title { font-size: 26px; font-weight: 700; color: var(--sf-navy); line-height: 1.2; }
+.section-time {
+  font-size: 12px; font-weight: 600; color: var(--sf-muted);
+  background: #fff; border: 1px solid var(--sf-border);
+  padding: 3px 10px; border-radius: 12px; margin-left: auto; flex-shrink: 0;
+}
+h3 { font-size: 17px; font-weight: 700; color: var(--sf-navy); margin: 26px 0 10px; }
+h4 { font-size: 14px; font-weight: 700; color: var(--sf-navy); margin: 18px 0 8px; }
+p { margin: 0 0 14px; font-size: 14.5px; color: var(--sf-text); }
+ul, ol { margin: 0 0 14px 22px; }
+li { font-size: 14.5px; margin-bottom: 6px; }
+strong { color: var(--sf-navy); }
+code {
+  font-family: var(--sf-mono); font-size: 12.5px;
+  background: var(--code-bg); border: 1px solid var(--sf-border);
+  padding: 1px 5px; border-radius: 4px; color: var(--sf-navy);
+}
+/* ── CODE BLOCKS ── */
+.code-block { margin: 16px 0 20px; border-radius: 8px; overflow: hidden; border: 1px solid var(--sf-border); box-shadow: 0 1px 4px rgba(17,34,77,.06); }
+.code-header {
+  background: var(--sf-navy); color: #fff;
+  padding: 8px 14px; display: flex; align-items: center; gap: 10px;
+}
+.code-header .lang { font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; }
+.code-header .desc { font-size: 11px; color: rgba(255,255,255,.6); flex: 1; }
+.copy-btn {
+  background: transparent; border: 1px solid rgba(255,255,255,.3);
+  color: #fff; font-size: 10px; font-weight: 600;
+  padding: 2px 10px; border-radius: 4px; cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+.copy-btn:hover { background: rgba(255,255,255,.15); }
+.copy-btn.copied { background: var(--sf-green); border-color: var(--sf-green); }
+.code-block pre {
+  background: var(--code-bg); padding: 14px 16px;
+  overflow-x: auto; font-size: 12px; line-height: 1.55;
+}
+.code-block pre code { background: none; border: none; padding: 0; font-size: 12px; color: var(--sf-text); }
+span.comment { color: #6B7A99; }
+span.kw { color: #0F6BAE; font-weight: 500; }
+span.str { color: #0A7D48; }
+/* ── COCO PROMPT BLOCKS ── */
+.coco-block { margin: 16px 0 20px; border-radius: 8px; overflow: hidden; border: 1px solid var(--coco-border); box-shadow: 0 1px 4px rgba(17,34,77,.08); }
+.coco-header {
+  background: var(--coco-bg); color: #fff; padding: 8px 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.coco-header .lang { font-size: 11px; font-weight: 700; letter-spacing: .5px; color: var(--sf-blue); }
+.coco-header .desc { font-size: 11px; color: rgba(255,255,255,.6); flex: 1; }
+.coco-block pre {
+  background: var(--coco-bg); color: #E6EDF3; padding: 14px 16px;
+  overflow-x: auto; font-size: 12px; line-height: 1.55;
+}
+.coco-block pre code { background: none; color: #E6EDF3; border: none; padding: 0; font-size: 12px; }
+/* ── CALLOUTS ── */
+.callout { border-radius: 8px; padding: 14px 16px; margin: 16px 0; font-size: 13.5px; border-left: 4px solid; }
+.callout p { margin: 0; font-size: 13.5px; }
+.callout p + p { margin-top: 8px; }
+.callout-title { font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+.callout.info { background: #EAF7FD; border-color: var(--sf-blue); }
+.callout.info .callout-title { color: #0F6BAE; }
+.callout.tip { background: #E8F8F0; border-color: var(--sf-green); }
+.callout.tip .callout-title { color: #0A7D48; }
+.callout.warn { background: #FFF7E0; border-color: var(--sf-yellow); }
+.callout.warn .callout-title { color: #9A7000; }
+.callout.danger { background: #FDECEC; border-color: var(--sf-red); }
+.callout.danger .callout-title { color: #C42424; }
+/* ── TABLES ── */
+table { width: 100%; border-collapse: collapse; margin: 16px 0 20px; font-size: 13px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(17,34,77,.06); }
+th { background: var(--sf-navy); color: #fff; text-align: left; padding: 10px 14px; font-size: 12px; font-weight: 600; letter-spacing: .3px; }
+td { padding: 10px 14px; border-top: 1px solid var(--sf-border); vertical-align: top; }
+tr:nth-child(even) td { background: var(--sf-light-bg); }
+td code { font-size: 11.5px; }
+/* ── PIPELINE DIAGRAM ── */
+.pipeline { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; margin: 20px 0 24px; padding: 20px; background: #fff; border-radius: 10px; border: 1px solid var(--sf-border); }
+.pipe-node { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 14px; border-radius: 8px; font-size: 11.5px; font-weight: 600; text-align: center; line-height: 1.3; }
+.pipe-node .icon { font-size: 18px; }
+.pipe-arrow { color: var(--sf-muted); font-size: 16px; font-weight: 700; }
+.pipe-data { background: #EAF7FD; color: #0F6BAE; border: 1px solid var(--sf-blue); }
+.pipe-semantic { background: #F3EDFF; color: #5B3FD1; border: 1px solid var(--sf-purple); }
+.pipe-ai { background: #FFF3D6; color: #9A7000; border: 1px solid var(--sf-yellow); }
+.pipe-final { background: #E8F8F0; color: #0A7D48; border: 1px solid var(--sf-green); }
+/* ── SAMPLE QUERY CARDS ── */
+.query-card {
+  background: #fff; border: 1px solid var(--sf-border); border-radius: 8px;
+  padding: 14px 16px; margin: 12px 0; box-shadow: 0 1px 3px rgba(17,34,77,.05);
+}
+.query-card .q-text { font-size: 14px; font-weight: 600; color: var(--sf-navy); margin-bottom: 8px; }
+.query-card .q-text::before { content: "\201C"; color: var(--sf-blue); font-size: 18px; margin-right: 2px; }
+.query-card .q-text::after { content: "\201D"; color: var(--sf-blue); font-size: 18px; margin-left: 2px; }
+.q-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.q-tag { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; letter-spacing: .3px; }
+.q-tag.starter { background: var(--sf-blue); color: #fff; }
+.q-tag.analyst { background: #EAF7FD; color: #0F6BAE; }
+.q-tag.search { background: #F3EDFF; color: #5B3FD1; }
+.q-tag.classify { background: #FFF3D6; color: #9A7000; }
+.q-tag.chart { background: #E8F8F0; color: #0A7D48; }
+.q-tag.hybrid { background: #FDECEC; color: #C42424; }
+/* ── FOOTER ── */
+.sf-footer { margin-top: 48px; padding: 22px 0 32px; border-top: 1px solid var(--sf-border); display: flex; align-items: center; justify-content: center; gap: 10px; }
+.sf-footer span { font-size: 12px; color: var(--sf-muted); font-weight: 500; }
+@media (max-width: 900px) {
+  .sidebar { display: none; }
+  .main { padding: 24px 20px 60px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-logo">
+    <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#29B5E8"/><path fill="white" d="M12 26l8-16 8 16-8-5z"/></svg>
+    <span class="topbar-title">Elevance AI Lab</span>
+    <span class="topbar-sep">|</span>
+    <span class="topbar-sub">Hands-On Lab</span>
+  </div>
+  <span class="topbar-badge">90–95 MIN</span>
+</div>
+
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-heading">Lab Steps</div>
+  <ul style="margin:0; padding:0;">
+    <li class="step-item"><a href="#s1"><span class="step-num">1</span><span class="step-title">Overview</span><span class="step-time">5 min</span></a></li>
+    <li class="step-item"><a href="#s2"><span class="step-num">2</span><span class="step-title">Prerequisites</span><span class="step-time">5 min</span></a></li>
+    <li class="step-item"><a href="#s3"><span class="step-num">3</span><span class="step-title">Setup & Data Load</span><span class="step-time">10 min</span></a></li>
+    <li class="step-item"><a href="#s4"><span class="step-num">4</span><span class="step-title">Semantic Layer</span><span class="step-time">15 min</span></a></li>
+    <li class="step-item"><a href="#s5"><span class="step-num">5</span><span class="step-title">Search & AI Functions</span><span class="step-time">15 min</span></a></li>
+    <li class="step-item"><a href="#s6"><span class="step-num">6</span><span class="step-title">Build the Agent</span><span class="step-time">15 min</span></a></li>
+    <li class="step-item"><a href="#s7"><span class="step-num">7</span><span class="step-title">CoWork</span><span class="step-time">15 min</span></a></li>
+    <li class="step-item"><a href="#s8"><span class="step-num">8</span><span class="step-title">Sample Queries</span><span class="step-time">10 min</span></a></li>
+    <li class="step-item"><a href="#s9"><span class="step-num">9</span><span class="step-title">Wrap-Up</span><span class="step-time">5 min</span></a></li>
+  </ul>
+  <div class="sidebar-cortex-badge">
+    <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="11" fill="#29B5E8"/><path fill="white" d="M7 16l5-10 5 10-5-3z"/></svg>
+    <span>Built on Snowflake Cortex AI</span>
+  </div>
+</aside>
+
+<main class="main">
+
+<!-- ═══════════════ SECTION 1 ═══════════════ -->
+<section class="section" id="s1">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Overview</h2>
+    <span class="section-time">5 MIN</span>
+  </div>
+
+  <p>Elevance teams spend significant time answering recurring questions about member cost drivers, quality gaps, and care utilization. Answers are often locked inside claims databases and scattered benefit policy documents — requiring manual SQL or analyst requests that take days.</p>
+
+  <p>In this lab, you will build a <strong>Member Intelligence Agent</strong>: an agentic AI experience that lets any team member ask natural language questions and get answers that draw on both structured claims data and unstructured policy documents — all governed, all within Snowflake.</p>
+
+  <div class="callout info">
+    <div class="callout-title">The foundation: a semantic view</div>
+    <p>The foundation for this is a <strong>semantic view</strong> — which is really a base ontology for your payer domain. It defines the entities that exist (members, claims, providers), how they relate to one another, and the vocabulary your business actually uses to describe them. Without this layer, an agent is guessing at what your column names mean. With it, the agent reasons over business concepts rather than raw schema.</p>
+  </div>
+
+  <div class="pipeline">
+    <div class="pipe-node pipe-data"><span class="icon">📊</span>Synthetic<br>Payer Data</div>
+    <span class="pipe-arrow">→</span>
+    <div class="pipe-node pipe-semantic"><span class="icon">🧩</span>Semantic View<br>(Ontology)</div>
+    <span class="pipe-arrow">→</span>
+    <div class="pipe-node pipe-ai"><span class="icon">✨</span>Cortex<br>Analyst</div>
+    <span class="pipe-arrow">→</span>
+    <div class="pipe-node pipe-ai"><span class="icon">🤖</span>Cortex<br>Agent</div>
+    <span class="pipe-arrow">→</span>
+    <div class="pipe-node pipe-final"><span class="icon">💬</span>Snowflake<br>CoWork</div>
+  </div>
+  <div class="pipeline" style="padding-top: 0; margin-top: -12px;">
+    <div class="pipe-node pipe-data"><span class="icon">📄</span>Benefit Policy Docs</div>
+    <span class="pipe-arrow">→</span>
+    <div class="pipe-node pipe-semantic"><span class="icon">🔍</span>Cortex Search</div>
+    <span class="pipe-arrow">→</span>
+  </div>
+
+  <p style="text-align: center; font-size: 12.5px; color: var(--sf-muted);">Structured queries (Cortex Analyst) + document retrieval (Cortex Search) + AI functions (AI_EXTRACT, AI_CLASSIFY) orchestrated by a Cortex Agent, surfaced via Snowflake CoWork</p>
+
+  <h3>What You Will Learn</h3>
+  <ul>
+    <li>How to create a semantic view — a base ontology that maps business language, entities, and relationships to physical tables</li>
+    <li>How Cortex Analyst translates natural language to SQL</li>
+    <li>How Cortex Search enables RAG over policy documents</li>
+    <li>How AI_EXTRACT pulls structured data from PDFs and AI_CLASSIFY categorizes claims in SQL</li>
+    <li>How to build and configure a Cortex Agent with multiple tools — including a custom AI function</li>
+    <li>How to use CoCo to scaffold and iterate AI artifacts</li>
+    <li>How to surface everything through Snowflake CoWork</li>
+  </ul>
+
+  <h3>What You Will Build</h3>
+  <ul>
+    <li>A synthetic payer database loaded from the lab GitHub repository (members, claims, pharmacy, providers)</li>
+    <li>A <code>MEMBER_INTELLIGENCE</code> semantic view via Autopilot — your payer base ontology</li>
+    <li>A Cortex Search service over benefit policy text</li>
+    <li>Structured extraction from a PA denial letter PDF using <code>AI_EXTRACT</code></li>
+    <li>A Member Intelligence Cortex Agent with Analyst, Search, and a custom <code>AI_CLASSIFY</code> tool</li>
+    <li>A live Snowflake CoWork session answering real Elevance-style questions</li>
+  </ul>
+
+  <h3>Use Case Context — Why This Matters for Elevance</h3>
+  <p>This lab is grounded in three of a payer's highest-priority AI patterns:</p>
+  <ul>
+    <li><strong>Cost-of-care analytics</strong> — which members, providers, and conditions are driving cost?</li>
+    <li><strong>Quality / Stars gap identification</strong> — which members are missing preventive services or medication adherence milestones?</li>
+    <li><strong>Member & contact center support</strong> — answering questions about benefits, coverage, and claims status using both structured data and policy documents</li>
+  </ul>
+
+  <div class="callout danger">
+    <div class="callout-title">The dataset — 100% synthetic</div>
+    <p>This lab uses a fully synthetic, HIPAA-safe payer dataset modelled on a commercial health plan population. It was purpose-built for this lab — <strong>no real member, patient, or PHI data is used at any point.</strong> The data mirrors the schemas and business logic that payer data engineering teams work with every day.</p>
+  </div>
+
+  <h4>STRUCTURED DATA (4 TABLES)</h4>
+  <ul>
+    <li><strong>Members</strong> — 10,000 synthetic health plan enrollees with demographics, plan type, PCP assignment, and chronic condition flags (diabetes, hypertension, COPD, etc.)</li>
+    <li><strong>Medical Claims</strong> — ~116,000 claim lines with ICD-10 diagnosis codes, CPT procedure codes, billed/allowed/paid amounts, and claim status</li>
+    <li><strong>Pharmacy Claims</strong> — ~54,000 prescription fills covering drug names, NDC codes, days supply, drug class, and paid amounts</li>
+    <li><strong>Providers</strong> — 2,000 providers with specialty, NPI, network status, and average cost per visit</li>
+  </ul>
+
+  <h4>UNSTRUCTURED DATA (4 POLICY DOCUMENTS)</h4>
+  <ul>
+    <li><strong>Formulary Guidelines</strong> — drug tiers, prior authorization rules, step therapy requirements, GLP-1 and specialty drug policies</li>
+    <li><strong>Medical Benefits Summary</strong> — coverage rules for preventive care, specialist referrals, mental health, physical therapy, and durable medical equipment</li>
+    <li><strong>Quality & Stars Measures</strong> — HEDIS measure definitions, Stars thresholds, eligible member criteria for colorectal screening, diabetes care, medication adherence</li>
+    <li><strong>PA Denial Letter</strong> — a synthetic prior authorization denial letter used with AI_EXTRACT</li>
+  </ul>
+
+  <h3>Agent Outcome — What Your Agent Will Be Able to Do</h3>
+  <p>By the end of this lab you will have a running Member Intelligence Agent that any team member — analyst, care manager, or operations lead — can query in plain English. The agent will be able to:</p>
+  <ul>
+    <li>📊 <strong>Answer structured analytics questions</strong> — "Which members with diabetes have the highest pharmacy spend this year?" — answered with a live SQL query over claims data, no analyst required.</li>
+    <li>📋 <strong>Retrieve policy & benefits information</strong> — "What are the prior authorization requirements for GLP-1 medications?" — answered from the formulary document, with source cited.</li>
+    <li>🔍 <strong>Identify care gaps & quality opportunities</strong> — "Show me members eligible for the colorectal cancer screening Stars measure who haven't been screened" — combining claims data with HEDIS criteria from policy docs.</li>
+    <li>💡 <strong>Surface trends & explain the "why"</strong> — "Why did pharmacy costs increase in Q3?" — the agent reasons across multiple data sources to give a synthesized, contextual answer.</li>
+    <li>🏷️ <strong>Classify claims on demand</strong> — "Classify an ER visit with diagnosis I21.0" — the agent calls a custom <code>AI_CLASSIFY</code> tool you build to assign clinical risk categories, no rules engine required.</li>
+    <li>📄 <strong>Read documents you hand it</strong> — You will use <code>AI_EXTRACT</code> to pull member ID, drug, denial reason, and appeal deadline out of a PA denial letter PDF — turning an unstructured document into a queryable row.</li>
+  </ul>
+
+  <div class="callout tip">
+    <div class="callout-title">Your agent is your design</div>
+    <p>In Step 6 you will define its persona, name, tone, guardrails, and focus area — making it specific to how your team would actually want to use it. Two attendees can build very different agents on the same dataset.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 2 ═══════════════ -->
+<section class="section" id="s2">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Prerequisites</h2>
+    <span class="section-time">5 MIN</span>
+  </div>
+
+  <h3>What You Need</h3>
+  <ul>
+    <li>A <strong>Snowflake Trial Account</strong> — use the event link provided by your instructor to sign up (free, no credit card required). Do not use the generic signup.snowflake.com link — the event link ensures your account is provisioned correctly for this lab.</li>
+    <li>A modern web browser (Chrome or Edge recommended)</li>
+    <li>This lab guide — all SQL, instructions, and assets are served from the public GitHub repository — no ZIP file to download.</li>
+  </ul>
+
+  <div class="callout info">
+    <div class="callout-title">Cross-region inference</div>
+    <p>All Snowflake features used in this lab — Cortex Analyst, Cortex Search, Cortex Agents, Snowflake CoWork, and CoCo — are available on free trial accounts. No additional entitlements are required. If your trial account is in a non-US region, Step 3 includes one command to enable cross-region LLM inference.</p>
+  </div>
+
+  <h3>Snowflake Features Used</h3>
+  <table>
+    <tr><th>FEATURE</th><th>PURPOSE IN THIS LAB</th><th>WHERE IN SNOWSIGHT</th></tr>
+    <tr><td>Semantic View Autopilot</td><td>Auto-generate a base ontology (entities, relationships, vocabulary) from your payer tables using AI — no YAML hand-coding required</td><td>AI & ML → Analyst → Create new → Autopilot</td></tr>
+    <tr><td>Cortex Analyst</td><td>Text-to-SQL over structured payer data via the generated semantic view</td><td>AI & ML → Analyst</td></tr>
+    <tr><td>Cortex Search</td><td>Vector search and RAG over benefit policy documents</td><td>AI & ML → Search</td></tr>
+    <tr><td>Cortex Agents</td><td>Orchestrate Analyst + Search + custom tools into a single AI agent</td><td>AI & ML → Agents</td></tr>
+    <tr><td>AI_EXTRACT</td><td>Extract structured fields from PDFs and documents using AI</td><td>SQL function</td></tr>
+    <tr><td>AI_CLASSIFY</td><td>Categorize claims into clinical risk categories — exposed as a custom agent tool</td><td>SQL function / Agent tool</td></tr>
+    <tr><td>CoCo</td><td>Generate agent instructions, persona, and tool descriptions; iterate mid-lab</td><td>Bottom-right chat icon in Snowsight, or CLI</td></tr>
+    <tr><td>Snowflake CoWork</td><td>Enterprise chat UI — surface your agent to any business user</td><td>AI & ML → Agents (or ai.snowflake.com)</td></tr>
+  </table>
+</section>
+
+<!-- ═══════════════ SECTION 3 ═══════════════ -->
+<section class="section" id="s3">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Setup & Data Load</h2>
+    <span class="section-time">10 MIN</span>
+  </div>
+
+  <p>This step has two parts: first enable cross-region LLM inference (only for non-US AWS regions), then run the bootstrap snippet to connect the lab repo and load everything. Both are done from a SQL worksheet and take about 3–4 minutes total.</p>
+
+  <h3>Step 3a — Enable Cross-Region Inference (non-US regions only)</h3>
+  <p>In Snowsight, click the <strong>+</strong> button in the top-left toolbar and select <strong>SQL File</strong> to open a new SQL worksheet. Paste and run the following:</p>
+
+  <div class="code-block">
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Enable cross-region inference — run as ACCOUNTADMIN · skip if your account is in a US region</span></div>
+    <pre><code><span class="kw">USE ROLE</span> ACCOUNTADMIN;
+
+<span class="comment">-- Enable cross-region LLM inference (required for Cortex AI features</span>
+<span class="comment">-- from non-US AWS regions). Traffic stays within the AWS global network.</span>
+<span class="kw">ALTER ACCOUNT SET</span> cortex_enabled_cross_region = <span class="str">'ANY_REGION'</span>;
+
+<span class="comment">-- Verify the setting was applied</span>
+<span class="kw">SHOW PARAMETERS LIKE</span> <span class="str">'CORTEX_ENABLED_CROSS_REGION'</span> <span class="kw">IN ACCOUNT</span>;</code></pre>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-title">Already set?</div>
+    <p>Recent accounts default to <code>ANY_REGION</code> — the <code>SHOW PARAMETERS</code> command will confirm this. Running the <code>ALTER ACCOUNT</code> above is safe either way.</p>
+  </div>
+
+  <h3>Step 3b — Connect the Lab Repo and Run Setup</h3>
+  <p>Open a new SQL worksheet, make sure your role is <code>ACCOUNTADMIN</code>, and run the bootstrap snippet below. It takes under 2 minutes and handles everything automatically:</p>
+  <ol>
+    <li>Creates the database, schema, warehouse, and lab role</li>
+    <li>Creates a Git Repository object connected to the public lab GitHub repo (no credentials required — it's a public repo)</li>
+    <li>Fetches the repo contents into Snowflake</li>
+    <li>Executes <code>setup.sql</code> directly from the repo, which creates all tables and loads the data</li>
+  </ol>
+
+  <div class="code-block">
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Bootstrap snippet — copy and run as ACCOUNTADMIN · ~2 minutes</span></div>
+    <pre><code><span class="kw">USE ROLE</span> ACCOUNTADMIN;
+
+<span class="comment">-- Connect to the public lab GitHub repo (no credentials needed)</span>
+<span class="kw">CREATE OR REPLACE API INTEGRATION</span> ELEVANCE_LAB_GIT
+  API_PROVIDER = git_https_api
+  API_ALLOWED_PREFIXES = (<span class="str">'https://github.com/sfc-gh-gkatireddy/'</span>)
+  ENABLED = TRUE;
+
+<span class="kw">CREATE OR REPLACE GIT REPOSITORY</span> ELEVANCE_LAB_REPO
+  API_INTEGRATION = ELEVANCE_LAB_GIT
+  ORIGIN = <span class="str">'https://github.com/sfc-gh-gkatireddy/elevance-ai-lab.git'</span>;
+
+<span class="kw">ALTER GIT REPOSITORY</span> ELEVANCE_LAB_REPO FETCH;
+
+<span class="comment">-- Run the full setup script from the repo</span>
+<span class="kw">EXECUTE IMMEDIATE FROM</span> @ELEVANCE_LAB_REPO/branches/main/assets/sql/setup.sql;</code></pre>
+  </div>
+
+  <p>The <code>setup.sql</code> script (run automatically above) creates:</p>
+  <ul>
+    <li><code>ELEVANCE_LAB_DB</code> database with <code>PAYER</code> and <code>AGENTS</code> schemas</li>
+    <li>Four payer tables: <code>MEMBERS</code>, <code>MEDICAL_CLAIMS</code>, <code>PHARMACY_CLAIMS</code>, <code>PROVIDERS</code></li>
+    <li><code>ELEVANCE_LAB_WH</code> warehouse (MEDIUM), <code>ELEVANCE_LAB_ROLE</code>, and all required grants</li>
+    <li>Loads ~185,000 rows from CSVs in the Git repo via <code>COPY INTO</code></li>
+    <li>Internal stages for lab artifacts (policy docs, semantic model)</li>
+    <li>The Snowflake Intelligence object used to register your agent in CoWork</li>
+  </ul>
+
+  <div class="callout warn">
+    <div class="callout-title">After the script completes</div>
+    <p>The final query shows row counts for all four tables. Switch your active role in Snowsight to <code>ELEVANCE_LAB_ROLE</code> — you will use this role for all remaining steps (Steps 4–9).</p>
+  </div>
+
+  <h3>Data Schema — What You Are Working With</h3>
+  <table>
+    <tr><th>TABLE</th><th>KEY COLUMNS</th><th>ROWS</th></tr>
+    <tr><td>MEMBERS</td><td>member_id PK · name · dob · gender · plan_id · plan_name · plan_type · pcp · chronic_condition · smoker_ind · enrollment_start · enrollment_end · state · city</td><td>~10,000</td></tr>
+    <tr><td>MEDICAL_CLAIMS</td><td>claim_id PK · member_id FK · service_date · provider_id · icd10_code · procedure_code · billed_amt · allowed_amt · paid_amt · claim_status · service_type</td><td>~116,000</td></tr>
+    <tr><td>PHARMACY_CLAIMS</td><td>rx_id PK · member_id FK · drug_name · ndc_code · drug_class · days_supply · paid_amt · fill_date · prescriber_id</td><td>~54,000</td></tr>
+    <tr><td>PROVIDERS</td><td>provider_id PK · name · specialty · npi · network_status · location · avg_cost_per_visit</td><td>~2,000</td></tr>
+  </table>
+
+  <h3>Verify the Load</h3>
+  <div class="code-block">
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Verification query</span></div>
+    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
+<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+
+<span class="kw">SELECT</span> <span class="str">'MEMBERS'</span> <span class="kw">AS</span> tbl, COUNT(*) <span class="kw">AS</span> row_count <span class="kw">FROM</span> MEMBERS
+<span class="kw">UNION ALL SELECT</span> <span class="str">'MEDICAL_CLAIMS'</span>, COUNT(*) <span class="kw">FROM</span> MEDICAL_CLAIMS
+<span class="kw">UNION ALL SELECT</span> <span class="str">'PHARMACY_CLAIMS'</span>, COUNT(*) <span class="kw">FROM</span> PHARMACY_CLAIMS
+<span class="kw">UNION ALL SELECT</span> <span class="str">'PROVIDERS'</span>, COUNT(*) <span class="kw">FROM</span> PROVIDERS;</code></pre>
+  </div>
+  <p>You should see non-zero row counts for all four tables before proceeding.</p>
+
+  <h3>Explore the Dataset</h3>
+  <p>Run these five queries to get familiar with the data and to <strong>seed query history</strong> — Semantic View Autopilot in Step 4 uses your account's query history to suggest better metrics and dimensions, so running these now improves the generated view.</p>
+
+  <div class="code-block">
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Exploratory queries — run as ELEVANCE_LAB_ROLE</span></div>
+    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
+<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+
+<span class="comment">-- 1. Member population by chronic condition</span>
+<span class="kw">SELECT</span> chronic_condition, COUNT(*) <span class="kw">AS</span> member_count
+<span class="kw">FROM</span> MEMBERS <span class="kw">GROUP BY</span> 1 <span class="kw">ORDER BY</span> 2 DESC;
+
+<span class="comment">-- 2. Medical spend by service type</span>
+<span class="kw">SELECT</span> service_type,
+       COUNT(*)                     <span class="kw">AS</span> claims,
+       ROUND(SUM(paid_amt), 0)      <span class="kw">AS</span> total_paid
+<span class="kw">FROM</span> MEDICAL_CLAIMS <span class="kw">GROUP BY</span> 1 <span class="kw">ORDER BY</span> 3 DESC;
+
+<span class="comment">-- 3. Top 10 drugs by total pharmacy spend</span>
+<span class="kw">SELECT</span> drug_name, drug_class,
+       COUNT(*)                     <span class="kw">AS</span> fills,
+       ROUND(SUM(paid_amt), 0)      <span class="kw">AS</span> total_paid
+<span class="kw">FROM</span> PHARMACY_CLAIMS <span class="kw">GROUP BY</span> 1, 2 <span class="kw">ORDER BY</span> 4 DESC <span class="kw">LIMIT</span> 10;
+
+<span class="comment">-- 4. Total medical cost of care by chronic condition (member + claims join)</span>
+<span class="kw">SELECT</span> m.chronic_condition,
+       COUNT(DISTINCT m.member_id)  <span class="kw">AS</span> members,
+       ROUND(SUM(mc.paid_amt), 0)   <span class="kw">AS</span> total_medical_paid
+<span class="kw">FROM</span> MEMBERS m
+<span class="kw">JOIN</span> MEDICAL_CLAIMS mc <span class="kw">ON</span> m.member_id = mc.member_id
+<span class="kw">GROUP BY</span> 1 <span class="kw">ORDER BY</span> 3 DESC;
+
+<span class="comment">-- 5. Provider utilization and average paid by specialty</span>
+<span class="kw">SELECT</span> p.specialty, p.network_status,
+       COUNT(*)                     <span class="kw">AS</span> claims,
+       ROUND(AVG(mc.paid_amt), 2)   <span class="kw">AS</span> avg_paid_per_claim
+<span class="kw">FROM</span> MEDICAL_CLAIMS mc
+<span class="kw">JOIN</span> PROVIDERS p <span class="kw">ON</span> mc.provider_id = p.provider_id
+<span class="kw">GROUP BY</span> 1, 2 <span class="kw">ORDER BY</span> 3 DESC <span class="kw">LIMIT</span> 10;</code></pre>
+  </div>
+
+  <p>These queries touch all four tables and exercise key dimensions and measures — this is exactly the pattern Autopilot looks for when building the semantic view in Step 4.</p>
+</section>
+
+<!-- ═══════════════ SECTION 4 ═══════════════ -->
+<section class="section" id="s4">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Build Your Semantic Layer — Autopilot & Ontology</h2>
+    <span class="section-time">15 MIN</span>
+  </div>
+
+  <p>Cortex Analyst translates natural language questions into SQL — but it needs a semantic view to understand your data. A semantic view is your domain's base ontology: it declares which entities exist, how they relate to each other, and what vocabulary describes them — mapping business concepts like "total cost of care", "care gap", and "medication adherence" onto the physical tables and columns in your database.</p>
+
+  <p>Rather than hand-authoring a YAML file, you will use <strong>Semantic View Autopilot</strong> — Snowflake's AI-powered feature that inspects your tables and generates a complete, business-ready semantic view automatically.</p>
+
+  <div class="callout info">
+    <div class="callout-title">What is Semantic View Autopilot?</div>
+    <p>It is an AI assistant built into Snowsight's Analyst interface that reads your table schemas, column names, data samples, and recent query history, then generates a Semantic View — a native Snowflake object stored in your database schema, just like a regular view. It includes dimensions, measures, table relationships, and verified sample queries — with zero manual YAML editing required. You review, refine, and save it directly to <code>ELEVANCE_LAB_DB.PAYER</code>.</p>
+  </div>
+
+  <h3>Step 4a — Open Cortex Analyst</h3>
+  <ol>
+    <li>In Snowsight, navigate to <strong>AI & ML → Analyst</strong> in the left navigation.</li>
+    <li>The page will load showing a "No Database selected" dropdown in the centre. Click it and select <code>ELEVANCE_LAB_DB</code>, then select the <code>PAYER</code> schema. This is required before Autopilot can discover your tables.</li>
+  </ol>
+
+  <div class="callout warn">
+    <div class="callout-title">Check your active role before proceeding</div>
+    <p>The role selector is in the top-right corner of the Analyst page. It must be set to <code>ELEVANCE_LAB_ROLE</code> — not <code>ACCOUNTADMIN</code> or <code>PUBLIC</code>. Autopilot will only see the tables and stages granted to the active role.</p>
+  </div>
+
+  <h3>Step 4b — Run Autopilot on Your Payer Tables</h3>
+  <ol>
+    <li>Click <strong>Create with Autopilot</strong> in the top-right corner of the Analyst page.</li>
+    <li><strong>Provide context</strong> (Step 1 of wizard): optionally import a Tableau export or SQL file to seed the view. Skip this for now — click Next.</li>
+    <li><strong>Name your semantic view</strong> (Step 2 of wizard): enter exactly <code>MEMBER_INTELLIGENCE</code> and confirm the database is <code>ELEVANCE_LAB_DB</code> and schema is <code>PAYER</code>. This name is referenced throughout the rest of the lab — do not change it.</li>
+    <li><strong>Select tables</strong> (Step 3 of wizard): add all four lab tables:
+      <ul>
+        <li><code>ELEVANCE_LAB_DB.PAYER.MEMBERS</code></li>
+        <li><code>ELEVANCE_LAB_DB.PAYER.MEDICAL_CLAIMS</code></li>
+        <li><code>ELEVANCE_LAB_DB.PAYER.PHARMACY_CLAIMS</code></li>
+        <li><code>ELEVANCE_LAB_DB.PAYER.PROVIDERS</code></li>
+      </ul>
+    </li>
+    <li><strong>Select columns</strong> (Step 4 of wizard): review the column list. Leave <em>Sample data</em> and <em>Add AI-generated descriptions</em> checked — these improve the quality of the generated view.</li>
+    <li>Click <strong>Create</strong>. Autopilot will take 30–60 seconds to inspect the schema and produce the semantic view.</li>
+  </ol>
+
+  <div class="callout tip">
+    <div class="callout-title">While Autopilot runs</div>
+    <p>It will show you which tables and columns it is analyzing. Watch the column-level inference — it maps <code>paid_amt</code> to a "Total Paid Amount" measure, <code>icd10_code</code> to a "Diagnosis" dimension, and so on. This is the "business translation layer" that makes Cortex Analyst accurate.</p>
+  </div>
+
+  <h3>Step 4c — Review the Generated Semantic View</h3>
+  <p>Autopilot will present a draft semantic view. Review the following before saving:</p>
+  <table>
+    <tr><th>SECTION</th><th>WHAT TO CHECK</th></tr>
+    <tr>
+      <td><strong>Suggestions</strong></td>
+      <td>First: look for a <strong>Suggestions</strong> tab in the Autopilot panel. It will surface AI-generated recommendations for measures, dimensions, relationships, and verified queries — click <strong>Review</strong> on each category and <strong>Accept</strong> the ones that look correct before making manual edits. <em>Note: this semantic view is AI-generated and may vary slightly between accounts. If you don't see an exact metric name mentioned below, that's expected — keep going. The agent will still work correctly as long as the core measures (cost, utilization) and dimensions (condition, plan type) are present.</em></td>
+    </tr>
+    <tr>
+      <td><strong>Relationships</strong></td>
+      <td>Check whether the Suggestions tab already included the relationships below and you accepted them. If not — add them manually using the <strong>+</strong> button:<br>
+        • <code>MEDICAL_CLAIMS.MEMBER_ID → MEMBERS.MEMBER_ID</code> (Many to One)<br>
+        • <code>PHARMACY_CLAIMS.MEMBER_ID → MEMBERS.MEMBER_ID</code> (Many to One)<br>
+        • <code>MEDICAL_CLAIMS.PROVIDER_ID → PROVIDERS.PROVIDER_ID</code> (Many to One)</td>
+    </tr>
+    <tr>
+      <td><strong>Measures</strong></td>
+      <td>Confirm that measures for paid amount exist for both medical and pharmacy claims, and that days_supply or a similar adherence metric is present. Exact names may differ.</td>
+    </tr>
+    <tr>
+      <td><strong>Dimensions</strong></td>
+      <td>Confirm that condition, plan type, provider specialty, and diagnosis code are present as filterable dimensions in some form. Exact names may differ.</td>
+    </tr>
+    <tr>
+      <td><strong>Verified queries</strong></td>
+      <td>Review any sample questions Autopilot generated. Try one in the test panel to confirm it returns correct SQL.</td>
+    </tr>
+  </table>
+
+  <p>If anything looks wrong, use the inline editor to adjust individual fields — or click <strong>Regenerate</strong> with a more specific business context description.</p>
+
+  <div class="callout tip">
+    <div class="callout-title">Skip Cortex Search suggestions for now</div>
+    <p>Autopilot may suggest enabling a Cortex Search service — for example, an "Enable smart filter" suggestion to resolve abbreviations. Skip any Cortex Search suggestions for now — you will create your own Cortex Search service in Step 5 for the policy documents. Accept and validate the other suggestions (measures, dimensions, relationships, verified queries).</p>
+  </div>
+
+  <div class="callout info">
+    <div class="callout-title">What you just built is a base ontology</div>
+    <p>A semantic view is not only a BI convenience layer — it encodes the structural pieces of a domain ontology: entity classes (members, claims, providers), typed relationships between them with explicit cardinality, a controlled vocabulary via synonyms so <em>enrollee</em>, <em>patient</em>, and <em>member</em> resolve to the same concept, and enumerated taxonomies for fields like chronic condition and service type. It also references external industry ontologies — ICD-10, CPT, NDC, and NPI are all formal classification systems in their own right. This is why your agent can answer questions phrased in language that appears nowhere in your column names.</p>
+    <p><strong>Where a fuller ontology would go next:</strong> the current model has no cross-entity concept unification. <code>MEMBERS.CHRONIC_CONDITION = 'Diabetes'</code> and <code>MEDICAL_CLAIMS.ICD10_CODE = 'E11.9'</code> both mean diabetes, but nothing in the model connects them — so the agent must be told they are the same concept. Adding a condition-to-code crosswalk, a drug class hierarchy (GLP-1 → antidiabetic → endocrine), and inference rules would turn this base ontology into a reasoning layer.</p>
+  </div>
+
+  <h3>Step 4d — Save and Test</h3>
+  <ol>
+    <li>Give the semantic view the name <code>MEMBER_INTELLIGENCE</code>.</li>
+    <li>Set the save location to schema <code>ELEVANCE_LAB_DB.PAYER</code> — Autopilot creates a native Snowflake view object here, not a file.</li>
+    <li>Click <strong>Save</strong>. The view is now a first-class object in your database: <code>ELEVANCE_LAB_DB.PAYER.MEMBER_INTELLIGENCE</code>.</li>
+    <li>In the test panel on the right, try this question: <em>"What are the top 5 chronic conditions by total paid amount?"</em> You should see a SQL query generated and a data table returned.</li>
+  </ol>
+
+  <div class="code-block">
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Fallback: upload the pre-built YAML if Autopilot is unavailable</span></div>
+    <pre><code><span class="kw">COPY FILES INTO</span> @ELEVANCE_LAB_DB.PAYER.SEMANTIC_MODELS
+<span class="kw">FROM</span> @ELEVANCE_LAB_REPO/branches/main/assets/semantic_models/
+FILES = (<span class="str">'member_intelligence.yaml'</span>);</code></pre>
+  </div>
+  <p><em>Note: If using the YAML fallback, upload it via <strong>Create new → Upload YAML</strong> in the Analyst UI, and the agent tool in Step 6 must reference the semantic model stage file path instead of the semantic view object.</em></p>
+</section>
+
+<!-- ═══════════════ SECTION 5 ═══════════════ -->
+<section class="section" id="s5">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Cortex Search & AI Functions</h2>
+    <span class="section-time">15 MIN</span>
+  </div>
+
+  <p>Your agent needs to answer questions that can't be answered from claims tables alone — questions like "What is the prior authorization process for GLP-1 medications?" or "Does our plan cover physical therapy for non-surgical back pain?". These answers live in benefit policy documents.</p>
+
+  <p>You will use Cortex Search to index three synthetic policy documents and make them retrievable by your agent. Then you will use two Cortex AI functions — <code>AI_EXTRACT</code> and <code>AI_CLASSIFY</code> — to work with a document and with claims data directly in SQL.</p>
+
+  <h3>Step 5a — Stage Policy Documents</h3>
+  <p>The policy documents live in the lab GitHub repo. Run the following SQL to copy them from the Git repository stage into your internal <code>POLICY_DOCS</code> stage:</p>
+
+  <div class="code-block">
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Copy policy docs to internal stage — run as ELEVANCE_LAB_ROLE</span></div>
+    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
+<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+
+<span class="kw">COPY FILES INTO</span> @POLICY_DOCS
+  <span class="kw">FROM</span> @ELEVANCE_LAB_REPO/branches/main/assets/documents/
+  FILES = (<span class="str">'formulary_guidelines.txt'</span>, <span class="str">'medical_benefits_summary.txt'</span>,
+          <span class="str">'quality_stars_measures.txt'</span>, <span class="str">'pa_denial_letter.pdf'</span>);
+
+<span class="comment">-- Verify: should show 4 files</span>
+<span class="kw">LIST</span> @POLICY_DOCS;</code></pre>
+  </div>
+
+  <p>The four documents cover:</p>
+  <ul>
+    <li><code>formulary_guidelines.txt</code> — drug formulary tiers, PA requirements, GLP-1 and specialty drug rules, step therapy, appeals</li>
+    <li><code>medical_benefits_summary.txt</code> — coverage rules for preventive care, specialist visits, mental health, PT, DME, cost-sharing tables</li>
+    <li><code>quality_stars_measures.txt</code> — HEDIS/Stars measure definitions, thresholds, member eligibility criteria, care gap methodology</li>
+    <li><code>pa_denial_letter.pdf</code> — a synthetic prior authorization denial letter (<a href="https://github.com/sfc-gh-gkatireddy/elevance-ai-lab/raw/main/assets/documents/pa_denial_letter.pdf" target="_blank">view PDF</a>) — used in Step 5d</li>
+  </ul>
+
+  <h3>Step 5b — Create the Cortex Search Service</h3>
+  <p>Run the following SQL to create a table from the staged documents and build the search service on it:</p>
+
+  <div class="code-block">
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Cortex Search setup</span></div>
+    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE;
+<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+<span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
+
+<span class="comment">-- Parse staged policy docs into a searchable table (one row per line)</span>
+<span class="comment">-- pattern skips the PDF: it is binary, and Step 5d reads it with AI_EXTRACT instead</span>
+<span class="kw">CREATE OR REPLACE TABLE</span> POLICY_DOCUMENTS <span class="kw">AS</span>
+<span class="kw">SELECT</span>
+  REPLACE(METADATA$FILENAME, <span class="str">'.txt'</span>, <span class="str">''</span>) <span class="kw">AS</span> doc_name,
+  $1::VARCHAR                             <span class="kw">AS</span> content
+<span class="kw">FROM</span> @POLICY_DOCS (file_format =&gt; POLICY_TEXT_FORMAT, pattern =&gt; <span class="str">'.*[.]txt'</span>)
+<span class="kw">WHERE</span> $1 <span class="kw">IS NOT NULL</span>;
+
+<span class="comment">-- Create Cortex Search service over policy content</span>
+<span class="kw">CREATE OR REPLACE CORTEX SEARCH SERVICE</span> BENEFIT_POLICY_SEARCH
+  <span class="kw">ON</span> content
+  ATTRIBUTES doc_name
+  WAREHOUSE = ELEVANCE_LAB_WH
+  TARGET_LAG = <span class="str">'1 hour'</span>
+  EMBEDDING_MODEL = <span class="str">'snowflake-arctic-embed-m-v1.5'</span>
+<span class="kw">AS</span> (
+  <span class="kw">SELECT</span> doc_name, content <span class="kw">FROM</span> POLICY_DOCUMENTS
+);</code></pre>
+  </div>
+
+  <div class="callout info">
+    <div class="callout-title">Indexing takes 1–2 minutes</div>
+    <p>The Cortex Search service will take 1–2 minutes to build its embedding index. You will see it appear in <strong>AI & ML → Search</strong> once it is ready. You can proceed to Step 6 while it indexes.</p>
+  </div>
+
+  <h3>Step 5c — Test the Search Service (Optional)</h3>
+  <div class="code-block">
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Optional validation</span></div>
+    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
+<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+
+<span class="kw">SELECT</span> SNOWFLAKE.CORTEX.SEARCH_PREVIEW(
+  <span class="str">'ELEVANCE_LAB_DB.PAYER.BENEFIT_POLICY_SEARCH'</span>,
+  <span class="str">'{"query": "prior authorization for GLP-1 medications", "columns": ["content"], "limit": 3}'</span>
+);</code></pre>
+  </div>
+  <p>You should see relevant chunks from <code>formulary_guidelines</code> in the results.</p>
+
+  <h3>Step 5d — Cortex AI Functions: Extract and Classify</h3>
+  <p>Snowflake's Cortex AI functions let you run intelligence directly inside SQL — no ML pipeline, no external API, no data movement. Two functions are especially relevant for payer workflows:</p>
+  <ul>
+    <li><code>AI_EXTRACT</code> reads a document (PDF, image, or text) and pulls out structured fields you specify — member IDs, diagnosis codes, denial reasons, dollar amounts — returning them as JSON. Think of it as turning any unstructured document into a queryable row.</li>
+    <li><code>AI_CLASSIFY</code> takes a text input and assigns it to one of a set of categories you define. For claims data, this means auto-categorizing service types, flagging high-risk encounters, or triaging appeals — without writing rules or training a model.</li>
+  </ul>
+
+  <p>You staged a synthetic PA denial letter in Step 5a alongside the policy documents. Open it to see what you're extracting from: <a href="https://github.com/sfc-gh-gkatireddy/elevance-ai-lab/raw/main/assets/documents/pa_denial_letter.pdf" target="_blank">view the PDF</a>. It contains a member ID, diagnosis, HbA1c, step therapy status, and a full denial reason — the kind of document a utilization management team processes hundreds of times a day.</p>
+
+  <p>Run the following query. It will take 1–3 minutes as Snowflake parses the PDF and extracts the fields. Start it running, then continue to Step 6 — by the time you finish creating your agent, the results will be waiting in your query tab.</p>
+
+  <div class="code-block">
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">AI_EXTRACT from PA denial letter — run as ELEVANCE_LAB_ROLE, continue to Step 6 while it runs</span></div>
+    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
+<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+
+<span class="kw">SELECT</span> AI_EXTRACT(
+  TO_FILE(<span class="str">'@POLICY_DOCS'</span>, <span class="str">'pa_denial_letter.pdf'</span>),
+  [<span class="str">'member_id'</span>, <span class="str">'member_name'</span>, <span class="str">'decision'</span>, <span class="str">'drug_name'</span>,
+   <span class="str">'icd10_code'</span>, <span class="str">'hba1c'</span>, <span class="str">'denial_reason'</span>,
+   <span class="str">'appeal_deadline'</span>, <span class="str">'prescriber_name'</span>, <span class="str">'prescriber_npi'</span>]
+)::VARCHAR <span class="kw">AS</span> extracted;</code></pre>
+  </div>
+
+  <p>When the query completes, you will see a JSON object with every field extracted — member ID, drug, diagnosis code, HbA1c, the full denial reason, and the appeal deadline — all from a 2-page PDF. One SQL function, zero parsing code.</p>
+
+  <p>In Step 6, you will also add <code>AI_CLASSIFY</code> as a tool your agent can use to automatically categorize medical claims into clinical risk categories — giving it the ability to reason beyond just the raw data.</p>
+</section>
+
+<!-- ═══════════════ SECTION 6 ═══════════════ -->
+<section class="section" id="s6">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <h2 class="section-title">Build Your Member Intelligence Agent via CoCo</h2>
+    <span class="section-time">15 MIN</span>
+  </div>
+
+  <p>Now you wire it all together. A Cortex Agent is an AI entity that orchestrates tools — Cortex Analyst for structured queries, Cortex Search for document retrieval — and responds to questions using both. This is where your personal creativity comes in: you define how the agent thinks, what it knows, and what kind of assistant it becomes.</p>
+
+  <h3>Step 6a — Use CoCo to Create the Agent</h3>
+
+  <div class="callout tip">
+    <div class="callout-title">Your turn — make this agent yours</div>
+    <p>Before you run the prompt, decide what kind of agent you want to build. CoCo will give you a solid starting point — but customize the persona, instructions, and tone to reflect how you'd actually want a Member Intelligence Agent to behave. Some ideas:</p>
+    <ul>
+      <li><strong>Give it a name and voice</strong> — e.g. "BlueAdvisor", "Care Analytics AI", or something your team would actually use</li>
+      <li><strong>Scope its expertise</strong> — should it focus on cost analytics only? Quality/Stars? Pharmacy? Or be the generalist member 360 agent?</li>
+      <li><strong>Define its tone</strong> — clinical and precise? Accessible for non-technical managers? Proactive in surfacing trends?</li>
+      <li><strong>Add a guardrail</strong> — e.g. "Never speculate on individual member diagnoses. Always recommend consulting a clinician for clinical decisions."</li>
+      <li><strong>Add a signature behavior</strong> — e.g. "When showing cost data, always compare to the plan average as context."</li>
+    </ul>
+    <p>You can bake these ideas directly into the CoCo prompt below, or ask CoCo to refine the agent after it is created.</p>
+  </div>
+
+  <p>Open CoCo in Snowsight and use the prompt below. CoCo will generate the <code>CREATE AGENT</code> DDL, show it to you, and ask for a yes/no approval before executing — you stay in control.</p>
+
+  <div class="coco-block">
+    <div class="coco-header"><span class="lang">COCO PROMPT</span><span class="desc">Create agent — paste into CoCo in Snowsight</span></div>
+    <pre><code>Create a Snowflake Cortex Agent for a healthcare payer (Elevance) in schema ELEVANCE_LAB_DB.AGENTS. Create it in exactly that schema — do not use SNOWFLAKE_INTELLIGENCE.AGENTS.
+
+The agent has access to two tools:
+  1. Cortex Analyst tool using semantic view at:
+     ELEVANCE_LAB_DB.PAYER.MEMBER_INTELLIGENCE
+     Description: Member 360 data — medical claims, pharmacy claims, members, providers. Use for structured questions about cost, utilization, care gaps, and adherence.
+  2. Cortex Search tool using service:
+     ELEVANCE_LAB_DB.PAYER.BENEFIT_POLICY_SEARCH
+     Description: Benefit policy and formulary documents. Use for questions about coverage rules, PA requirements, HEDIS/Stars criteria.
+
+In addition, create a custom tool for the agent:
+  3. Create a SQL UDF named ELEVANCE_LAB_DB.PAYER.CLASSIFY_CLAIM that takes two VARCHAR inputs (service_type, icd10_code) and uses AI_CLASSIFY to categorize the claim into one of these clinical categories: ['Preventive Care', 'Chronic Disease Management', 'Acute/Emergency', 'Surgical', 'Mental Health', 'Routine Follow-up'] The UDF should build a description string from the inputs and pass it to AI_CLASSIFY with those categories. Then add this UDF as a generic tool on the agent so it can classify claims on demand during a conversation.
+
+Also add the built-in data_to_chart tool so the agent can visualize results:
+  4. data_to_chart — no resources needed, just the tool_spec. In the orchestration instructions, tell the agent to return a chart alongside the table whenever a result has several rows and a numeric measure. Include a <chart_customization> block inside instructions.orchestration so the charts are on-brand rather than default Vega colors:
+
+     <chart_customization>
+     vega_template:
+     {
+       "config": {
+         "title":  { "font": "sans-serif", "fontSize": 16, "fontWeight": "bold" },
+         "axis":   { "labelFont": "sans-serif", "titleFont": "sans-serif" },
+         "legend": { "labelFont": "sans-serif", "titleFont": "sans-serif" }
+       },
+       "encoding": {
+         "color": { "scale": { "range": ["#29B5E8","#1B3A6B","#FFC130","#7D44CF","#11567F","#2EC4A6","#FF6B6B","#75CDF0","#E8743B","#6B7A99"] } }
+       },
+       "usermeta": { "merge": "extend" }
+     }
+     </chart_customization>
+
+Also generate:
+  a) A set of orchestration instructions that tell the agent:
+     - When to use Analyst vs Search vs both
+     - How to format responses (use tables for structured data, prose for policy questions)
+     - How to cite sources (mention the document name for policy answers)
+  b) These exact 4 sample_questions, so the starter prompts shown in CoWork match the ones in the lab guide. Use them verbatim:
+     - "Show me the monthly trend in total medical spend over the last two years, split by plan type."
+     - "Show me monthly pharmacy spend by drug class over the last year."
+     - "Which service types have the most denied claims, and what does our policy say about how a member appeals a denial?"
+     - "Pull the top 5 members by total cost of care, classify their highest-cost claim, and tell me what the plan says about coverage for that service type."
+  c) A display name and persona appropriate for a payer organization
+
+Use warehouse ELEVANCE_LAB_WH for the Analyst tool. Include it as an execution_environment on the Analyst tool_resources entry — the agent errors without it.
+
+Finally, after the CREATE AGENT statement, also generate the statement that registers the agent on the Snowflake CoWork object so it appears in CoWork:
+  ALTER SNOWFLAKE INTELLIGENCE SNOWFLAKE_INTELLIGENCE_OBJECT_DEFAULT
+    ADD AGENT ELEVANCE_LAB_DB.AGENTS.&lt;agent_name&gt;;</code></pre>
+  </div>
+
+  <div class="callout info">
+    <div class="callout-title">CoCo shows you the SQL first</div>
+    <p>CoCo will generate the <code>CREATE AGENT</code> SQL and display it for review. When you approve, it executes the DDL on your behalf — no need to open Snowsight Agents manually.</p>
+  </div>
+
+  <h3>Step 6b — Register and Verify Your Agent</h3>
+  <p>Creating an agent and making it <em>visible</em> in Snowflake CoWork are two separate things. Snowflake CoWork uses an account-level object to decide which agents to show, and an agent only appears once it has been added to that object. Your setup script created the object, and the prompt above asks CoCo to register your agent on it.</p>
+  <p>Confirm registration worked before moving on — this takes seconds and saves a confusing dead end in Step 7:</p>
+
+  <div class="code-block">
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Verify agent registration — run as ELEVANCE_LAB_ROLE</span></div>
+    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE;
+
+<span class="kw">SHOW AGENTS IN SNOWFLAKE INTELLIGENCE</span>
+  SNOWFLAKE_INTELLIGENCE_OBJECT_DEFAULT;</code></pre>
+  </div>
+  <p>Your agent should be listed. If it is not, first confirm where CoCo actually created it, then register that exact path:</p>
+
+  <div class="code-block">
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Register agent manually — only if the check above did not list your agent</span></div>
+    <pre><code><span class="comment">-- Find the agent and note its database and schema columns</span>
+<span class="kw">SHOW AGENTS IN ACCOUNT</span>;
+
+<span class="comment">-- Register it using the path shown above</span>
+<span class="kw">ALTER SNOWFLAKE INTELLIGENCE</span> SNOWFLAKE_INTELLIGENCE_OBJECT_DEFAULT
+  <span class="kw">ADD AGENT</span> ELEVANCE_LAB_DB.AGENTS.&lt;your_agent_name&gt;;</code></pre>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-title">Why this matters</div>
+    <p>If you open Settings in Snowflake CoWork and your agent later disappears from the list, this is why — visiting Settings can create the CoWork object, after which only registered agents are shown. Re-run the <code>ADD AGENT</code> statement above and it will come back. Your agent is never lost, only unlisted.</p>
+  </div>
+
+  <h3>Step 6c — Iterate and Personalise</h3>
+  <p>Once CoCo has created the agent, customise it further. Ask CoCo to update the instructions to reflect your own persona and guardrails — it will generate updated DDL and ask for approval again before applying changes.</p>
+
+  <div class="coco-block">
+    <div class="coco-header"><span class="lang">COCO PROMPT</span><span class="desc">Iteration — mid-lab tuning</span></div>
+    <pre><code>My agent is answering policy questions with too much detail. Rewrite the instruction for concise policy responses: cite the document name and section, quote only the directly relevant rule, and keep the response under 150 words.</code></pre>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 7 ═══════════════ -->
+<section class="section" id="s7">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <h2 class="section-title">Snowflake CoWork — Open Your Agent</h2>
+    <span class="section-time">15 MIN</span>
+  </div>
+
+  <p>Snowflake CoWork is the enterprise chat interface built on top of Cortex Agents. It's the "AI front door" your agent will be accessed through — no code, no SQL, just a conversation. (If you used this platform earlier in the year, you may know it as Snowflake Intelligence — same product, new name.)</p>
+
+  <h3>Step 7a — Access Snowflake CoWork</h3>
+  <p>There are two routes in. Both work; the second does not depend on agent registration, so use it if the first does not show your agent.</p>
+
+  <h4>Route 1 — Snowflake CoWork directly</h4>
+  <ol>
+    <li>Go to <a href="https://ai.snowflake.com" target="_blank">ai.snowflake.com</a>, or in Snowsight navigate to <strong>AI & ML → Agents</strong> and open the Snowflake CoWork tab.</li>
+    <li>Make sure you are signed in with the correct role (<code>ACCOUNTADMIN</code> or <code>ELEVANCE_LAB_ROLE</code>).</li>
+    <li>In the left panel, you should see the agent you just created. Click on it to open a new conversation.</li>
+  </ol>
+
+  <h4>Route 2 — via Snowsight (always works)</h4>
+  <ol>
+    <li>In Snowsight, navigate to <strong>AI & ML → Agents</strong>.</li>
+    <li>Select your agent from the list.</li>
+    <li>Click <strong>Preview in Snowflake CoWork</strong>.</li>
+  </ol>
+
+  <div class="callout warn">
+    <div class="callout-title">Agent not listed in Route 1?</div>
+    <p>This is almost always agent visibility, not a broken agent — Snowflake CoWork only lists agents registered on the account's CoWork object. Go back to Step 6b and re-run the <code>ADD AGENT</code> statement, then reload. Route 2 above works regardless of registration, so if you are short on time, use it and move on — you will not miss any of the lab.</p>
+  </div>
+
+  <h3>Step 7b — Ask Your First Question</h3>
+  <p>Start with the example questions CoCo surfaced in Step 6, or try your own. Observe how the agent:</p>
+  <ul>
+    <li><strong>Routes structured questions to Cortex Analyst</strong> (generates SQL → returns data table or chart)</li>
+    <li><strong>Routes policy questions to Cortex Search</strong> (retrieves document chunks → synthesizes prose response)</li>
+    <li><strong>Combines both for hybrid questions</strong> (e.g. "Which members with diabetes are on a Tier 1 insulin formulary?")</li>
+  </ul>
+
+  <div class="callout tip">
+    <div class="callout-title">Transparency: show your work</div>
+    <p>Click the expand icon on any response to see which tool the agent used, what SQL was generated, or which document chunk was retrieved. This is Snowflake's "show your work" feature — critical for trust in enterprise AI.</p>
+  </div>
+
+  <h3>Step 7c — Iterate with CoCo (If Time Allows)</h3>
+  <p>If the agent's responses aren't quite right, open CoCo alongside Snowflake CoWork and ask it to refine the instructions:</p>
+
+  <div class="coco-block">
+    <div class="coco-header"><span class="lang">COCO PROMPT</span><span class="desc">Iteration — mid-lab tuning</span></div>
+    <pre><code>My agent returned a table when I asked about top members by cost, but it didn't include their chronic condition. Update the Cortex Analyst tool description to always encourage joining MEMBERS.chronic_condition when the question involves member-level cost analysis.</code></pre>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 8 ═══════════════ -->
+<section class="section" id="s8">
+  <div class="section-header">
+    <span class="section-num">08</span>
+    <h2 class="section-title">Ask Your Agent — Sample Queries</h2>
+    <span class="section-time">10 MIN</span>
+  </div>
+
+  <p>Use the questions below to explore what your agent can do. They span all three payer use cases: cost-of-care analytics, quality/Stars gap identification, and member policy support.</p>
+
+  <p>The four marked <strong>STARTER</strong> are the same ones your agent offers as suggested prompts in CoWork, so you can click them there instead of typing. Questions marked <strong>CHART</strong> return a visualization alongside the table. The rest return a table or prose, which is the right answer for a member list or a policy lookup.</p>
+
+  <div class="query-card">
+    <div class="q-text">Show me the monthly trend in total medical spend over the last two years, split by plan type.</div>
+    <div class="q-tags"><span class="q-tag starter">STARTER</span><span class="q-tag analyst">ANALYST</span><span class="q-tag chart">CHART</span></div>
+  </div>
+
+  <div class="query-card">
+    <div class="q-text">Show me monthly pharmacy spend by drug class over the last year.</div>
+    <div class="q-tags"><span class="q-tag starter">STARTER</span><span class="q-tag analyst">ANALYST</span><span class="q-tag chart">CHART</span></div>
+  </div>
+
+  <div class="query-card">
+    <div class="q-text">Which service types have the most denied claims, and what does our policy say about how a member appeals a denial?</div>
+    <div class="q-tags"><span class="q-tag starter">STARTER</span><span class="q-tag hybrid">ANALYST + SEARCH</span><span class="q-tag chart">CHART</span></div>
+  </div>
+
+  <div class="query-card">
+    <div class="q-text">Pull the top 5 members by total cost of care, classify their highest-cost claim, and tell me what the plan says about coverage for that service type.</div>
+    <div class="q-tags"><span class="q-tag starter">STARTER</span><span class="q-tag hybrid">ANALYST + AI_CLASSIFY + SEARCH</span></div>
+  </div>
+
+  <div class="query-card">
+    <div class="q-text">What are the top 5 chronic conditions by total paid amount, broken down by plan type?</div>
+    <div class="q-tags"><span class="q-tag analyst">ANALYST</span><span class="q-tag chart">CHART</span></div>
+  </div>
+
+  <div class="query-card">
+    <div class="q-text">Which provider specialties have the highest average cost per claim, and are they in-network?</div>
+    <div class="q-tags"><span class="q-tag analyst">ANALYST</span><span class="q-tag chart">CHART</span></div>
+  </div>
+
+  <div class="query-card">
+    <div class="q-text">What does our formulary say about prior authorization requirements for GLP-1 medications?</div>
+    <div class="q-tags"><span class="q-tag search">CORTEX SEARCH</span></div>
+  </div>
+
+  <div class="query-card">
+    <div class="q-text">Classify these claims: 1) ER visit with diagnosis I21.0, 2) Office Visit with E11.9, 3) Preventive visit with Z00.00</div>
+    <div class="q-tags"><span class="q-tag classify">AI_CLASSIFY TOOL</span></div>
+  </div>
+
+  <div class="query-card">
+    <div class="q-text">What are the HEDIS measures we track for colorectal cancer screening, and which members are eligible but not yet compliant?</div>
+    <div class="q-tags"><span class="q-tag search">SEARCH</span><span class="q-tag analyst">ANALYST</span></div>
+  </div>
+
+  <h3>Save a Chart as an Artifact</h3>
+  <p>Because your agent has the <code>data_to_chart</code> tool, trend and ranking questions come back with a chart as well as a table. When one is worth keeping, select <strong>Save</strong> on the chart to turn it into an <strong>artifact</strong>.</p>
+  <p>An artifact is not a screenshot. It stores the query and the chart specification, so it re-runs against live data when you open it later — and it re-runs under each viewer's credentials. Share one with a colleague and they see the same chart filtered through their own permissions, which is what makes this safe to pass around in a payer setting. Your saved artifacts live in the artifacts hub in the left nav.</p>
+
+  <div class="callout tip">
+    <div class="callout-title">Try your own question</div>
+    <p>Think of a question you'd actually want answered in your team — something that currently takes a ticket to the analytics team. Try it on your agent. If it doesn't work well, use CoCo to iterate on the semantic view or agent instructions.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 9 ═══════════════ -->
+<section class="section" id="s9">
+  <div class="section-header">
+    <span class="section-num">09</span>
+    <h2 class="section-title">Wrap-Up & Next Steps</h2>
+    <span class="section-time">5 MIN</span>
+  </div>
+
+  <h3>What You Built Today</h3>
+  <ul>
+    <li>A synthetic payer data foundation — four tables covering members, medical claims, pharmacy, and providers</li>
+    <li>A base ontology for the payer domain, expressed as a semantic view (<code>ELEVANCE_LAB_DB.PAYER.MEMBER_INTELLIGENCE</code>) — entity classes, typed relationships, business vocabulary, and enumerated taxonomies, generated and refined with Autopilot</li>
+    <li>A Cortex Search service over benefit policy and formulary documents — enabling RAG over unstructured content</li>
+    <li>Structured extraction from a PDF — <code>AI_EXTRACT</code> pulled member ID, drug, diagnosis code, denial reason, and appeal deadline out of a prior authorization denial letter in a single SQL call</li>
+    <li>A custom <code>AI_CLASSIFY</code> tool (<code>CLASSIFY_CLAIM</code>) that categorizes claims into clinical risk categories — and is wired into the agent, so it can classify on demand mid-conversation</li>
+    <li>A Cortex Agent with your own persona, instructions, and three tools — Analyst, Search, and your custom classifier — built and iterated with CoCo</li>
+    <li>A live Snowflake CoWork session that any business user could access without writing a single line of SQL</li>
+  </ul>
+
+  <h3>From Lab to Production — Where Do You Go From Here?</h3>
+  <p>The pattern you built today is a direct template for production use cases on real payer data platforms. Here are the natural next steps:</p>
+
+  <div class="callout info">
+    <div class="callout-title">Reuse the semantics you already have</div>
+    <p>Don't rebuild your ontology from scratch. Your business definitions already exist — in Power BI reports, Tableau workbooks, dbt models, and the data dictionaries your team keeps in Excel and Confluence. Semantic View Autopilot ingests Power BI files directly (<code>.pbit</code> or <code>.pbix</code>): DAX measures become metrics, relationships and calculated columns carry over. For the messier sources — spreadsheets, docs, legacy SQL — use CoCo to extract the measures, filters, and business logic. The definitions your business already reconciles against become the ones your agent uses, so agent answers match the reports leadership already reads.</p>
+  </div>
+
+  <div class="callout info">
+    <div class="callout-title">Deepen the ontology</div>
+    <p>Your base ontology has no cross-entity concept unification yet — <code>CHRONIC_CONDITION = 'Diabetes'</code> and <code>ICD10_CODE = 'E11.9'</code> mean the same thing but nothing links them. Add a condition-to-code crosswalk, a drug class hierarchy (GLP-1 → antidiabetic → endocrine), and clinical grouper logic so the agent can reason across entities instead of being told they match.</p>
+  </div>
+
+  <div class="callout info">
+    <div class="callout-title">Add more tools</div>
+    <p>Extend the agent with a custom stored procedure tool — e.g. a <code>SEND_CARE_GAP_ALERT()</code> procedure that triggers an action from a natural language instruction.</p>
+  </div>
+
+  <div class="callout info">
+    <div class="callout-title">Govern with Horizon</div>
+    <p>Apply row-access policies and column masking to the payer tables so the same agent returns only the data each role is authorized to see — critical for PHI in production.</p>
+  </div>
+
+  <p style="margin-top: 24px; font-size: 13.5px; color: var(--sf-muted);">All data in this lab is synthetic and was purpose-built for training. No real member, patient, or PHI data is used at any point.</p>
+</section>
+
+<footer class="sf-footer">
+  <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="11" fill="#29B5E8"/><path fill="white" d="M7 16l5-10 5 10-5-3z"/></svg>
+  <span>Built on Snowflake Cortex AI · Elevance AI Lab — Hands-On Lab</span>
+</footer>
+
+</main>
+</div>
+
+<script>
+  // Highlight active step on scroll
+  const sections = document.querySelectorAll('.section');
+  const stepItems = document.querySelectorAll('.step-item');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        stepItems.forEach(item => {
+          item.classList.remove('active');
+          if (item.querySelector('a').getAttribute('href') === '#' + id) {
+            item.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+
+  // Copy buttons — injected into every .code-header and .coco-header
+  document.querySelectorAll('.code-block, .coco-block').forEach(block => {
+    const header = block.querySelector('.code-header, .coco-header');
+    const pre    = block.querySelector('pre');
+    if (!header || !pre) return;
+    const btn = document.createElement('button');
+    btn.className   = 'copy-btn';
+    btn.textContent  = 'Copy';
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+      });
+    });
+    header.appendChild(btn);
+  });
+</script>
+</body>
+</html>

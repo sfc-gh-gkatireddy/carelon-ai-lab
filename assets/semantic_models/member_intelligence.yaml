@@ -1,0 +1,297 @@
+name: MEMBER_INTELLIGENCE
+description: >
+  Member 360 semantic view for the Elevance AI Lab. Covers members, medical
+  claims, pharmacy claims, and providers for a synthetic commercial health
+  plan population. Use this model for structured questions about cost of
+  care, utilization, care gaps, and medication adherence.
+
+tables:
+  - name: MEMBERS
+    description: Health plan enrollees with demographics, plan, and chronic condition flags.
+    base_table:
+      database: ELEVANCE_LAB_DB
+      schema: PAYER
+      table: MEMBERS
+    columns:
+      - name: member_id
+        data_type: varchar
+        description: Unique member identifier
+      - name: name
+        data_type: varchar
+        description: Member full name
+      - name: dob
+        data_type: date
+        description: Member date of birth
+      - name: gender
+        data_type: varchar
+        description: Member gender (M, F, X)
+      - name: plan_id
+        data_type: varchar
+        description: Plan identifier
+      - name: plan_name
+        data_type: varchar
+        description: Plan name, e.g. Blue Advantage PPO
+      - name: plan_type
+        data_type: varchar
+        description: Plan product type (HMO, PPO, EPO, HDHP, Medicare Advantage)
+      - name: pcp
+        data_type: varchar
+        description: Primary care provider identifier
+      - name: chronic_condition
+        data_type: varchar
+        description: >
+          Primary chronic condition flag (Diabetes, Hypertension, COPD,
+          Asthma, Coronary Artery Disease, Heart Failure, Chronic Kidney
+          Disease, Depression, Hyperlipidemia, or None)
+      - name: smoker_ind
+        data_type: varchar
+        description: Smoker indicator (Y or N)
+      - name: enrollment_start
+        data_type: date
+        description: Plan enrollment start date
+      - name: enrollment_end
+        data_type: date
+        description: Plan enrollment end date (null if currently enrolled)
+      - name: state
+        data_type: varchar
+        description: Member state of residence
+      - name: city
+        data_type: varchar
+        description: Member city of residence
+    dimensions:
+      - name: chronic_condition
+        expressions: [chronic_condition]
+        description: Primary chronic condition
+        synonyms: [condition, diagnosis flag, disease]
+      - name: plan_type
+        expressions: [plan_type]
+        description: Plan product type
+        synonyms: [product, plan product]
+      - name: state
+        expressions: [state]
+        description: Member state
+      - name: gender
+        expressions: [gender]
+        description: Member gender
+    measures:
+      - name: member_count
+        expression: COUNT(DISTINCT member_id)
+        description: Number of unique members
+
+  - name: MEDICAL_CLAIMS
+    description: Medical claim lines with diagnosis, procedure, and amounts.
+    base_table:
+      database: ELEVANCE_LAB_DB
+      schema: PAYER
+      table: MEDICAL_CLAIMS
+    columns:
+      - name: claim_id
+        data_type: varchar
+        description: Unique claim identifier
+      - name: member_id
+        data_type: varchar
+        description: Member identifier (join to MEMBERS)
+      - name: service_date
+        data_type: date
+        description: Date of service
+      - name: provider_id
+        data_type: varchar
+        description: Provider identifier (join to PROVIDERS)
+      - name: icd10_code
+        data_type: varchar
+        description: ICD-10 diagnosis code
+      - name: icd10_desc
+        data_type: varchar
+        description: Diagnosis description
+      - name: procedure_code
+        data_type: varchar
+        description: CPT procedure code
+      - name: procedure_desc
+        data_type: varchar
+        description: Procedure description
+      - name: billed_amt
+        data_type: number
+        description: Billed amount in USD
+      - name: allowed_amt
+        data_type: number
+        description: Allowed (negotiated) amount in USD
+      - name: paid_amt
+        data_type: number
+        description: Paid amount in USD
+      - name: claim_status
+        data_type: varchar
+        description: Claim status (Paid, Denied, Pending, Adjusted, Appealed)
+      - name: service_type
+        data_type: varchar
+        description: Service category (Preventive Care, Office Visit, Emergency Room, Surgical, Diagnostic Imaging, Lab, Mental Health, Physical Therapy)
+    dimensions:
+      - name: service_type
+        expressions: [service_type]
+        description: Service category
+        synonyms: [service category, place of service]
+      - name: icd10_code
+        expressions: [icd10_code]
+        description: ICD-10 diagnosis code
+        synonyms: [diagnosis code, dx code]
+      - name: claim_status
+        expressions: [claim_status]
+        description: Claim status
+      - name: service_date
+        expressions: [service_date]
+        description: Date of service
+    measures:
+      - name: total_paid_amount
+        expression: SUM(paid_amt)
+        description: Total paid amount in USD
+        synonyms: [total medical spend, cost of care, total paid]
+      - name: total_billed_amount
+        expression: SUM(billed_amt)
+        description: Total billed amount in USD
+      - name: claim_count
+        expression: COUNT(*)
+        description: Number of claim lines
+      - name: denied_claim_count
+        expression: COUNT_IF(claim_status = 'Denied')
+        description: Number of denied claim lines
+
+  - name: PHARMACY_CLAIMS
+    description: Prescription fills with drug, class, and paid amounts.
+    base_table:
+      database: ELEVANCE_LAB_DB
+      schema: PAYER
+      table: PHARMACY_CLAIMS
+    columns:
+      - name: rx_id
+        data_type: varchar
+        description: Unique prescription fill identifier
+      - name: member_id
+        data_type: varchar
+        description: Member identifier (join to MEMBERS)
+      - name: drug_name
+        data_type: varchar
+        description: Drug name, e.g. Semaglutide
+      - name: ndc_code
+        data_type: varchar
+        description: National Drug Code
+      - name: drug_class
+        data_type: varchar
+        description: Therapeutic class (GLP-1 Agonist, Statin, Insulin, etc.)
+      - name: drug_strength
+        data_type: varchar
+        description: Drug strength
+      - name: days_supply
+        data_type: number
+        description: Days supply per fill
+      - name: paid_amt
+        data_type: number
+        description: Paid amount in USD
+      - name: fill_date
+        data_type: date
+        description: Fill date
+      - name: prescriber_id
+        data_type: varchar
+        description: Prescriber provider identifier
+    dimensions:
+      - name: drug_name
+        expressions: [drug_name]
+        description: Drug name
+        synonyms: [medication, drug]
+      - name: drug_class
+        expressions: [drug_class]
+        description: Therapeutic drug class
+        synonyms: [therapeutic class, class]
+      - name: fill_date
+        expressions: [fill_date]
+        description: Fill date
+    measures:
+      - name: total_pharmacy_paid
+        expression: SUM(paid_amt)
+        description: Total pharmacy paid amount in USD
+        synonyms: [pharmacy spend, drug spend]
+      - name: fill_count
+        expression: COUNT(*)
+        description: Number of fills
+      - name: total_days_supply
+        expression: SUM(days_supply)
+        description: Total days supply dispensed
+        synonyms: [adherence denominator]
+
+  - name: PROVIDERS
+    description: Providers with specialty, network status, and cost per visit.
+    base_table:
+      database: ELEVANCE_LAB_DB
+      schema: PAYER
+      table: PROVIDERS
+    columns:
+      - name: provider_id
+        data_type: varchar
+        description: Unique provider identifier
+      - name: name
+        data_type: varchar
+        description: Provider name
+      - name: specialty
+        data_type: varchar
+        description: Provider specialty
+      - name: npi
+        data_type: varchar
+        description: National Provider Identifier
+      - name: network_status
+        data_type: varchar
+        description: Network status (In-Network or Out-of-Network)
+      - name: location
+        data_type: varchar
+        description: City and state
+      - name: avg_cost_per_visit
+        data_type: number
+        description: Average cost per visit in USD
+    dimensions:
+      - name: specialty
+        expressions: [specialty]
+        description: Provider specialty
+      - name: network_status
+        expressions: [network_status]
+        description: Network status
+    measures:
+      - name: provider_count
+        expression: COUNT(DISTINCT provider_id)
+        description: Number of unique providers
+      - name: avg_cost_per_visit
+        expression: AVG(avg_cost_per_visit)
+        description: Average cost per visit in USD
+
+relationships:
+  - name: medical_claims_to_members
+    left_table: MEDICAL_CLAIMS
+    right_table: MEMBERS
+    join_on: MEDICAL_CLAIMS.member_id = MEMBERS.member_id
+    relationship_type: many_to_one
+  - name: pharmacy_claims_to_members
+    left_table: PHARMACY_CLAIMS
+    right_table: MEMBERS
+    join_on: PHARMACY_CLAIMS.member_id = MEMBERS.member_id
+    relationship_type: many_to_one
+  - name: medical_claims_to_providers
+    left_table: MEDICAL_CLAIMS
+    right_table: PROVIDERS
+    join_on: MEDICAL_CLAIMS.provider_id = PROVIDERS.provider_id
+    relationship_type: many_to_one
+
+verified_queries:
+  - question: "What are the top 5 chronic conditions by total paid amount?"
+    sql: |
+      SELECT m.chronic_condition, ROUND(SUM(mc.paid_amt), 0) AS total_paid
+      FROM MEMBERS m
+      JOIN MEDICAL_CLAIMS mc ON m.member_id = mc.member_id
+      GROUP BY 1 ORDER BY 2 DESC LIMIT 5
+  - question: "Show me monthly pharmacy spend by drug class over the last year"
+    sql: |
+      SELECT DATE_TRUNC('month', fill_date) AS fill_month, drug_class,
+             ROUND(SUM(paid_amt), 0) AS total_paid
+      FROM PHARMACY_CLAIMS
+      WHERE fill_date >= DATEADD('year', -1, CURRENT_DATE)
+      GROUP BY 1, 2 ORDER BY 1, 3 DESC
+  - question: "Which service types have the most denied claims?"
+    sql: |
+      SELECT service_type, COUNT_IF(claim_status = 'Denied') AS denied_claims
+      FROM MEDICAL_CLAIMS
+      GROUP BY 1 ORDER BY 2 DESC

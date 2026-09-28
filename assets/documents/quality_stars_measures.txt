@@ -1,0 +1,100 @@
+Blue Advantage Quality and Stars Measures Reference
+Elevance Health — Plan Year 2026
+Document ID: QUAL-2026-003
+Effective: January 1, 2026
+
+This document summarizes the HEDIS measures and CMS Star Ratings criteria
+tracked for the commercial and Medicare Advantage lines of business.
+
+SECTION 1 — COLORECTAL CANCER SCREENING (HEDIS COL)
+
+Measure definition: Members age 45-75 who had appropriate screening for
+colorectal cancer during the measurement year or the two years prior.
+Appropriate screenings are:
+- Fecal immunochemical test (FIT) annually
+- Colonoscopy (CPT 45378) during the measurement year or prior two years
+- FIT-DNA test within the prior 3 years
+
+Eligible population: Members enrolled as of December 1 of the measurement
+year with at least 11 months of continuous enrollment. Members with a
+history of colorectal cancer or total colectomy are excluded.
+
+Compliance target: 80% of eligible members.
+
+SECTION 2 — DIABETES CARE MEASURES
+
+2.1 HbA1c Testing (HEDIS CDC-A1c)
+Members age 18-75 with Type 1 or Type 2 diabetes (ICD-10 E10.x, E11.x) who
+had an HbA1c test (CPT 83036) during the measurement year.
+Target: 92% of eligible members.
+
+2.2 HbA1c Poor Control (HEDIS CDC-A1cP)
+Percentage of diabetic members whose most recent HbA1c is greater than 9.0%.
+Lower is better. Target: fewer than 15% of eligible members.
+
+2.3 Eye Exam (HEDIS CDC-Eye)
+Members with diabetes who had a retinal or dilated eye exam by an
+ophthalmologist or optometrist, or documented retinal imaging.
+Target: 70% of eligible members.
+
+2.4 Kidney Health Monitoring (HEDIS CDC-Kidney)
+Members with diabetes who had an eGFR or urine albumin test during the
+year. Target: 55% of eligible members.
+
+SECTION 3 — MEDICATION ADHERENCE MEASURES
+
+3.1 Diabetes Medication Adherence (PDC-DR)
+Percentage of diabetic members age 18+ with at least two fills of a diabetes
+medication (Biguanide, Sulfonylurea, GLP-1, Insulin, SGLT2, DPP-4 classes)
+whose proportion of days covered (PDC) is at least 80% during the measurement
+year. Target: 85% of eligible members.
+
+Adherence calculation: PDC = total days supply across all fills / days in
+measurement period. Members with days supply exceeding 365 count as 365.
+
+3.2 Statin Adherence for Members with Cardiovascular Disease (PDC-STA)
+Members with atherosclerotic cardiovascular disease (ICD-10 I20.x, I25.x)
+with two or more statin fills and PDC >= 80%. Target: 85%.
+
+3.3 RAS Antagonist Adherence (PDC-RASA)
+Members with hypertension (ICD-10 I10.x) with two or more fills of an ACE
+inhibitor or ARB and PDC >= 80%. Target: 85%.
+
+SECTION 4 — PREVENTIVE SCREENING MEASURES
+
+4.1 Breast Cancer Screening (HEDIS BCS)
+Members age 50-74 with a mammogram during the measurement year or the two
+years prior. Target: 70%.
+
+4.2 Adult BMI Assessment
+Adult members with a documented BMI during the measurement year or the two
+years prior. Target: 90%.
+
+4.3 Controlling High Blood Pressure (HEDIS CBP)
+Members age 18-85 with hypertension whose most recent systolic reading is
+< 140 mmHg and diastolic is < 90 mmHg. Target: 75%.
+
+SECTION 5 — CARE GAP IDENTIFICATION METHODOLOGY
+
+A care gap is a member who is eligible for a measure but shows no compliant
+claim activity in the claims data:
+- Colorectal screening gap: age 45-75, no colonoscopy claim (CPT 45378) and
+  no FIT claim in the prior 3 years
+- A1c testing gap: diabetes diagnosis, no 83036 lab claim in the current year
+- Adherence gap: PDC below 80% based on pharmacy fill dates and days supply
+- Statin gap for CAD members: no statin fill in the last 6 months
+
+Gap lists are refreshed monthly and prioritized by member risk tier. Care
+managers should prioritize members with both chronic conditions and multiple
+concurrent gaps.
+
+SECTION 6 — STAR RATINGS WEIGHTING (MEDICARE ADVANTAGE)
+
+Colorectal cancer screening, diabetes A1c testing, and medication adherence
+measures are triple-weighted or double-weighted domains in the CMS Star
+Ratings for Medicare Advantage plans. Improvements in these measures have
+the largest impact on overall Star rating.
+
+For data questions, contact the Quality Analytics team. Measure
+specifications follow NCQA HEDIS Volume 2 definitions for the measurement
+year.

@@ -1,0 +1,2001 @@
+provider_id,name,specialty,npi,network_status,location,avg_cost_per_visit
+PRV-000001,Dr. Ana Wilson MD,Orthopedics,1957970516,In-Network,"Atlanta, GA",306.3
+PRV-000002,Dr. Joseph Cook MD,Nephrology,1602632297,In-Network,"New York, NY",243.14
+PRV-000003,Dr. Alyssa Scott DO,Family Medicine,1006977991,In-Network,"New York, NY",139.25
+PRV-000004,Dr. Susan Ross MD,Psychiatry,1099585092,In-Network,"Atlanta, GA",247.02
+PRV-000005,Dr. Robert Sanders MD,Cardiology,1134031070,In-Network,"Los Angeles, CA",300.18
+PRV-000006,Dr. Brianna Campbell MD,Ophthalmology,1756528252,In-Network,"Los Angeles, CA",332.69
+PRV-000007,Dr. Joseph Gonzalez MD,Internal Medicine,1486845604,In-Network,"New York, NY",261.81
+PRV-000008,Dr. Sarah Hughes DO,Orthopedics,1695822698,In-Network,"Los Angeles, CA",302.11
+PRV-000009,Dr. Denise Carter MD,Internal Medicine,1993631208,In-Network,"New York, NY",151.85
+PRV-000010,Dr. Lucia Davis MD,Orthopedics,1034467368,In-Network,"New York, NY",495.91
+PRV-000011,Dr. Xavier Alvarez MD,General Surgery,1703771909,In-Network,"San Diego, CA",730.47
+PRV-000012,Dr. David Young MD,Pulmonology,1578722458,In-Network,"Richmond, VA",248.58
+PRV-000013,Dr. Joseph Moore MD,Family Medicine,1097613238,Out-of-Network,"New York, NY",164.22
+PRV-000014,Dr. Mei Diaz MD,Psychiatry,1413140753,In-Network,"Kansas City, MO",219.44
+PRV-000015,Dr. James Mendoza MD,Cardiology,1731980933,In-Network,"Columbus, OH",503.67
+PRV-000016,Dr. Charles Parker MD,Radiology,1003484630,In-Network,"St. Louis, MO",291.79
+PRV-000017,Dr. Barbara Cook DO,Oncology,1934712197,In-Network,"Kansas City, MO",598.27
+PRV-000018,Dr. Keisha Ross MD,Emergency Medicine,1836043811,In-Network,"Kansas City, MO",1054.82
+PRV-000019,Dr. Linda Campbell DO,Physical Therapy,1892994062,In-Network,"Richmond, VA",159.56
+PRV-000020,Dr. Jennifer Hernandez MD,General Surgery,1876198296,In-Network,"Savannah, GA",581.1
+PRV-000021,Dr. Andre Peterson MD,Internal Medicine,1566585408,In-Network,"St. Louis, MO",134.57
+PRV-000022,Dr. Luis Ruiz MD,Radiology,1334702822,In-Network,"San Diego, CA",343.76
+PRV-000023,Dr. Jerome Thomas MD,Cardiology,1068747287,In-Network,"Buffalo, NY",483.09
+PRV-000024,Dr. John Price MD,Cardiology,1245824373,In-Network,"New York, NY",287.42
+PRV-000025,Dr. Sarah Bennett MD,Internal Medicine,1578998028,In-Network,"Atlanta, GA",191.85
+PRV-000026,Dr. Andre Evans MD,Internal Medicine,1104078666,In-Network,"Norfolk, VA",185.69
+PRV-000027,Dr. Patricia Gray MD,Orthopedics,1693830224,In-Network,"Los Angeles, CA",502.33
+PRV-000028,Dr. Jessica Harris MD,Internal Medicine,1481695135,In-Network,"San Diego, CA",243.46
+PRV-000029,Dr. John Cruz DO,Internal Medicine,1919087451,In-Network,"Atlanta, GA",245.36
+PRV-000030,Dr. Jennifer Long DO,Emergency Medicine,1178575192,Out-of-Network,"Atlanta, GA",1742.91
+PRV-000031,Dr. William Carter MD,Endocrinology,1419212169,Out-of-Network,"San Francisco, CA",423.42
+PRV-000032,Dr. Luis Bailey MD,Family Medicine,1522559454,In-Network,"St. Louis, MO",167.51
+PRV-000033,Dr. Jamal Davis MD,Internal Medicine,1061380746,Out-of-Network,"Los Angeles, CA",201.51
+PRV-000034,Dr. Patricia Rogers MD,Internal Medicine,1199528037,Out-of-Network,"San Francisco, CA",194.37
+PRV-000035,Dr. Xavier Young MD,Internal Medicine,1042672287,Out-of-Network,"Atlanta, GA",175.46
+PRV-000036,Dr. Thomas Clark MD,Emergency Medicine,1337352358,In-Network,"San Diego, CA",1404.61
+PRV-000037,Dr. Marcus Long DO,Family Medicine,1010002396,In-Network,"Los Angeles, CA",150.35
+PRV-000038,Dr. Susan Cook MD,Endocrinology,1374745382,Out-of-Network,"Columbus, OH",214.46
+PRV-000039,Dr. Jamal Price MD,Radiology,1866616964,In-Network,"Kansas City, MO",244.17
+PRV-000040,Dr. Wei Wilson DO,Orthopedics,1144193987,In-Network,"Atlanta, GA",329.61
+PRV-000041,Dr. Charles Cox MD,Family Medicine,1368164906,In-Network,"Richmond, VA",130.18
+PRV-000042,Dr. Patricia Lopez MD,Family Medicine,1890505735,In-Network,"New York, NY",176.65
+PRV-000043,Dr. Thomas Lee MD,Family Medicine,1592362342,In-Network,"Atlanta, GA",197.38
+PRV-000044,Dr. Carlos Martin MD,Gastroenterology,1896139578,In-Network,"New York, NY",542.69
+PRV-000045,Dr. Keisha Garcia DO,Cardiology,1225567963,In-Network,"New York, NY",236.05
+PRV-000046,Dr. Malik Richardson MD,Orthopedics,1994031334,In-Network,"New York, NY",409.32
+PRV-000047,Dr. Malik Brown MD,Physical Therapy,1992660672,Out-of-Network,"Kansas City, MO",200.16
+PRV-000048,Dr. Jessica Wright MD,Cardiology,1752991721,In-Network,"Norfolk, VA",472.85
+PRV-000049,Dr. Denise Hall MD,Internal Medicine,1853995721,Out-of-Network,"Kansas City, MO",148.53
+PRV-000050,Dr. Sarah Rodriguez DO,Radiology,1299708182,In-Network,"Savannah, GA",307.0
+PRV-000051,Dr. Aisha Brown MD,Cardiology,1280477683,In-Network,"San Francisco, CA",466.97
+PRV-000052,Dr. Latoya Hall MD,Family Medicine,1336808455,In-Network,"Columbus, OH",123.62
+PRV-000053,Dr. Richard Allen MD,Endocrinology,1468213197,In-Network,"Columbus, OH",422.68
+PRV-000054,Dr. Ana Patel MD,Internal Medicine,1391079829,In-Network,"Richmond, VA",222.34
+PRV-000055,Dr. Wei Thomas MD,Endocrinology,1322468580,Out-of-Network,"Norfolk, VA",353.04
+PRV-000056,Dr. Renee Taylor MD,Pulmonology,1713962536,In-Network,"New York, NY",398.25
+PRV-000057,Dr. Karen Phillips MD,Oncology,1000435874,Out-of-Network,"Buffalo, NY",652.06
+PRV-000058,Dr. Marcus Reyes MD,Family Medicine,1725449223,In-Network,"Atlanta, GA",193.13
+PRV-000059,Dr. William James MD,Family Medicine,1553462378,Out-of-Network,"San Francisco, CA",219.55
+PRV-000060,Dr. Jessica Gray MD,Orthopedics,1866040317,In-Network,"New York, NY",529.31
+PRV-000061,Dr. Lucia Martinez MD,Family Medicine,1951482263,In-Network,"Atlanta, GA",174.78
+PRV-000062,Dr. Jessica Jackson MD,Emergency Medicine,1005953697,In-Network,"Atlanta, GA",1373.93
+PRV-000063,Dr. Joseph Thompson DO,Physical Therapy,1747229579,Out-of-Network,"Kansas City, MO",196.08
+PRV-000064,Dr. Denise Moore DO,Nephrology,1716806128,In-Network,"Atlanta, GA",453.69
+PRV-000065,Dr. Jerome Ward DO,Nephrology,1957799499,In-Network,"New York, NY",427.71
+PRV-000066,Dr. Ana Stewart MD,Pulmonology,1807214179,In-Network,"Kansas City, MO",452.25
+PRV-000067,Dr. Hassan Walker MD,Family Medicine,1083197117,In-Network,"New York, NY",181.22
+PRV-000068,Dr. Jennifer Moore MD,Gastroenterology,1411281012,In-Network,"Savannah, GA",526.3
+PRV-000069,Dr. Jamal Reyes MD,Orthopedics,1222086735,In-Network,"Buffalo, NY",362.73
+PRV-000070,Dr. Mary Ross MD,General Surgery,1512153089,In-Network,"Los Angeles, CA",744.7
+PRV-000071,Dr. Malik Morgan MD,Internal Medicine,1586405096,In-Network,"Los Angeles, CA",242.24
+PRV-000072,Dr. Monica Brown MD,Psychiatry,1718197581,In-Network,"Richmond, VA",245.87
+PRV-000073,Dr. David Richardson MD,Orthopedics,1973807454,In-Network,"San Diego, CA",381.02
+PRV-000074,Dr. David Reyes MD,Cardiology,1279340713,In-Network,"New York, NY",409.11
+PRV-000075,Dr. Robert Scott MD,Cardiology,1893271900,In-Network,"Atlanta, GA",443.23
+PRV-000076,Dr. Patricia Hall MD,Endocrinology,1073678414,In-Network,"Kansas City, MO",384.75
+PRV-000077,Dr. Richard Williams MD,Psychiatry,1256135680,In-Network,"New York, NY",404.21
+PRV-000078,Dr. Carlos Allen MD,Internal Medicine,1180162221,In-Network,"New York, NY",147.87
+PRV-000079,Dr. William Flores MD,Emergency Medicine,1027571992,In-Network,"Columbus, OH",1680.02
+PRV-000080,Dr. Sofia Sanchez MD,Physical Therapy,1741541582,Out-of-Network,"New York, NY",145.29
+PRV-000081,Dr. Mei Kim DO,General Surgery,1854942461,In-Network,"Savannah, GA",466.28
+PRV-000082,Dr. Keisha Rodriguez MD,Ophthalmology,1366394187,In-Network,"St. Louis, MO",249.67
+PRV-000083,Dr. Keisha Brooks DO,Internal Medicine,1493641365,In-Network,"San Diego, CA",179.88
+PRV-000084,Dr. Sarah Ward DO,Gastroenterology,1577858758,In-Network,"San Diego, CA",549.12
+PRV-000085,Dr. Marcus Young DO,Psychiatry,1093053577,Out-of-Network,"San Francisco, CA",320.64
+PRV-000086,Dr. Wei Carter MD,Family Medicine,1530757561,In-Network,"San Diego, CA",187.99
+PRV-000087,Dr. Aisha Scott DO,Radiology,1752890318,In-Network,"Atlanta, GA",411.23
+PRV-000088,Dr. Jessica Castillo MD,Radiology,1596115913,In-Network,"New York, NY",252.87
+PRV-000089,Dr. Mary Lopez MD,Psychiatry,1434222401,In-Network,"Buffalo, NY",296.85
+PRV-000090,Dr. Kiara Hall MD,Orthopedics,1800942073,In-Network,"Los Angeles, CA",382.82
+PRV-000091,Dr. Joseph Thomas MD,Emergency Medicine,1338817025,In-Network,"Los Angeles, CA",1171.15
+PRV-000092,Dr. Susan Patel MD,Internal Medicine,1778017216,In-Network,"Sacramento, CA",142.99
+PRV-000093,Dr. Richard Nguyen MD,Emergency Medicine,1192673892,In-Network,"St. Louis, MO",1898.95
+PRV-000094,Dr. Patricia Peterson MD,Family Medicine,1135591568,In-Network,"Buffalo, NY",114.85
+PRV-000095,Dr. Charles Stewart MD,Orthopedics,1365830215,In-Network,"St. Louis, MO",241.75
+PRV-000096,Dr. John Phillips MD,Family Medicine,1619571745,Out-of-Network,"Atlanta, GA",175.14
+PRV-000097,Dr. Karen Hernandez DO,Emergency Medicine,1127186396,In-Network,"Atlanta, GA",1447.87
+PRV-000098,Dr. Lucia Gutierrez MD,Emergency Medicine,1975499151,In-Network,"San Diego, CA",1507.89
+PRV-000099,Dr. Brianna Davis MD,Endocrinology,1794664845,Out-of-Network,"Kansas City, MO",272.96
+PRV-000100,Dr. Jennifer Lee MD,Internal Medicine,1592697161,In-Network,"St. Louis, MO",154.8
+PRV-000101,Dr. Charles Jones MD,Internal Medicine,1759088046,In-Network,"Atlanta, GA",203.68
+PRV-000102,Dr. Thomas Watson MD,Family Medicine,1863187150,In-Network,"Kansas City, MO",141.06
+PRV-000103,Dr. Sarah Jackson MD,Physical Therapy,1178158234,In-Network,"San Diego, CA",179.6
+PRV-000104,Dr. Jerome Thomas MD,Psychiatry,1326515425,Out-of-Network,"New York, NY",397.56
+PRV-000105,Dr. Jennifer Kim MD,Orthopedics,1463887247,In-Network,"Norfolk, VA",389.1
+PRV-000106,Dr. Mei Kelly MD,Gastroenterology,1022275263,In-Network,"New York, NY",317.11
+PRV-000107,Dr. Miguel Thompson MD,Ophthalmology,1699552991,In-Network,"Buffalo, NY",169.33
+PRV-000108,Dr. Monica Lopez MD,Endocrinology,1438460431,Out-of-Network,"Savannah, GA",305.84
+PRV-000109,Dr. Carlos Murphy MD,Cardiology,1429982328,Out-of-Network,"Buffalo, NY",318.98
+PRV-000110,Dr. Marcus Anderson DO,General Surgery,1433979662,In-Network,"New York, NY",471.87
+PRV-000111,Dr. Denise Evans MD,Radiology,1556670062,In-Network,"Kansas City, MO",429.9
+PRV-000112,Dr. Susan Wright MD,Cardiology,1996081045,In-Network,"St. Louis, MO",442.88
+PRV-000113,Dr. Hassan Cox MD,Family Medicine,1762123506,In-Network,"Richmond, VA",112.53
+PRV-000114,Dr. Linda Reyes DO,Internal Medicine,1695472980,In-Network,"New York, NY",129.34
+PRV-000115,Dr. Sarah Turner DO,General Surgery,1507042130,In-Network,"San Francisco, CA",555.83
+PRV-000116,Dr. Trevon Myers DO,Family Medicine,1927741858,In-Network,"New York, NY",237.1
+PRV-000117,Dr. Trevon Wright DO,Internal Medicine,1303696046,Out-of-Network,"St. Louis, MO",165.97
+PRV-000118,Dr. Elizabeth Edwards MD,Gastroenterology,1370574014,In-Network,"Kansas City, MO",452.88
+PRV-000119,Dr. Richard Hughes MD,Cardiology,1411211819,In-Network,"St. Louis, MO",492.66
+PRV-000120,Dr. Sofia Carter MD,Family Medicine,1712630453,In-Network,"St. Louis, MO",212.39
+PRV-000121,Dr. David Cook DO,Psychiatry,1356476596,In-Network,"New York, NY",407.77
+PRV-000122,Dr. Denise Johnson MD,Radiology,1440211187,In-Network,"Kansas City, MO",340.27
+PRV-000123,Dr. Thomas Baker MD,Radiology,1426794469,In-Network,"Columbus, OH",406.98
+PRV-000124,Dr. Robert Green MD,Orthopedics,1952880024,Out-of-Network,"Kansas City, MO",500.96
+PRV-000125,Dr. Hassan Mendoza DO,Psychiatry,1244261532,In-Network,"Kansas City, MO",198.01
+PRV-000126,Dr. Michael Cruz MD,Gastroenterology,1321549249,In-Network,"San Diego, CA",444.63
+PRV-000127,Dr. Keisha Parker MD,Physical Therapy,1570335494,In-Network,"Atlanta, GA",134.96
+PRV-000128,Dr. Brianna Carter MD,Endocrinology,1258589021,In-Network,"Buffalo, NY",240.12
+PRV-000129,Dr. Denise Allen MD,Pulmonology,1965195684,In-Network,"New York, NY",382.23
+PRV-000130,Dr. Jerome Hall DO,General Surgery,1321214426,In-Network,"Richmond, VA",404.25
+PRV-000131,Dr. Richard Roberts DO,Orthopedics,1114518079,In-Network,"San Diego, CA",496.66
+PRV-000132,Dr. Charles Williams DO,Family Medicine,1706768884,In-Network,"New York, NY",246.98
+PRV-000133,Dr. Patricia Cox MD,Cardiology,1894253959,Out-of-Network,"Atlanta, GA",448.15
+PRV-000134,Dr. Dwayne Lewis MD,Physical Therapy,1666676815,In-Network,"Los Angeles, CA",174.49
+PRV-000135,Dr. David Watson MD,Family Medicine,1673728014,In-Network,"St. Louis, MO",203.48
+PRV-000136,Dr. Luis Taylor MD,Orthopedics,1316872439,In-Network,"Los Angeles, CA",415.35
+PRV-000137,Dr. Keisha Ortiz MD,Cardiology,1292624015,In-Network,"San Diego, CA",450.52
+PRV-000138,Dr. Charles Myers DO,General Surgery,1863538119,Out-of-Network,"Savannah, GA",544.16
+PRV-000139,Dr. Mei Castillo MD,Internal Medicine,1426717340,In-Network,"Columbus, OH",259.03
+PRV-000140,Dr. James King MD,Ophthalmology,1488322781,In-Network,"St. Louis, MO",324.67
+PRV-000141,Dr. Hassan Mitchell MD,Cardiology,1251064359,In-Network,"St. Louis, MO",333.74
+PRV-000142,Dr. Brianna Lewis MD,Pulmonology,1682259766,Out-of-Network,"New York, NY",298.56
+PRV-000143,Dr. David Garcia DO,General Surgery,1326808977,In-Network,"Richmond, VA",512.38
+PRV-000144,Dr. Robert Collins MD,Ophthalmology,1797940629,In-Network,"Atlanta, GA",272.27
+PRV-000145,Dr. Malik Wood MD,Orthopedics,1525432379,In-Network,"Sacramento, CA",460.34
+PRV-000146,Dr. Susan Cruz MD,Emergency Medicine,1253524015,In-Network,"Norfolk, VA",1585.5
+PRV-000147,Dr. Priya Rivera MD,Radiology,1296225446,In-Network,"Atlanta, GA",345.11
+PRV-000148,Dr. Wei Ramirez MD,Family Medicine,1641180590,Out-of-Network,"Atlanta, GA",171.93
+PRV-000149,Dr. Xavier Clark MD,Ophthalmology,1821581473,In-Network,"Atlanta, GA",365.69
+PRV-000150,Dr. Lucia Jackson MD,Emergency Medicine,1639930411,In-Network,"New York, NY",1091.64
+PRV-000151,Dr. Thomas Thompson MD,Internal Medicine,1930341337,In-Network,"Kansas City, MO",134.8
+PRV-000152,Dr. Marcus Williams MD,Internal Medicine,1056263020,In-Network,"Atlanta, GA",150.83
+PRV-000153,Dr. Jerome Jimenez MD,Internal Medicine,1637444033,In-Network,"San Diego, CA",124.94
+PRV-000154,Dr. Wei Gutierrez MD,Internal Medicine,1690781796,Out-of-Network,"San Francisco, CA",121.94
+PRV-000155,Dr. Mei Wilson MD,Ophthalmology,1976783824,In-Network,"Atlanta, GA",244.13
+PRV-000156,Dr. David Scott MD,Endocrinology,1628530544,In-Network,"Richmond, VA",233.38
+PRV-000157,Dr. Denise Cook MD,Nephrology,1106492059,Out-of-Network,"Los Angeles, CA",365.03
+PRV-000158,Dr. Renee Castillo DO,Psychiatry,1461784080,In-Network,"Atlanta, GA",387.38
+PRV-000159,Dr. Malik Sanders MD,Endocrinology,1458234365,In-Network,"Savannah, GA",310.28
+PRV-000160,Dr. Andre Rodriguez MD,Family Medicine,1091659287,Out-of-Network,"Savannah, GA",204.31
+PRV-000161,Dr. Renee Davis MD,Internal Medicine,1602998820,In-Network,"Atlanta, GA",236.05
+PRV-000162,Dr. Miguel Diaz DO,Emergency Medicine,1774233009,In-Network,"Buffalo, NY",1783.5
+PRV-000163,Dr. Trevon Ramirez MD,Internal Medicine,1517746926,In-Network,"Los Angeles, CA",130.88
+PRV-000164,Dr. Miguel Scott MD,Family Medicine,1866747347,Out-of-Network,"Atlanta, GA",159.77
+PRV-000165,Dr. Mei Chavez MD,Endocrinology,1653903309,In-Network,"New York, NY",352.67
+PRV-000166,Dr. Carlos Ross MD,Physical Therapy,1364883950,In-Network,"Kansas City, MO",120.73
+PRV-000167,Dr. John Jackson MD,Cardiology,1032917811,In-Network,"Atlanta, GA",413.32
+PRV-000168,Dr. William Mitchell MD,Internal Medicine,1348303473,In-Network,"Sacramento, CA",182.87
+PRV-000169,Dr. William Long MD,Psychiatry,1723668399,In-Network,"New York, NY",194.31
+PRV-000170,Dr. Malik Wright MD,Internal Medicine,1550127661,In-Network,"San Diego, CA",205.65
+PRV-000171,Dr. Monica Ortiz MD,Internal Medicine,1048766522,In-Network,"San Diego, CA",216.26
+PRV-000172,Dr. Susan Foster MD,Family Medicine,1274361983,In-Network,"Columbus, OH",137.02
+PRV-000173,Dr. David Carter MD,Family Medicine,1247079497,In-Network,"Atlanta, GA",168.58
+PRV-000174,Dr. Ana Garcia MD,Pulmonology,1493657365,In-Network,"Kansas City, MO",229.46
+PRV-000175,Dr. Sofia Brooks MD,Physical Therapy,1123666470,In-Network,"Kansas City, MO",170.25
+PRV-000176,Dr. Denise Ruiz DO,Endocrinology,1094628740,In-Network,"Columbus, OH",434.8
+PRV-000177,Dr. Jennifer Gomez DO,Endocrinology,1800801837,In-Network,"Atlanta, GA",296.91
+PRV-000178,Dr. Linda Ortiz MD,Cardiology,1972727126,In-Network,"Los Angeles, CA",371.02
+PRV-000179,Dr. Elizabeth Walker MD,Psychiatry,1274843786,Out-of-Network,"Los Angeles, CA",333.03
+PRV-000180,Dr. Barbara Foster MD,Family Medicine,1498165815,In-Network,"New York, NY",199.94
+PRV-000181,Dr. Xavier Chavez MD,Psychiatry,1670575153,In-Network,"St. Louis, MO",398.25
+PRV-000182,Dr. Andre Cruz MD,Cardiology,1855052486,In-Network,"Columbus, OH",350.65
+PRV-000183,Dr. Jerome Jones MD,Family Medicine,1893027458,In-Network,"Atlanta, GA",151.8
+PRV-000184,Dr. Dante Cook MD,Family Medicine,1623123952,Out-of-Network,"New York, NY",121.1
+PRV-000185,Dr. Xavier Wood MD,Emergency Medicine,1649620068,Out-of-Network,"St. Louis, MO",1325.71
+PRV-000186,Dr. Aisha Alvarez MD,Pulmonology,1693773681,In-Network,"Atlanta, GA",237.95
+PRV-000187,Dr. Kiara Ward MD,Family Medicine,1400346767,In-Network,"Savannah, GA",169.8
+PRV-000188,Dr. Patricia Watson MD,Physical Therapy,1070772317,In-Network,"Los Angeles, CA",183.54
+PRV-000189,Dr. Wei Cox DO,Cardiology,1357944766,In-Network,"New York, NY",296.57
+PRV-000190,Dr. Priya Hughes MD,Internal Medicine,1138460786,Out-of-Network,"New York, NY",161.57
+PRV-000191,Dr. Aisha Taylor MD,Emergency Medicine,1890087914,In-Network,"Norfolk, VA",1246.81
+PRV-000192,Dr. Wei Diaz MD,Oncology,1019574893,Out-of-Network,"Columbus, OH",407.74
+PRV-000193,Dr. Monica Harris MD,Cardiology,1147709679,In-Network,"Atlanta, GA",496.93
+PRV-000194,Dr. Jamal Patel DO,Internal Medicine,1040531056,In-Network,"Los Angeles, CA",190.89
+PRV-000195,Dr. Elizabeth Lee MD,Orthopedics,1743937341,In-Network,"Kansas City, MO",420.76
+PRV-000196,Dr. Malik Campbell MD,Psychiatry,1255046107,In-Network,"St. Louis, MO",284.42
+PRV-000197,Dr. Joseph Morgan MD,Ophthalmology,1868253265,In-Network,"New York, NY",323.25
+PRV-000198,Dr. Xavier Cruz MD,Psychiatry,1302550088,In-Network,"Richmond, VA",340.72
+PRV-000199,Dr. Richard Cox MD,Psychiatry,1268438908,In-Network,"San Francisco, CA",219.92
+PRV-000200,Dr. Sofia Gutierrez DO,Internal Medicine,1306084084,In-Network,"San Francisco, CA",254.24
+PRV-000201,Dr. Latoya Lopez DO,Internal Medicine,1238411494,In-Network,"Atlanta, GA",191.73
+PRV-000202,Dr. Tanisha Cook MD,General Surgery,1414642708,Out-of-Network,"Richmond, VA",515.24
+PRV-000203,Dr. Sofia Wood MD,Ophthalmology,1156819248,In-Network,"Los Angeles, CA",353.68
+PRV-000204,Dr. David Ross MD,Internal Medicine,1481682167,Out-of-Network,"Los Angeles, CA",218.87
+PRV-000205,Dr. Elizabeth Peterson DO,Emergency Medicine,1653780028,In-Network,"Richmond, VA",1072.91
+PRV-000206,Dr. Patricia Walker MD,Nephrology,1852442674,In-Network,"Atlanta, GA",301.02
+PRV-000207,Dr. Jamal Williams MD,Emergency Medicine,1617452511,Out-of-Network,"Atlanta, GA",1379.82
+PRV-000208,Dr. Jessica Kelly MD,Family Medicine,1713363254,In-Network,"Atlanta, GA",194.27
+PRV-000209,Dr. Jamal Cook MD,Orthopedics,1545055605,In-Network,"Sacramento, CA",529.74
+PRV-000210,Dr. Keisha Allen MD,Emergency Medicine,1383426624,In-Network,"Los Angeles, CA",1526.52
+PRV-000211,Dr. Lucia Howard MD,Psychiatry,1357039137,In-Network,"Los Angeles, CA",329.01
+PRV-000212,Dr. Lucia Mendoza MD,Internal Medicine,1746668526,In-Network,"Los Angeles, CA",210.96
+PRV-000213,Dr. Denise Jones MD,Pulmonology,1047036629,In-Network,"Atlanta, GA",403.33
+PRV-000214,Dr. Tanisha Cooper MD,Psychiatry,1039321248,In-Network,"Richmond, VA",254.56
+PRV-000215,Dr. Priya Nelson MD,Psychiatry,1858287383,In-Network,"Atlanta, GA",364.72
+PRV-000216,Dr. Robert Baker DO,Cardiology,1532794158,In-Network,"Richmond, VA",481.66
+PRV-000217,Dr. Jennifer Sanders MD,Orthopedics,1462360908,In-Network,"Los Angeles, CA",319.62
+PRV-000218,Dr. Jennifer Adams MD,Emergency Medicine,1329097422,In-Network,"Kansas City, MO",1186.91
+PRV-000219,Dr. Jerome Garcia MD,Endocrinology,1978830811,In-Network,"Albany, NY",307.86
+PRV-000220,Dr. Patricia Martinez MD,Cardiology,1436164913,In-Network,"Columbus, OH",506.25
+PRV-000221,Dr. Elizabeth Cox MD,Cardiology,1470484488,In-Network,"St. Louis, MO",498.4
+PRV-000222,Dr. Robert Reed MD,Internal Medicine,1164752975,In-Network,"Atlanta, GA",169.9
+PRV-000223,Dr. Xavier Moore MD,Orthopedics,1427385805,In-Network,"Norfolk, VA",471.5
+PRV-000224,Dr. Barbara Murphy MD,Family Medicine,1980908797,Out-of-Network,"Savannah, GA",112.11
+PRV-000225,Dr. Brianna Torres MD,Emergency Medicine,1527422192,In-Network,"Savannah, GA",1321.97
+PRV-000226,Dr. Sofia Cruz DO,Family Medicine,1870281936,In-Network,"Atlanta, GA",132.59
+PRV-000227,Dr. John Peterson MD,Orthopedics,1957060109,In-Network,"Kansas City, MO",344.31
+PRV-000228,Dr. Barbara Campbell MD,Family Medicine,1130311939,In-Network,"Atlanta, GA",206.18
+PRV-000229,Dr. Keisha Peterson MD,Ophthalmology,1501873197,In-Network,"St. Louis, MO",263.26
+PRV-000230,Dr. Karen Gomez DO,General Surgery,1771880418,In-Network,"New York, NY",373.25
+PRV-000231,Dr. David Green MD,Pulmonology,1483156434,In-Network,"San Diego, CA",365.22
+PRV-000232,Dr. Renee Brooks MD,Pulmonology,1824399252,In-Network,"Sacramento, CA",433.84
+PRV-000233,Dr. Linda Gutierrez MD,Ophthalmology,1176799196,Out-of-Network,"San Diego, CA",172.47
+PRV-000234,Dr. Kiara Torres DO,Family Medicine,1269085407,In-Network,"Norfolk, VA",240.67
+PRV-000235,Dr. Brianna Morgan MD,Family Medicine,1688255012,In-Network,"Norfolk, VA",195.69
+PRV-000236,Dr. Luis Cox MD,Family Medicine,1992061988,In-Network,"Norfolk, VA",200.39
+PRV-000237,Dr. Priya Foster MD,Emergency Medicine,1699145494,In-Network,"Kansas City, MO",889.1
+PRV-000238,Dr. Hassan Cooper MD,Family Medicine,1324371087,In-Network,"New York, NY",112.72
+PRV-000239,Dr. John Ruiz MD,Pulmonology,1472022811,In-Network,"St. Louis, MO",290.31
+PRV-000240,Dr. Sofia Green MD,Endocrinology,1924252660,In-Network,"San Francisco, CA",232.2
+PRV-000241,Dr. Michael Green MD,Cardiology,1131556899,In-Network,"Los Angeles, CA",372.31
+PRV-000242,Dr. Robert Ward MD,Family Medicine,1929116851,In-Network,"Savannah, GA",148.98
+PRV-000243,Dr. Richard Ross MD,Physical Therapy,1552681586,Out-of-Network,"St. Louis, MO",188.86
+PRV-000244,Dr. Tanisha Cook MD,Pulmonology,1258480413,In-Network,"Kansas City, MO",234.31
+PRV-000245,Dr. Priya Gray MD,Family Medicine,1576267306,In-Network,"Los Angeles, CA",177.54
+PRV-000246,Dr. Keisha Ross MD,Internal Medicine,1048578655,In-Network,"Atlanta, GA",154.77
+PRV-000247,Dr. John Roberts MD,Endocrinology,1820772671,In-Network,"New York, NY",335.41
+PRV-000248,Dr. David Gonzalez MD,Nephrology,1853514394,In-Network,"Kansas City, MO",387.48
+PRV-000249,Dr. Dante Rogers MD,Ophthalmology,1043223380,In-Network,"New York, NY",190.86
+PRV-000250,Dr. Denise Martin MD,Internal Medicine,1553520069,In-Network,"Atlanta, GA",185.85
+PRV-000251,Dr. Brianna Patel DO,Internal Medicine,1637506993,In-Network,"Norfolk, VA",173.85
+PRV-000252,Dr. Karen Stewart DO,Cardiology,1395521185,In-Network,"Kansas City, MO",428.12
+PRV-000253,Dr. Luis Ruiz MD,Cardiology,1640926818,In-Network,"Atlanta, GA",312.61
+PRV-000254,Dr. Xavier Robinson MD,Pulmonology,1626553348,In-Network,"Columbus, OH",419.56
+PRV-000255,Dr. Robert Jackson DO,Pulmonology,1260056579,In-Network,"Sacramento, CA",419.14
+PRV-000256,Dr. Marcus Turner MD,Internal Medicine,1741419015,In-Network,"Norfolk, VA",118.31
+PRV-000257,Dr. Ana Sanders MD,Family Medicine,1148264937,In-Network,"San Francisco, CA",174.29
+PRV-000258,Dr. Robert Green DO,Nephrology,1493559955,Out-of-Network,"New York, NY",350.47
+PRV-000259,Dr. Luis Mendoza MD,Physical Therapy,1744439496,In-Network,"Los Angeles, CA",195.27
+PRV-000260,Dr. Karen Lewis DO,Family Medicine,1319561201,Out-of-Network,"San Francisco, CA",147.42
+PRV-000261,Dr. Andre Hall MD,Psychiatry,1854059995,In-Network,"Buffalo, NY",296.43
+PRV-000262,Dr. Tanisha Hall DO,Gastroenterology,1863949678,In-Network,"Los Angeles, CA",416.11
+PRV-000263,Dr. Jerome Wood MD,Internal Medicine,1514407444,Out-of-Network,"Atlanta, GA",127.24
+PRV-000264,Dr. Sarah Moore MD,Family Medicine,1795525625,In-Network,"Kansas City, MO",186.9
+PRV-000265,Dr. Hassan Robinson MD,Emergency Medicine,1443778963,In-Network,"Savannah, GA",1413.52
+PRV-000266,Dr. Renee Lee MD,Cardiology,1945588000,In-Network,"San Francisco, CA",263.59
+PRV-000267,Dr. Marcus Torres MD,Radiology,1974889880,In-Network,"San Francisco, CA",454.58
+PRV-000268,Dr. Robert Thompson MD,Psychiatry,1899371401,In-Network,"New York, NY",354.85
+PRV-000269,Dr. Monica White DO,Family Medicine,1936614991,Out-of-Network,"Richmond, VA",163.88
+PRV-000270,Dr. Michael Nelson MD,Physical Therapy,1688603957,In-Network,"Kansas City, MO",169.56
+PRV-000271,Dr. Denise Wright MD,Nephrology,1120953538,Out-of-Network,"San Francisco, CA",454.45
+PRV-000272,Dr. James Patel MD,Cardiology,1316779880,In-Network,"Albany, NY",430.96
+PRV-000273,Dr. Tanisha Diaz MD,Emergency Medicine,1093133974,In-Network,"St. Louis, MO",1764.64
+PRV-000274,Dr. Jessica Smith MD,Endocrinology,1252889019,Out-of-Network,"Atlanta, GA",316.32
+PRV-000275,Dr. Xavier Johnson MD,Endocrinology,1386066116,In-Network,"Savannah, GA",342.78
+PRV-000276,Dr. Tanisha Mendoza MD,Orthopedics,1961126026,In-Network,"Atlanta, GA",331.88
+PRV-000277,Dr. Charles Mitchell MD,Radiology,1235287540,In-Network,"St. Louis, MO",369.7
+PRV-000278,Dr. Keisha Turner MD,Oncology,1980108198,In-Network,"San Francisco, CA",826.78
+PRV-000279,Dr. Jessica Mendoza MD,Pulmonology,1937521629,In-Network,"Sacramento, CA",268.97
+PRV-000280,Dr. Xavier Anderson MD,Psychiatry,1588033900,In-Network,"Sacramento, CA",266.66
+PRV-000281,Dr. Kiara Cruz MD,Physical Therapy,1220548167,In-Network,"Atlanta, GA",118.73
+PRV-000282,Dr. Patricia Collins MD,Gastroenterology,1446058739,Out-of-Network,"San Francisco, CA",385.33
+PRV-000283,Dr. Luis Williams MD,Endocrinology,1876659977,In-Network,"Atlanta, GA",399.34
+PRV-000284,Dr. Carlos Rodriguez MD,Internal Medicine,1064698991,In-Network,"Atlanta, GA",178.42
+PRV-000285,Dr. Malik White MD,Physical Therapy,1822301213,Out-of-Network,"Atlanta, GA",102.0
+PRV-000286,Dr. Robert Edwards DO,Orthopedics,1973633989,Out-of-Network,"Albany, NY",352.59
+PRV-000287,Dr. David Wood DO,Cardiology,1127381397,Out-of-Network,"Atlanta, GA",475.87
+PRV-000288,Dr. Joseph Smith MD,Family Medicine,1320364823,In-Network,"Sacramento, CA",210.04
+PRV-000289,Dr. Joseph Young MD,Pulmonology,1166560311,In-Network,"Albany, NY",312.4
+PRV-000290,Dr. Wei Turner MD,Family Medicine,1948926442,In-Network,"Norfolk, VA",124.24
+PRV-000291,Dr. Jerome Kim MD,Radiology,1936530957,In-Network,"Savannah, GA",358.02
+PRV-000292,Dr. Susan Long DO,Internal Medicine,1060606325,In-Network,"St. Louis, MO",150.3
+PRV-000293,Dr. Xavier Green MD,Internal Medicine,1829506584,In-Network,"Columbus, OH",251.58
+PRV-000294,Dr. Wei Gutierrez MD,Orthopedics,1322660441,In-Network,"Los Angeles, CA",281.84
+PRV-000295,Dr. Barbara Watson MD,Family Medicine,1596840109,In-Network,"New York, NY",211.06
+PRV-000296,Dr. Kiara Green MD,Pulmonology,1438364955,Out-of-Network,"Columbus, OH",391.26
+PRV-000297,Dr. Joseph Hill DO,Internal Medicine,1154996504,In-Network,"Los Angeles, CA",185.82
+PRV-000298,Dr. Renee Ortiz MD,General Surgery,1260767346,In-Network,"Richmond, VA",754.08
+PRV-000299,Dr. Keisha Lopez MD,Family Medicine,1890568217,In-Network,"Los Angeles, CA",171.25
+PRV-000300,Dr. John Harris DO,Family Medicine,1630913181,In-Network,"Savannah, GA",192.61
+PRV-000301,Dr. Aisha Hill DO,Gastroenterology,1016464447,In-Network,"New York, NY",518.88
+PRV-000302,Dr. Miguel Morris DO,Family Medicine,1746923032,In-Network,"Atlanta, GA",212.69
+PRV-000303,Dr. Lucia Torres MD,Emergency Medicine,1573002461,Out-of-Network,"Atlanta, GA",1436.25
+PRV-000304,Dr. Denise Gonzalez DO,Orthopedics,1775685667,In-Network,"Los Angeles, CA",508.14
+PRV-000305,Dr. Malik Garcia MD,Pulmonology,1237591250,Out-of-Network,"Kansas City, MO",310.09
+PRV-000306,Dr. Luis Turner MD,Gastroenterology,1210659326,In-Network,"Atlanta, GA",428.97
+PRV-000307,Dr. Priya Mendoza MD,Cardiology,1819652226,Out-of-Network,"Los Angeles, CA",367.8
+PRV-000308,Dr. William Sanders MD,General Surgery,1181747678,In-Network,"Columbus, OH",547.94
+PRV-000309,Dr. Priya Davis MD,Internal Medicine,1900942933,In-Network,"Sacramento, CA",247.57
+PRV-000310,Dr. Malik Moore DO,General Surgery,1248499712,In-Network,"Norfolk, VA",666.19
+PRV-000311,Dr. Patricia Richardson MD,Internal Medicine,1661982621,In-Network,"Atlanta, GA",183.22
+PRV-000312,Dr. Malik Johnson MD,Physical Therapy,1775448533,In-Network,"New York, NY",165.06
+PRV-000313,Dr. Mei Parker DO,Family Medicine,1976861712,In-Network,"Columbus, OH",221.94
+PRV-000314,Dr. Brianna Ortiz MD,Family Medicine,1380578233,In-Network,"Richmond, VA",142.12
+PRV-000315,Dr. Xavier Young DO,Family Medicine,1242512383,In-Network,"Los Angeles, CA",165.14
+PRV-000316,Dr. Priya Ross MD,Family Medicine,1435164258,In-Network,"Kansas City, MO",246.84
+PRV-000317,Dr. William Hernandez MD,Cardiology,1465906941,In-Network,"New York, NY",226.72
+PRV-000318,Dr. Kiara Garcia MD,Orthopedics,1967734470,Out-of-Network,"Los Angeles, CA",535.99
+PRV-000319,Dr. John Mendoza DO,Radiology,1965628533,In-Network,"Richmond, VA",215.15
+PRV-000320,Dr. Mary Clark MD,Nephrology,1807727084,In-Network,"New York, NY",454.27
+PRV-000321,Dr. Xavier Walker MD,General Surgery,1912081856,Out-of-Network,"Kansas City, MO",465.29
+PRV-000322,Dr. David Ruiz MD,Cardiology,1537722224,In-Network,"Richmond, VA",441.62
+PRV-000323,Dr. John Baker MD,Gastroenterology,1659132774,In-Network,"Los Angeles, CA",318.13
+PRV-000324,Dr. Sarah Edwards MD,Oncology,1382049366,In-Network,"Los Angeles, CA",377.86
+PRV-000325,Dr. Robert Hernandez MD,Emergency Medicine,1317161302,In-Network,"Los Angeles, CA",1472.75
+PRV-000326,Dr. Sofia Brooks MD,Psychiatry,1418353415,In-Network,"Albany, NY",218.09
+PRV-000327,Dr. Keisha Ross MD,Family Medicine,1142278314,In-Network,"Atlanta, GA",151.5
+PRV-000328,Dr. Michael Brown MD,Internal Medicine,1595088987,In-Network,"San Diego, CA",191.6
+PRV-000329,Dr. Charles Evans MD,Internal Medicine,1090945411,In-Network,"New York, NY",172.71
+PRV-000330,Dr. Kiara Perez MD,Gastroenterology,1182001119,Out-of-Network,"New York, NY",321.46
+PRV-000331,Dr. Latoya Scott MD,Internal Medicine,1519939412,In-Network,"Los Angeles, CA",124.9
+PRV-000332,Dr. Monica Kim MD,Psychiatry,1491625191,Out-of-Network,"Los Angeles, CA",350.69
+PRV-000333,Dr. Brianna Carter DO,Internal Medicine,1353842723,Out-of-Network,"Los Angeles, CA",164.83
+PRV-000334,Dr. Dante Moore MD,Endocrinology,1647693166,Out-of-Network,"San Diego, CA",360.06
+PRV-000335,Dr. Marcus Nguyen MD,Oncology,1679573843,In-Network,"Atlanta, GA",815.42
+PRV-000336,Dr. Tanisha Campbell MD,Pulmonology,1605429879,In-Network,"New York, NY",311.53
+PRV-000337,Dr. Mary Sanders MD,Family Medicine,1760603328,In-Network,"Columbus, OH",215.58
+PRV-000338,Dr. Malik Gray MD,Family Medicine,1680039397,Out-of-Network,"St. Louis, MO",118.15
+PRV-000339,Dr. Robert Martinez MD,Family Medicine,1642026586,In-Network,"Savannah, GA",167.53
+PRV-000340,Dr. Carlos Turner MD,Pulmonology,1849030118,In-Network,"San Diego, CA",458.51
+PRV-000341,Dr. Jennifer Wilson MD,Ophthalmology,1706094391,In-Network,"Buffalo, NY",283.92
+PRV-000342,Dr. Priya Gray MD,Orthopedics,1808186980,In-Network,"Atlanta, GA",410.35
+PRV-000343,Dr. Joseph Rogers MD,Cardiology,1599140867,In-Network,"St. Louis, MO",252.4
+PRV-000344,Dr. Lucia Gray MD,Emergency Medicine,1537371044,In-Network,"New York, NY",1262.42
+PRV-000345,Dr. Jennifer Anderson DO,Internal Medicine,1783993370,In-Network,"Columbus, OH",159.37
+PRV-000346,Dr. Andre Hall MD,Internal Medicine,1470477095,In-Network,"Los Angeles, CA",146.22
+PRV-000347,Dr. Sofia Anderson MD,Gastroenterology,1368377143,In-Network,"San Diego, CA",259.08
+PRV-000348,Dr. Jessica Gutierrez MD,Orthopedics,1171944408,In-Network,"Buffalo, NY",539.07
+PRV-000349,Dr. Hassan White MD,Cardiology,1705778992,In-Network,"San Diego, CA",453.75
+PRV-000350,Dr. Alyssa Diaz MD,Endocrinology,1756704108,In-Network,"Atlanta, GA",245.73
+PRV-000351,Dr. Xavier Wilson MD,Family Medicine,1576480186,In-Network,"Savannah, GA",219.54
+PRV-000352,Dr. Monica Ortiz DO,Family Medicine,1336515102,In-Network,"Los Angeles, CA",145.1
+PRV-000353,Dr. Denise Richardson MD,Emergency Medicine,1723260532,In-Network,"New York, NY",1215.76
+PRV-000354,Dr. David Green MD,Gastroenterology,1327899285,In-Network,"Los Angeles, CA",271.7
+PRV-000355,Dr. Dante Moore MD,Internal Medicine,1454234434,In-Network,"Los Angeles, CA",173.19
+PRV-000356,Dr. Barbara Bailey MD,Family Medicine,1310133983,In-Network,"New York, NY",198.51
+PRV-000357,Dr. Dwayne Johnson MD,Internal Medicine,1209517616,In-Network,"Los Angeles, CA",123.46
+PRV-000358,Dr. Mei Morales MD,General Surgery,1901826955,In-Network,"Columbus, OH",549.83
+PRV-000359,Dr. Joseph Nguyen MD,Endocrinology,1241423782,In-Network,"Atlanta, GA",396.56
+PRV-000360,Dr. Lucia Murphy MD,Nephrology,1121559383,In-Network,"Atlanta, GA",424.16
+PRV-000361,Dr. Jamal Long MD,Emergency Medicine,1771999153,In-Network,"Savannah, GA",1910.17
+PRV-000362,Dr. Priya Long MD,Endocrinology,1939319914,In-Network,"Atlanta, GA",381.47
+PRV-000363,Dr. Jerome Thomas MD,Ophthalmology,1254418892,In-Network,"San Diego, CA",330.06
+PRV-000364,Dr. Brianna Watson MD,Family Medicine,1661587312,In-Network,"Albany, NY",228.62
+PRV-000365,Dr. Dwayne Morgan MD,Internal Medicine,1578498324,In-Network,"Atlanta, GA",124.31
+PRV-000366,Dr. Trevon Gray DO,Family Medicine,1145587477,In-Network,"Columbus, OH",188.4
+PRV-000367,Dr. Priya Taylor MD,Ophthalmology,1142475723,Out-of-Network,"St. Louis, MO",366.44
+PRV-000368,Dr. Mei Gomez MD,Family Medicine,1620005941,Out-of-Network,"Albany, NY",214.73
+PRV-000369,Dr. Lucia Lopez MD,Orthopedics,1805094179,In-Network,"New York, NY",261.11
+PRV-000370,Dr. Marcus Howard MD,Family Medicine,1831221434,In-Network,"Norfolk, VA",241.06
+PRV-000371,Dr. Carlos Rivera DO,General Surgery,1854352670,Out-of-Network,"Atlanta, GA",610.25
+PRV-000372,Dr. Sarah Adams DO,Nephrology,1362661837,In-Network,"Atlanta, GA",276.11
+PRV-000373,Dr. Mei Ross MD,Nephrology,1106917560,Out-of-Network,"Atlanta, GA",436.94
+PRV-000374,Dr. William Cruz MD,Emergency Medicine,1459346003,In-Network,"Kansas City, MO",1843.79
+PRV-000375,Dr. William Scott MD,Family Medicine,1387014547,In-Network,"Buffalo, NY",199.17
+PRV-000376,Dr. Tanisha Watson MD,Family Medicine,1751019450,Out-of-Network,"Los Angeles, CA",131.59
+PRV-000377,Dr. Susan Morris MD,Psychiatry,1637458510,In-Network,"San Diego, CA",204.27
+PRV-000378,Dr. Linda Diaz MD,Family Medicine,1512926731,In-Network,"Buffalo, NY",205.54
+PRV-000379,Dr. Marcus Mitchell DO,Internal Medicine,1147241457,In-Network,"Los Angeles, CA",130.71
+PRV-000380,Dr. Mei Jackson MD,Cardiology,1604829337,Out-of-Network,"St. Louis, MO",408.77
+PRV-000381,Dr. Hassan Myers MD,Internal Medicine,1442070132,In-Network,"New York, NY",222.78
+PRV-000382,Dr. David Long MD,Emergency Medicine,1783841357,In-Network,"San Diego, CA",1808.32
+PRV-000383,Dr. Sarah Chavez MD,Cardiology,1594205108,In-Network,"Columbus, OH",264.27
+PRV-000384,Dr. Mary James DO,Emergency Medicine,1220595661,In-Network,"Albany, NY",1856.58
+PRV-000385,Dr. Patricia Walker MD,Nephrology,1121057584,In-Network,"San Francisco, CA",299.46
+PRV-000386,Dr. James Campbell DO,Family Medicine,1141715543,In-Network,"New York, NY",232.48
+PRV-000387,Dr. Barbara Ross MD,Cardiology,1827175323,In-Network,"Kansas City, MO",381.35
+PRV-000388,Dr. Patricia Gomez MD,Internal Medicine,1674922644,In-Network,"New York, NY",147.54
+PRV-000389,Dr. Hassan Morgan MD,Gastroenterology,1163939376,In-Network,"St. Louis, MO",371.72
+PRV-000390,Dr. Elizabeth Morgan MD,Family Medicine,1629682105,In-Network,"Los Angeles, CA",136.85
+PRV-000391,Dr. Carlos Parker MD,Orthopedics,1908888221,In-Network,"Kansas City, MO",258.23
+PRV-000392,Dr. Brianna Cox MD,Family Medicine,1715197502,Out-of-Network,"Savannah, GA",124.68
+PRV-000393,Dr. Carlos Johnson MD,Gastroenterology,1372271797,In-Network,"St. Louis, MO",467.99
+PRV-000394,Dr. David Myers MD,Nephrology,1288583671,In-Network,"St. Louis, MO",263.58
+PRV-000395,Dr. Latoya Wright MD,Gastroenterology,1282340033,Out-of-Network,"Atlanta, GA",350.53
+PRV-000396,Dr. Keisha Davis MD,Gastroenterology,1608689346,In-Network,"New York, NY",388.39
+PRV-000397,Dr. Mei Castillo MD,Family Medicine,1795406424,In-Network,"Atlanta, GA",233.25
+PRV-000398,Dr. Andre Campbell MD,Pulmonology,1161152186,Out-of-Network,"Atlanta, GA",276.03
+PRV-000399,Dr. Sofia Patel MD,Family Medicine,1241071485,In-Network,"Columbus, OH",220.53
+PRV-000400,Dr. John Kelly MD,Cardiology,1539062353,In-Network,"San Diego, CA",302.12
+PRV-000401,Dr. Robert Phillips MD,Orthopedics,1499391065,In-Network,"Atlanta, GA",395.83
+PRV-000402,Dr. Denise Johnson MD,Radiology,1313097844,In-Network,"St. Louis, MO",225.55
+PRV-000403,Dr. Alyssa Murphy DO,Emergency Medicine,1833101205,In-Network,"Los Angeles, CA",1341.04
+PRV-000404,Dr. James Evans MD,Family Medicine,1581479730,In-Network,"Richmond, VA",142.7
+PRV-000405,Dr. James Ross MD,Cardiology,1911613232,Out-of-Network,"Kansas City, MO",497.89
+PRV-000406,Dr. Malik Morales DO,Gastroenterology,1152872361,In-Network,"Los Angeles, CA",554.68
+PRV-000407,Dr. Kiara Evans MD,Gastroenterology,1399960213,Out-of-Network,"Atlanta, GA",527.65
+PRV-000408,Dr. Hassan Gomez MD,Endocrinology,1609692870,In-Network,"St. Louis, MO",323.37
+PRV-000409,Dr. Marcus Gomez MD,Internal Medicine,1789579134,In-Network,"New York, NY",158.81
+PRV-000410,Dr. David Jimenez MD,Cardiology,1117008688,In-Network,"San Diego, CA",495.74
+PRV-000411,Dr. Jamal Rivera DO,Internal Medicine,1222947698,In-Network,"Atlanta, GA",175.87
+PRV-000412,Dr. Mei Hill DO,Endocrinology,1748267035,Out-of-Network,"San Francisco, CA",218.79
+PRV-000413,Dr. Sofia Young DO,Emergency Medicine,1425464250,Out-of-Network,"Atlanta, GA",1000.19
+PRV-000414,Dr. Mary Phillips DO,Nephrology,1596950800,In-Network,"Buffalo, NY",493.4
+PRV-000415,Dr. David Thomas MD,Gastroenterology,1891605503,In-Network,"Savannah, GA",498.23
+PRV-000416,Dr. Mei Watson DO,Psychiatry,1090236646,In-Network,"Savannah, GA",275.74
+PRV-000417,Dr. John Sanchez DO,Emergency Medicine,1476130756,In-Network,"Savannah, GA",863.54
+PRV-000418,Dr. Linda Garcia DO,General Surgery,1054371817,Out-of-Network,"Atlanta, GA",685.44
+PRV-000419,Dr. Mary Carter MD,Family Medicine,1185550328,Out-of-Network,"New York, NY",163.6
+PRV-000420,Dr. Elizabeth Jones MD,Cardiology,1662474187,In-Network,"Richmond, VA",352.45
+PRV-000421,Dr. Patricia Lopez MD,Family Medicine,1147356051,In-Network,"Los Angeles, CA",185.32
+PRV-000422,Dr. Jamal Williams DO,Endocrinology,1839575663,In-Network,"New York, NY",258.79
+PRV-000423,Dr. Xavier Cook MD,Gastroenterology,1290378111,In-Network,"San Francisco, CA",353.37
+PRV-000424,Dr. Lucia Scott MD,Family Medicine,1506467254,In-Network,"Los Angeles, CA",233.46
+PRV-000425,Dr. Michael Young MD,Nephrology,1286181187,Out-of-Network,"St. Louis, MO",488.74
+PRV-000426,Dr. Joseph Kelly DO,Nephrology,1856191734,In-Network,"St. Louis, MO",430.17
+PRV-000427,Dr. Jessica Ramos MD,Cardiology,1792534314,Out-of-Network,"Norfolk, VA",274.03
+PRV-000428,Dr. Xavier Reed MD,Orthopedics,1202114356,In-Network,"Richmond, VA",452.37
+PRV-000429,Dr. Barbara Morales MD,General Surgery,1060309911,Out-of-Network,"St. Louis, MO",570.2
+PRV-000430,Dr. Brianna Sanchez DO,Family Medicine,1365887237,In-Network,"Atlanta, GA",108.6
+PRV-000431,Dr. Mary Jackson MD,Gastroenterology,1984861930,Out-of-Network,"Richmond, VA",346.93
+PRV-000432,Dr. John Mitchell MD,Internal Medicine,1710966933,In-Network,"Atlanta, GA",169.69
+PRV-000433,Dr. William Sanders DO,Cardiology,1850234433,In-Network,"Atlanta, GA",263.3
+PRV-000434,Dr. Renee Ruiz DO,Orthopedics,1658965006,In-Network,"San Francisco, CA",454.4
+PRV-000435,Dr. Karen Sanders MD,Psychiatry,1136739271,In-Network,"Savannah, GA",223.03
+PRV-000436,Dr. Lucia Reed MD,Family Medicine,1646809909,In-Network,"Atlanta, GA",188.41
+PRV-000437,Dr. Michael Murphy MD,Family Medicine,1800306310,In-Network,"St. Louis, MO",197.73
+PRV-000438,Dr. Jennifer Price MD,Internal Medicine,1783064819,In-Network,"Los Angeles, CA",209.97
+PRV-000439,Dr. John Hall MD,Radiology,1116001265,In-Network,"San Diego, CA",268.13
+PRV-000440,Dr. William Evans MD,Gastroenterology,1406639535,In-Network,"Atlanta, GA",377.19
+PRV-000441,Dr. Xavier Wood MD,Cardiology,1242217614,Out-of-Network,"Los Angeles, CA",451.15
+PRV-000442,Dr. Marcus King DO,Family Medicine,1079672074,Out-of-Network,"Atlanta, GA",149.64
+PRV-000443,Dr. Jennifer Baker MD,Cardiology,1658896006,In-Network,"Richmond, VA",245.6
+PRV-000444,Dr. Dante Parker MD,Physical Therapy,1108724746,In-Network,"Buffalo, NY",180.36
+PRV-000445,Dr. Luis Cooper MD,Cardiology,1302283096,In-Network,"Columbus, OH",383.58
+PRV-000446,Dr. Monica Martin MD,Family Medicine,1004096941,In-Network,"Atlanta, GA",185.18
+PRV-000447,Dr. Richard Gonzalez MD,Endocrinology,1183429671,In-Network,"Los Angeles, CA",347.25
+PRV-000448,Dr. Tanisha Stewart MD,Orthopedics,1709786356,In-Network,"Columbus, OH",273.35
+PRV-000449,Dr. Robert Mitchell MD,Family Medicine,1047907058,In-Network,"New York, NY",160.26
+PRV-000450,Dr. Patricia Martin MD,Family Medicine,1716688804,In-Network,"San Francisco, CA",145.96
+PRV-000451,Dr. Miguel Ramos MD,Internal Medicine,1065480798,In-Network,"New York, NY",176.98
+PRV-000452,Dr. Andre Kelly DO,General Surgery,1511382735,In-Network,"St. Louis, MO",567.34
+PRV-000453,Dr. Xavier Gutierrez DO,Family Medicine,1727497537,Out-of-Network,"Los Angeles, CA",113.34
+PRV-000454,Dr. William Ramirez DO,Ophthalmology,1135491190,Out-of-Network,"Atlanta, GA",253.95
+PRV-000455,Dr. Hassan Jackson DO,Internal Medicine,1276903372,In-Network,"Atlanta, GA",145.49
+PRV-000456,Dr. Renee Gomez MD,Family Medicine,1919793210,In-Network,"Albany, NY",120.64
+PRV-000457,Dr. Brianna Ramos MD,Family Medicine,1450535448,Out-of-Network,"San Diego, CA",218.22
+PRV-000458,Dr. Michael Wilson MD,Internal Medicine,1108437656,In-Network,"Atlanta, GA",202.03
+PRV-000459,Dr. Thomas Roberts MD,Psychiatry,1614205272,Out-of-Network,"Kansas City, MO",387.43
+PRV-000460,Dr. Dante Mendoza MD,Emergency Medicine,1041642429,In-Network,"Atlanta, GA",995.36
+PRV-000461,Dr. Andre Wright DO,Cardiology,1021724902,In-Network,"Kansas City, MO",238.2
+PRV-000462,Dr. Carlos Mendoza MD,Cardiology,1932974300,In-Network,"St. Louis, MO",466.74
+PRV-000463,Dr. Marcus Wright MD,Family Medicine,1649591392,In-Network,"Los Angeles, CA",216.48
+PRV-000464,Dr. Ana Morales MD,Orthopedics,1931137066,In-Network,"Atlanta, GA",490.13
+PRV-000465,Dr. Sofia Cook MD,Cardiology,1838073130,In-Network,"Atlanta, GA",242.9
+PRV-000466,Dr. Richard Davis MD,Radiology,1490108029,In-Network,"Kansas City, MO",253.31
+PRV-000467,Dr. Denise Cook MD,Internal Medicine,1991142702,In-Network,"Los Angeles, CA",170.2
+PRV-000468,Dr. Barbara Stewart MD,Internal Medicine,1375551835,In-Network,"Atlanta, GA",203.72
+PRV-000469,Dr. Jennifer Torres MD,Cardiology,1053312407,In-Network,"Kansas City, MO",463.29
+PRV-000470,Dr. Priya Lewis MD,Family Medicine,1288926290,Out-of-Network,"New York, NY",228.07
+PRV-000471,Dr. Mei Johnson MD,Orthopedics,1142071170,Out-of-Network,"Sacramento, CA",533.94
+PRV-000472,Dr. Karen Alvarez DO,Orthopedics,1690137154,In-Network,"New York, NY",315.23
+PRV-000473,Dr. Susan Reyes MD,Family Medicine,1559030686,Out-of-Network,"Richmond, VA",172.53
+PRV-000474,Dr. Wei Mitchell MD,General Surgery,1637558411,In-Network,"Los Angeles, CA",556.97
+PRV-000475,Dr. Sarah Brooks MD,Emergency Medicine,1297302928,In-Network,"Los Angeles, CA",908.94
+PRV-000476,Dr. Elizabeth Gutierrez MD,Family Medicine,1966031608,Out-of-Network,"Albany, NY",150.18
+PRV-000477,Dr. Marcus Mendoza MD,Internal Medicine,1027332385,In-Network,"Kansas City, MO",175.51
+PRV-000478,Dr. Robert Patel MD,Orthopedics,1760283250,In-Network,"Columbus, OH",366.08
+PRV-000479,Dr. Mei Morgan MD,Ophthalmology,1510816782,In-Network,"St. Louis, MO",308.67
+PRV-000480,Dr. Wei Bailey MD,Physical Therapy,1104800493,In-Network,"Buffalo, NY",204.52
+PRV-000481,Dr. Barbara Mendoza DO,Pulmonology,1702693852,In-Network,"St. Louis, MO",360.94
+PRV-000482,Dr. Aisha Mitchell MD,Internal Medicine,1315734988,In-Network,"Los Angeles, CA",161.1
+PRV-000483,Dr. Alyssa Richardson MD,Pulmonology,1955013965,In-Network,"Atlanta, GA",381.29
+PRV-000484,Dr. Malik Miller DO,Family Medicine,1161897130,In-Network,"Atlanta, GA",182.41
+PRV-000485,Dr. Denise Jackson MD,Internal Medicine,1768443155,In-Network,"Atlanta, GA",200.06
+PRV-000486,Dr. Marcus Brooks MD,Family Medicine,1485388459,In-Network,"Atlanta, GA",246.14
+PRV-000487,Dr. Monica Ross MD,Family Medicine,1138948590,In-Network,"St. Louis, MO",215.15
+PRV-000488,Dr. Robert Smith MD,Emergency Medicine,1214119421,In-Network,"New York, NY",1882.55
+PRV-000489,Dr. Kiara Harris MD,Gastroenterology,1004427929,Out-of-Network,"Norfolk, VA",483.41
+PRV-000490,Dr. David Wilson MD,Emergency Medicine,1632080338,In-Network,"Savannah, GA",1211.9
+PRV-000491,Dr. Denise Sanders MD,Family Medicine,1562767039,In-Network,"Atlanta, GA",240.81
+PRV-000492,Dr. Monica Rivera MD,Cardiology,1177042316,Out-of-Network,"Richmond, VA",322.71
+PRV-000493,Dr. Luis Taylor MD,Oncology,1023529192,In-Network,"Richmond, VA",470.9
+PRV-000494,Dr. Robert Carter DO,Emergency Medicine,1274651533,In-Network,"Atlanta, GA",1542.58
+PRV-000495,Dr. Michael Wood DO,Psychiatry,1051791998,In-Network,"New York, NY",193.22
+PRV-000496,Dr. Andre Hughes MD,Orthopedics,1746456758,In-Network,"San Diego, CA",405.47
+PRV-000497,Dr. Kiara Wright MD,Orthopedics,1752399189,In-Network,"Atlanta, GA",268.9
+PRV-000498,Dr. Linda Torres MD,Internal Medicine,1114099789,In-Network,"Kansas City, MO",222.24
+PRV-000499,Dr. Richard Rivera MD,Pulmonology,1317130941,In-Network,"New York, NY",434.5
+PRV-000500,Dr. Andre Nelson MD,Family Medicine,1013689561,Out-of-Network,"Sacramento, CA",204.5
+PRV-000501,Dr. Elizabeth Lopez MD,Orthopedics,1080582403,Out-of-Network,"Richmond, VA",442.72
+PRV-000502,Dr. Charles King MD,Gastroenterology,1107169001,In-Network,"Atlanta, GA",317.82
+PRV-000503,Dr. Mei Green MD,General Surgery,1124447810,Out-of-Network,"Kansas City, MO",491.61
+PRV-000504,Dr. Wei Chavez MD,Internal Medicine,1383892122,In-Network,"St. Louis, MO",242.02
+PRV-000505,Dr. Keisha Baker MD,Physical Therapy,1430331581,In-Network,"Norfolk, VA",190.37
+PRV-000506,Dr. Andre Turner MD,Endocrinology,1855675121,Out-of-Network,"San Diego, CA",369.86
+PRV-000507,Dr. William Wilson MD,Family Medicine,1634313309,In-Network,"Atlanta, GA",245.43
+PRV-000508,Dr. Lucia Rivera MD,Pulmonology,1926183684,In-Network,"New York, NY",375.06
+PRV-000509,Dr. Monica Anderson DO,Orthopedics,1473185010,Out-of-Network,"Kansas City, MO",277.98
+PRV-000510,Dr. Mei Ortiz MD,Internal Medicine,1619172154,In-Network,"Savannah, GA",220.13
+PRV-000511,Dr. Kiara Gutierrez MD,Gastroenterology,1663829091,Out-of-Network,"Savannah, GA",520.04
+PRV-000512,Dr. Mei Chavez MD,Internal Medicine,1900904843,In-Network,"New York, NY",166.84
+PRV-000513,Dr. William Cook DO,General Surgery,1914689681,In-Network,"Richmond, VA",341.03
+PRV-000514,Dr. Aisha Scott MD,Pulmonology,1239129305,In-Network,"Atlanta, GA",296.57
+PRV-000515,Dr. Jerome Kelly MD,Emergency Medicine,1919755675,In-Network,"Los Angeles, CA",925.14
+PRV-000516,Dr. Mary Wilson MD,Pulmonology,1038474240,Out-of-Network,"Los Angeles, CA",411.21
+PRV-000517,Dr. Brianna Brooks MD,Emergency Medicine,1545823493,In-Network,"Atlanta, GA",1492.54
+PRV-000518,Dr. Patricia Lewis DO,Emergency Medicine,1356452891,In-Network,"New York, NY",1208.12
+PRV-000519,Dr. Sofia Edwards MD,Emergency Medicine,1815313588,In-Network,"New York, NY",1549.74
+PRV-000520,Dr. Charles Peterson MD,Orthopedics,1753869899,In-Network,"Atlanta, GA",431.9
+PRV-000521,Dr. Ana Castillo MD,Internal Medicine,1273041065,In-Network,"Richmond, VA",237.54
+PRV-000522,Dr. Denise Harris MD,Emergency Medicine,1115712585,Out-of-Network,"Atlanta, GA",1264.33
+PRV-000523,Dr. Linda Foster DO,Psychiatry,1491116494,In-Network,"Atlanta, GA",339.28
+PRV-000524,Dr. Kiara Patel MD,Orthopedics,1464726604,In-Network,"Norfolk, VA",390.64
+PRV-000525,Dr. Barbara Ruiz MD,General Surgery,1784362665,In-Network,"San Francisco, CA",733.94
+PRV-000526,Dr. Marcus Cook DO,General Surgery,1449537843,In-Network,"Atlanta, GA",597.86
+PRV-000527,Dr. Aisha Nguyen MD,Ophthalmology,1143206913,In-Network,"Richmond, VA",217.63
+PRV-000528,Dr. Carlos Peterson DO,Internal Medicine,1764369269,Out-of-Network,"New York, NY",191.58
+PRV-000529,Dr. Sofia Nguyen MD,Gastroenterology,1989122121,In-Network,"New York, NY",311.06
+PRV-000530,Dr. Trevon Cooper MD,Orthopedics,1346154387,In-Network,"Columbus, OH",531.25
+PRV-000531,Dr. Wei Price MD,Gastroenterology,1803017927,In-Network,"St. Louis, MO",428.58
+PRV-000532,Dr. James Gutierrez MD,Physical Therapy,1408956386,Out-of-Network,"Sacramento, CA",151.22
+PRV-000533,Dr. William Torres MD,Internal Medicine,1157226287,In-Network,"Buffalo, NY",226.9
+PRV-000534,Dr. Robert Rivera DO,General Surgery,1110037068,In-Network,"Buffalo, NY",661.55
+PRV-000535,Dr. Priya Bailey MD,Emergency Medicine,1548598641,In-Network,"Buffalo, NY",1082.25
+PRV-000536,Dr. Robert Roberts MD,Psychiatry,1846228305,In-Network,"St. Louis, MO",337.49
+PRV-000537,Dr. Thomas Sanchez MD,Ophthalmology,1838511718,In-Network,"Los Angeles, CA",163.68
+PRV-000538,Dr. Sofia Chavez MD,Radiology,1631773948,In-Network,"San Diego, CA",368.42
+PRV-000539,Dr. Charles Edwards MD,Nephrology,1732999366,In-Network,"New York, NY",486.04
+PRV-000540,Dr. Robert Diaz MD,Internal Medicine,1283725108,In-Network,"Columbus, OH",133.22
+PRV-000541,Dr. Sofia Martin MD,Internal Medicine,1997106977,In-Network,"New York, NY",164.59
+PRV-000542,Dr. Wei Hill MD,Cardiology,1614907233,Out-of-Network,"Atlanta, GA",401.3
+PRV-000543,Dr. Barbara Gutierrez MD,Emergency Medicine,1542390322,In-Network,"Atlanta, GA",1407.43
+PRV-000544,Dr. Susan James MD,Internal Medicine,1387403718,In-Network,"Sacramento, CA",167.39
+PRV-000545,Dr. Renee Long DO,Family Medicine,1009452902,In-Network,"Norfolk, VA",174.74
+PRV-000546,Dr. Brianna Young DO,Internal Medicine,1732883943,In-Network,"Los Angeles, CA",210.88
+PRV-000547,Dr. Thomas Cooper MD,Radiology,1026527569,In-Network,"Los Angeles, CA",232.59
+PRV-000548,Dr. Jerome Morales MD,Physical Therapy,1964522532,In-Network,"Kansas City, MO",199.15
+PRV-000549,Dr. Lucia Morgan MD,Orthopedics,1673164268,In-Network,"Los Angeles, CA",267.36
+PRV-000550,Dr. Latoya Wilson MD,Internal Medicine,1889862107,In-Network,"Buffalo, NY",243.95
+PRV-000551,Dr. John Myers MD,Gastroenterology,1025504528,In-Network,"Columbus, OH",448.67
+PRV-000552,Dr. Thomas Bailey MD,Endocrinology,1882207031,In-Network,"Los Angeles, CA",209.68
+PRV-000553,Dr. Latoya Green MD,Family Medicine,1722949013,In-Network,"Savannah, GA",196.42
+PRV-000554,Dr. Ana Howard MD,Internal Medicine,1910802832,In-Network,"Atlanta, GA",124.89
+PRV-000555,Dr. Karen Cox MD,Internal Medicine,1821706952,In-Network,"Richmond, VA",232.35
+PRV-000556,Dr. William Morgan MD,Physical Therapy,1801820909,Out-of-Network,"Los Angeles, CA",101.88
+PRV-000557,Dr. Elizabeth Hill MD,Cardiology,1981581394,In-Network,"St. Louis, MO",500.52
+PRV-000558,Dr. James Peterson DO,Ophthalmology,1151799039,In-Network,"Kansas City, MO",359.18
+PRV-000559,Dr. Jennifer Flores MD,Internal Medicine,1796104919,In-Network,"Atlanta, GA",195.27
+PRV-000560,Dr. Trevon Jackson MD,Physical Therapy,1237069279,In-Network,"Los Angeles, CA",179.39
+PRV-000561,Dr. Xavier Miller DO,Emergency Medicine,1589324397,In-Network,"Savannah, GA",1564.66
+PRV-000562,Dr. Michael Sanchez MD,Pulmonology,1523116712,In-Network,"Sacramento, CA",228.19
+PRV-000563,Dr. Charles Richardson MD,Oncology,1207767506,In-Network,"Los Angeles, CA",473.76
+PRV-000564,Dr. Alyssa Martin MD,Family Medicine,1391371841,In-Network,"San Diego, CA",151.14
+PRV-000565,Dr. Joseph Alvarez MD,General Surgery,1468284652,In-Network,"Norfolk, VA",471.31
+PRV-000566,Dr. Andre Reyes MD,Family Medicine,1831899691,In-Network,"Los Angeles, CA",154.75
+PRV-000567,Dr. Sarah Moore DO,Family Medicine,1210917183,In-Network,"New York, NY",193.12
+PRV-000568,Dr. Mary Cook MD,Family Medicine,1872568129,In-Network,"Richmond, VA",119.02
+PRV-000569,Dr. Renee King MD,Emergency Medicine,1579473892,In-Network,"San Diego, CA",1818.81
+PRV-000570,Dr. Lucia Ramos MD,Pulmonology,1312457968,In-Network,"St. Louis, MO",270.29
+PRV-000571,Dr. James James MD,Internal Medicine,1866015789,In-Network,"San Francisco, CA",169.53
+PRV-000572,Dr. William Thompson MD,Ophthalmology,1607536579,In-Network,"Buffalo, NY",190.06
+PRV-000573,Dr. Dwayne Garcia MD,Orthopedics,1523601769,In-Network,"Columbus, OH",385.95
+PRV-000574,Dr. Kiara Campbell MD,Family Medicine,1985589704,In-Network,"Savannah, GA",201.77
+PRV-000575,Dr. Sofia Gutierrez MD,Endocrinology,1293663355,Out-of-Network,"Atlanta, GA",277.67
+PRV-000576,Dr. Priya Carter MD,General Surgery,1701514770,In-Network,"Savannah, GA",411.1
+PRV-000577,Dr. Joseph Gutierrez MD,Physical Therapy,1877501292,In-Network,"Atlanta, GA",220.56
+PRV-000578,Dr. Trevon Moore MD,Radiology,1246950710,In-Network,"San Francisco, CA",360.7
+PRV-000579,Dr. Keisha Cox MD,Internal Medicine,1127056105,In-Network,"New York, NY",143.26
+PRV-000580,Dr. Mei Morris MD,Orthopedics,1634356903,In-Network,"San Diego, CA",272.68
+PRV-000581,Dr. Xavier Ramos MD,Family Medicine,1675963880,In-Network,"Kansas City, MO",114.52
+PRV-000582,Dr. Barbara Gutierrez DO,Nephrology,1643555234,In-Network,"Richmond, VA",263.41
+PRV-000583,Dr. Charles Hernandez MD,Ophthalmology,1651252216,Out-of-Network,"New York, NY",311.69
+PRV-000584,Dr. Dante Jackson MD,Ophthalmology,1880954894,In-Network,"Kansas City, MO",332.89
+PRV-000585,Dr. Mei Baker DO,Psychiatry,1640522822,In-Network,"New York, NY",221.25
+PRV-000586,Dr. Richard Gutierrez DO,Emergency Medicine,1541551915,In-Network,"Savannah, GA",957.26
+PRV-000587,Dr. Brianna Kim MD,Orthopedics,1841672107,In-Network,"Kansas City, MO",292.29
+PRV-000588,Dr. Dante Cooper DO,Nephrology,1963113072,In-Network,"St. Louis, MO",400.97
+PRV-000589,Dr. Robert Hughes MD,Physical Therapy,1246408985,In-Network,"Buffalo, NY",151.01
+PRV-000590,Dr. Ana Ross DO,Physical Therapy,1618605023,In-Network,"San Francisco, CA",142.17
+PRV-000591,Dr. Jennifer Torres MD,Internal Medicine,1583826742,In-Network,"Atlanta, GA",150.03
+PRV-000592,Dr. Xavier Gutierrez MD,Endocrinology,1007724556,In-Network,"Atlanta, GA",394.93
+PRV-000593,Dr. Michael Martin MD,Cardiology,1628536453,In-Network,"Atlanta, GA",341.75
+PRV-000594,Dr. Sarah Mendoza MD,Family Medicine,1218714407,In-Network,"Kansas City, MO",159.51
+PRV-000595,Dr. Renee Morris MD,Endocrinology,1329266242,In-Network,"St. Louis, MO",289.29
+PRV-000596,Dr. Wei Thomas MD,Emergency Medicine,1479527597,In-Network,"St. Louis, MO",989.11
+PRV-000597,Dr. Aisha Peterson MD,Psychiatry,1735045478,In-Network,"Norfolk, VA",300.95
+PRV-000598,Dr. Jennifer Jackson MD,Gastroenterology,1644508634,Out-of-Network,"Atlanta, GA",246.67
+PRV-000599,Dr. Robert Castillo MD,Endocrinology,1430189140,In-Network,"Atlanta, GA",216.17
+PRV-000600,Dr. Lucia Thompson MD,Emergency Medicine,1471342650,In-Network,"Sacramento, CA",1485.27
+PRV-000601,Dr. Richard Jones MD,Internal Medicine,1548196577,Out-of-Network,"Kansas City, MO",192.45
+PRV-000602,Dr. Jessica Wood MD,Nephrology,1169055029,In-Network,"Savannah, GA",227.06
+PRV-000603,Dr. Tanisha Ramos MD,Internal Medicine,1016499677,In-Network,"Savannah, GA",214.94
+PRV-000604,Dr. Renee Howard MD,Gastroenterology,1875652436,In-Network,"Atlanta, GA",334.62
+PRV-000605,Dr. Xavier Smith MD,Family Medicine,1437157475,In-Network,"New York, NY",238.2
+PRV-000606,Dr. Linda Rogers DO,Pulmonology,1940719223,In-Network,"New York, NY",301.79
+PRV-000607,Dr. Robert Reed MD,Nephrology,1261212671,In-Network,"St. Louis, MO",340.53
+PRV-000608,Dr. Alyssa Brown MD,Psychiatry,1276831869,In-Network,"Columbus, OH",289.81
+PRV-000609,Dr. Joseph Green MD,Internal Medicine,1379134231,Out-of-Network,"New York, NY",216.02
+PRV-000610,Dr. Jennifer Phillips MD,Nephrology,1881622236,Out-of-Network,"Atlanta, GA",286.26
+PRV-000611,Dr. Susan Kelly MD,Cardiology,1801179178,In-Network,"New York, NY",314.4
+PRV-000612,Dr. Ana Walker DO,Orthopedics,1222026871,In-Network,"Richmond, VA",299.1
+PRV-000613,Dr. Lucia Wilson MD,Family Medicine,1084275390,Out-of-Network,"Kansas City, MO",158.17
+PRV-000614,Dr. Jamal Garcia DO,Orthopedics,1398569245,In-Network,"New York, NY",471.86
+PRV-000615,Dr. Sarah Morales MD,Emergency Medicine,1820620417,Out-of-Network,"San Francisco, CA",1808.76
+PRV-000616,Dr. Patricia Ortiz MD,Physical Therapy,1513592269,In-Network,"Los Angeles, CA",170.66
+PRV-000617,Dr. Lucia Thompson MD,Physical Therapy,1129244346,In-Network,"Atlanta, GA",206.41
+PRV-000618,Dr. Susan Carter MD,Orthopedics,1349434459,In-Network,"San Francisco, CA",241.62
+PRV-000619,Dr. Sarah Stewart DO,Cardiology,1368397022,In-Network,"Kansas City, MO",299.7
+PRV-000620,Dr. Keisha Campbell DO,Cardiology,1300249927,In-Network,"San Francisco, CA",425.81
+PRV-000621,Dr. Michael Castillo MD,Endocrinology,1253193872,Out-of-Network,"New York, NY",368.88
+PRV-000622,Dr. Ana Martin MD,Emergency Medicine,1010460711,In-Network,"Kansas City, MO",1704.04
+PRV-000623,Dr. Kiara Morgan MD,Family Medicine,1843244821,Out-of-Network,"San Francisco, CA",226.99
+PRV-000624,Dr. Michael Ruiz MD,Pulmonology,1231356272,Out-of-Network,"Savannah, GA",222.88
+PRV-000625,Dr. Aisha King MD,General Surgery,1601671267,In-Network,"San Francisco, CA",530.34
+PRV-000626,Dr. Dwayne Gray DO,Emergency Medicine,1213629646,In-Network,"St. Louis, MO",1284.7
+PRV-000627,Dr. Charles Rivera MD,Emergency Medicine,1548085639,In-Network,"New York, NY",1897.72
+PRV-000628,Dr. Charles Reyes MD,Pulmonology,1155529715,Out-of-Network,"Albany, NY",312.89
+PRV-000629,Dr. Brianna Kelly MD,Radiology,1973962272,Out-of-Network,"New York, NY",313.09
+PRV-000630,Dr. Charles Price MD,Internal Medicine,1692181541,In-Network,"Atlanta, GA",162.56
+PRV-000631,Dr. Ana Ramos MD,Cardiology,1483493761,In-Network,"Richmond, VA",494.37
+PRV-000632,Dr. Wei Allen DO,Endocrinology,1752367594,In-Network,"Atlanta, GA",379.4
+PRV-000633,Dr. Andre Peterson MD,Gastroenterology,1827783767,In-Network,"Atlanta, GA",275.1
+PRV-000634,Dr. Elizabeth Hernandez MD,Cardiology,1950767585,In-Network,"St. Louis, MO",299.59
+PRV-000635,Dr. David Taylor MD,Cardiology,1183188932,In-Network,"Savannah, GA",351.63
+PRV-000636,Dr. Andre Reyes DO,Internal Medicine,1580447823,Out-of-Network,"New York, NY",163.79
+PRV-000637,Dr. Jamal Thompson MD,Physical Therapy,1490209766,In-Network,"Sacramento, CA",217.51
+PRV-000638,Dr. Hassan Morgan MD,Orthopedics,1372769123,In-Network,"New York, NY",398.18
+PRV-000639,Dr. Malik King MD,Pulmonology,1011334226,In-Network,"Savannah, GA",293.12
+PRV-000640,Dr. Andre Morgan MD,Internal Medicine,1990084878,Out-of-Network,"St. Louis, MO",166.57
+PRV-000641,Dr. Charles Kim MD,Pulmonology,1007750253,In-Network,"St. Louis, MO",416.78
+PRV-000642,Dr. Jessica Lee MD,Nephrology,1693627337,Out-of-Network,"Atlanta, GA",338.95
+PRV-000643,Dr. Jessica Gutierrez MD,Cardiology,1977056097,In-Network,"Los Angeles, CA",345.6
+PRV-000644,Dr. Jamal Wright MD,Emergency Medicine,1916419348,In-Network,"Buffalo, NY",1540.33
+PRV-000645,Dr. Jerome Wright MD,Internal Medicine,1528276702,In-Network,"Atlanta, GA",183.12
+PRV-000646,Dr. Barbara Wilson MD,Family Medicine,1134259822,In-Network,"Atlanta, GA",183.13
+PRV-000647,Dr. Monica Ramirez MD,Gastroenterology,1334552915,In-Network,"Albany, NY",292.47
+PRV-000648,Dr. Robert Nelson MD,Psychiatry,1805917946,In-Network,"San Francisco, CA",345.08
+PRV-000649,Dr. Andre White MD,Oncology,1903595929,In-Network,"Atlanta, GA",397.41
+PRV-000650,Dr. Sofia Young MD,Family Medicine,1475625690,In-Network,"Los Angeles, CA",244.46
+PRV-000651,Dr. Michael Gutierrez MD,Family Medicine,1223818407,In-Network,"Columbus, OH",211.08
+PRV-000652,Dr. Hassan Sanders MD,Pulmonology,1590106975,In-Network,"Buffalo, NY",297.23
+PRV-000653,Dr. Patricia Bennett MD,Nephrology,1121256011,In-Network,"Savannah, GA",272.44
+PRV-000654,Dr. Alyssa Thomas MD,Family Medicine,1261015184,In-Network,"San Diego, CA",219.32
+PRV-000655,Dr. Dante Martin MD,Internal Medicine,1096078316,In-Network,"Atlanta, GA",186.08
+PRV-000656,Dr. Miguel Watson MD,Family Medicine,1381734198,In-Network,"San Francisco, CA",155.71
+PRV-000657,Dr. Joseph Green DO,Orthopedics,1846711815,In-Network,"Buffalo, NY",276.5
+PRV-000658,Dr. Mary Ruiz MD,Orthopedics,1777817678,Out-of-Network,"Los Angeles, CA",462.36
+PRV-000659,Dr. Charles Cooper MD,Internal Medicine,1203770248,In-Network,"Richmond, VA",180.47
+PRV-000660,Dr. Dante Peterson MD,Emergency Medicine,1570304472,In-Network,"Sacramento, CA",1345.87
+PRV-000661,Dr. James Jimenez MD,Internal Medicine,1406994931,In-Network,"Los Angeles, CA",170.02
+PRV-000662,Dr. Brianna Walker MD,Gastroenterology,1068012695,In-Network,"Richmond, VA",359.68
+PRV-000663,Dr. Monica Foster MD,Orthopedics,1658245879,In-Network,"Sacramento, CA",398.37
+PRV-000664,Dr. Wei Rodriguez MD,Family Medicine,1139344057,In-Network,"San Diego, CA",121.93
+PRV-000665,Dr. Robert Kelly MD,Family Medicine,1417254802,In-Network,"Atlanta, GA",135.23
+PRV-000666,Dr. Keisha Lewis MD,Orthopedics,1076100340,In-Network,"Sacramento, CA",316.32
+PRV-000667,Dr. Jennifer Reyes DO,Internal Medicine,1065176331,In-Network,"Richmond, VA",253.37
+PRV-000668,Dr. Sofia Davis DO,Cardiology,1285417366,Out-of-Network,"St. Louis, MO",460.74
+PRV-000669,Dr. Susan Gutierrez MD,Nephrology,1778647434,Out-of-Network,"Albany, NY",238.74
+PRV-000670,Dr. Xavier Watson DO,Family Medicine,1599602642,In-Network,"Los Angeles, CA",200.13
+PRV-000671,Dr. Dwayne Gray MD,Gastroenterology,1714298538,In-Network,"San Diego, CA",446.17
+PRV-000672,Dr. Trevon Baker MD,Endocrinology,1573271266,In-Network,"Atlanta, GA",334.59
+PRV-000673,Dr. Marcus Mitchell MD,Ophthalmology,1679937154,In-Network,"San Diego, CA",226.24
+PRV-000674,Dr. Susan Carter MD,Endocrinology,1994442682,In-Network,"Albany, NY",337.91
+PRV-000675,Dr. James Castillo MD,Gastroenterology,1305460403,In-Network,"Los Angeles, CA",547.34
+PRV-000676,Dr. Karen Lewis MD,Emergency Medicine,1338126323,Out-of-Network,"Sacramento, CA",1165.99
+PRV-000677,Dr. Renee Rogers MD,Internal Medicine,1994201661,In-Network,"Kansas City, MO",156.48
+PRV-000678,Dr. Thomas Campbell DO,Emergency Medicine,1268281808,In-Network,"Atlanta, GA",1008.6
+PRV-000679,Dr. Susan Sanders MD,Family Medicine,1348635435,In-Network,"St. Louis, MO",164.27
+PRV-000680,Dr. Xavier Gonzalez MD,Psychiatry,1322544802,Out-of-Network,"Atlanta, GA",343.37
+PRV-000681,Dr. Lucia Nelson MD,Internal Medicine,1877399222,In-Network,"St. Louis, MO",231.35
+PRV-000682,Dr. Ana Wood DO,Endocrinology,1997133750,In-Network,"Norfolk, VA",390.14
+PRV-000683,Dr. Robert Green MD,Internal Medicine,1160610323,In-Network,"St. Louis, MO",160.76
+PRV-000684,Dr. Tanisha Edwards MD,Cardiology,1617675194,In-Network,"Buffalo, NY",418.01
+PRV-000685,Dr. David Baker MD,Pulmonology,1613579662,In-Network,"Savannah, GA",316.47
+PRV-000686,Dr. Latoya Jimenez MD,Gastroenterology,1818226618,In-Network,"Sacramento, CA",370.54
+PRV-000687,Dr. Richard Bailey MD,Internal Medicine,1789917232,In-Network,"New York, NY",212.36
+PRV-000688,Dr. Mei Kelly MD,Nephrology,1721283444,In-Network,"Savannah, GA",336.99
+PRV-000689,Dr. Priya Brown MD,Endocrinology,1181736451,In-Network,"Los Angeles, CA",282.82
+PRV-000690,Dr. Elizabeth Cruz MD,Ophthalmology,1878505410,Out-of-Network,"New York, NY",252.54
+PRV-000691,Dr. Jennifer Anderson MD,Family Medicine,1260971128,In-Network,"Buffalo, NY",210.12
+PRV-000692,Dr. James Baker MD,Oncology,1119483835,Out-of-Network,"Richmond, VA",747.82
+PRV-000693,Dr. Susan Clark MD,Family Medicine,1805687707,In-Network,"San Francisco, CA",211.73
+PRV-000694,Dr. Carlos Bennett MD,Family Medicine,1625996789,In-Network,"San Francisco, CA",128.22
+PRV-000695,Dr. Richard Hughes MD,Physical Therapy,1056999852,In-Network,"Sacramento, CA",105.57
+PRV-000696,Dr. Wei James MD,Pulmonology,1115847550,In-Network,"Norfolk, VA",388.3
+PRV-000697,Dr. Robert Rogers DO,Internal Medicine,1106948671,In-Network,"Kansas City, MO",149.83
+PRV-000698,Dr. Richard Cook DO,Physical Therapy,1602033662,In-Network,"San Francisco, CA",109.09
+PRV-000699,Dr. Aisha Morales MD,Physical Therapy,1168583107,In-Network,"Atlanta, GA",164.71
+PRV-000700,Dr. Trevon Scott DO,Internal Medicine,1671939435,In-Network,"Buffalo, NY",160.4
+PRV-000701,Dr. Renee Scott MD,Family Medicine,1366990085,Out-of-Network,"Los Angeles, CA",246.66
+PRV-000702,Dr. Mei Ward DO,Physical Therapy,1737148793,In-Network,"New York, NY",146.16
+PRV-000703,Dr. Dante Nelson MD,Family Medicine,1141489248,In-Network,"Savannah, GA",243.89
+PRV-000704,Dr. David Flores MD,Family Medicine,1964910757,In-Network,"Atlanta, GA",220.11
+PRV-000705,Dr. Elizabeth Wood DO,Nephrology,1984741643,Out-of-Network,"Atlanta, GA",489.24
+PRV-000706,Dr. Barbara Green DO,Internal Medicine,1156253951,In-Network,"Atlanta, GA",222.34
+PRV-000707,Dr. Malik Hill MD,Gastroenterology,1882292061,Out-of-Network,"St. Louis, MO",375.42
+PRV-000708,Dr. Michael Taylor MD,Physical Therapy,1818671750,In-Network,"Norfolk, VA",196.17
+PRV-000709,Dr. Dante Robinson MD,Ophthalmology,1028008008,In-Network,"New York, NY",287.76
+PRV-000710,Dr. Dante Stewart MD,Cardiology,1401535849,In-Network,"Buffalo, NY",368.67
+PRV-000711,Dr. Joseph Jones MD,Family Medicine,1016121432,In-Network,"Los Angeles, CA",131.35
+PRV-000712,Dr. Richard Long MD,Physical Therapy,1190136266,In-Network,"Norfolk, VA",182.59
+PRV-000713,Dr. Marcus Collins DO,Physical Therapy,1459084418,Out-of-Network,"Columbus, OH",159.73
+PRV-000714,Dr. Marcus Gomez MD,Endocrinology,1797218787,In-Network,"Atlanta, GA",291.85
+PRV-000715,Dr. Robert Gutierrez MD,Emergency Medicine,1490593090,In-Network,"Sacramento, CA",1600.44
+PRV-000716,Dr. Tanisha Patel MD,General Surgery,1415965279,Out-of-Network,"Atlanta, GA",560.08
+PRV-000717,Dr. Tanisha Hill MD,Nephrology,1306998453,In-Network,"New York, NY",298.24
+PRV-000718,Dr. Kiara Jackson MD,Pulmonology,1693746209,In-Network,"San Diego, CA",224.73
+PRV-000719,Dr. Carlos Cooper MD,Endocrinology,1444055921,In-Network,"Albany, NY",392.24
+PRV-000720,Dr. Richard Collins MD,Cardiology,1347972640,In-Network,"Atlanta, GA",482.23
+PRV-000721,Dr. Linda Lopez MD,Orthopedics,1482537877,In-Network,"Richmond, VA",457.82
+PRV-000722,Dr. Trevon Ward DO,Orthopedics,1406603082,In-Network,"Atlanta, GA",460.42
+PRV-000723,Dr. Wei Martin MD,Emergency Medicine,1155270986,In-Network,"Atlanta, GA",1202.01
+PRV-000724,Dr. Lucia Edwards MD,Family Medicine,1194020880,In-Network,"Albany, NY",151.68
+PRV-000725,Dr. Thomas Johnson MD,Internal Medicine,1918490625,In-Network,"Atlanta, GA",207.95
+PRV-000726,Dr. Susan Ramos MD,Pulmonology,1487197988,In-Network,"St. Louis, MO",343.24
+PRV-000727,Dr. Renee Scott MD,Endocrinology,1598663298,In-Network,"Atlanta, GA",257.67
+PRV-000728,Dr. Dwayne Jones MD,General Surgery,1034823688,In-Network,"Atlanta, GA",359.79
+PRV-000729,Dr. Patricia Wilson MD,Orthopedics,1191392758,In-Network,"Kansas City, MO",519.64
+PRV-000730,Dr. Xavier Bailey MD,Family Medicine,1488915267,In-Network,"Los Angeles, CA",206.13
+PRV-000731,Dr. Marcus Mitchell DO,Gastroenterology,1880752567,In-Network,"Los Angeles, CA",487.08
+PRV-000732,Dr. David Thomas MD,Internal Medicine,1294654666,In-Network,"San Diego, CA",158.99
+PRV-000733,Dr. Patricia Wilson MD,Cardiology,1675360627,In-Network,"San Diego, CA",284.21
+PRV-000734,Dr. Sofia Torres MD,Nephrology,1910316138,In-Network,"Atlanta, GA",385.73
+PRV-000735,Dr. David Ward MD,Family Medicine,1558029852,Out-of-Network,"Sacramento, CA",157.86
+PRV-000736,Dr. Joseph Price MD,Gastroenterology,1207828574,In-Network,"San Francisco, CA",523.35
+PRV-000737,Dr. Susan Ward DO,Internal Medicine,1444573290,In-Network,"Atlanta, GA",133.01
+PRV-000738,Dr. Hassan Sanchez MD,Internal Medicine,1273178728,In-Network,"Los Angeles, CA",147.03
+PRV-000739,Dr. James Anderson MD,Psychiatry,1366534208,In-Network,"Los Angeles, CA",257.8
+PRV-000740,Dr. Richard Nelson DO,Cardiology,1990290356,Out-of-Network,"New York, NY",463.63
+PRV-000741,Dr. Andre Martin MD,Orthopedics,1957840329,In-Network,"Richmond, VA",435.57
+PRV-000742,Dr. Ana Davis DO,Radiology,1321417903,In-Network,"Richmond, VA",415.5
+PRV-000743,Dr. Xavier Mendoza MD,Emergency Medicine,1983747709,In-Network,"Buffalo, NY",860.22
+PRV-000744,Dr. Mary Baker DO,Radiology,1672710898,Out-of-Network,"Los Angeles, CA",276.2
+PRV-000745,Dr. Linda Long MD,Nephrology,1921076653,In-Network,"Atlanta, GA",269.28
+PRV-000746,Dr. Jessica Mitchell MD,Family Medicine,1324945099,In-Network,"Atlanta, GA",177.84
+PRV-000747,Dr. Lucia Sanchez DO,Family Medicine,1476498805,In-Network,"Los Angeles, CA",218.0
+PRV-000748,Dr. Aisha Morris MD,Pulmonology,1562241242,Out-of-Network,"St. Louis, MO",251.6
+PRV-000749,Dr. Kiara Gray DO,Family Medicine,1220317979,In-Network,"Los Angeles, CA",122.21
+PRV-000750,Dr. James Flores DO,Gastroenterology,1737716816,In-Network,"San Diego, CA",409.54
+PRV-000751,Dr. Michael Gutierrez MD,General Surgery,1800533293,In-Network,"Kansas City, MO",720.13
+PRV-000752,Dr. Marcus Sanchez MD,Family Medicine,1297050178,In-Network,"New York, NY",232.95
+PRV-000753,Dr. William Scott MD,Nephrology,1668882058,In-Network,"St. Louis, MO",293.07
+PRV-000754,Dr. Sarah Jackson DO,Emergency Medicine,1863291475,In-Network,"Atlanta, GA",1433.31
+PRV-000755,Dr. Aisha Cooper MD,Family Medicine,1139665900,In-Network,"Savannah, GA",194.05
+PRV-000756,Dr. Jennifer Diaz MD,Internal Medicine,1756641801,In-Network,"Richmond, VA",172.46
+PRV-000757,Dr. Brianna Rivera MD,Emergency Medicine,1877721640,Out-of-Network,"New York, NY",1595.31
+PRV-000758,Dr. Miguel Ross MD,Family Medicine,1141514106,In-Network,"St. Louis, MO",119.46
+PRV-000759,Dr. Karen Mendoza MD,Internal Medicine,1823016120,In-Network,"St. Louis, MO",129.94
+PRV-000760,Dr. Brianna King DO,Pulmonology,1420989391,In-Network,"Savannah, GA",442.5
+PRV-000761,Dr. Marcus Collins MD,Family Medicine,1070185347,In-Network,"Richmond, VA",228.58
+PRV-000762,Dr. Lucia Hall MD,Pulmonology,1136788265,In-Network,"Los Angeles, CA",256.12
+PRV-000763,Dr. Renee Wood MD,Pulmonology,1324396864,In-Network,"San Diego, CA",238.88
+PRV-000764,Dr. Renee Lee DO,Nephrology,1412119784,In-Network,"San Diego, CA",390.22
+PRV-000765,Dr. Latoya Reed MD,Internal Medicine,1584681287,In-Network,"Atlanta, GA",179.53
+PRV-000766,Dr. Sofia Kelly DO,Orthopedics,1122753236,In-Network,"Atlanta, GA",464.25
+PRV-000767,Dr. Barbara Flores DO,Emergency Medicine,1074740628,In-Network,"San Francisco, CA",1727.78
+PRV-000768,Dr. Marcus Murphy MD,Emergency Medicine,1066016032,In-Network,"Buffalo, NY",1725.45
+PRV-000769,Dr. Hassan Smith MD,Internal Medicine,1709615999,Out-of-Network,"St. Louis, MO",249.63
+PRV-000770,Dr. Richard Clark MD,Internal Medicine,1339944210,In-Network,"Sacramento, CA",201.32
+PRV-000771,Dr. Latoya Alvarez DO,Family Medicine,1369651326,In-Network,"St. Louis, MO",236.63
+PRV-000772,Dr. David Nguyen MD,Ophthalmology,1967522662,In-Network,"New York, NY",266.66
+PRV-000773,Dr. Dwayne Anderson DO,Nephrology,1929516435,In-Network,"Atlanta, GA",445.99
+PRV-000774,Dr. Sofia Carter MD,Internal Medicine,1467281753,In-Network,"San Diego, CA",208.34
+PRV-000775,Dr. Robert Campbell DO,Nephrology,1165643247,In-Network,"New York, NY",269.52
+PRV-000776,Dr. Priya Williams MD,Family Medicine,1950141991,In-Network,"Kansas City, MO",110.12
+PRV-000777,Dr. Priya Turner DO,Pulmonology,1959476868,Out-of-Network,"San Diego, CA",232.86
+PRV-000778,Dr. Trevon Diaz MD,Psychiatry,1483232960,In-Network,"New York, NY",224.07
+PRV-000779,Dr. Monica Sanders MD,Cardiology,1538727202,In-Network,"Savannah, GA",226.14
+PRV-000780,Dr. Robert Reed MD,Family Medicine,1395758262,In-Network,"Richmond, VA",113.17
+PRV-000781,Dr. Luis Ortiz DO,Internal Medicine,1805931508,In-Network,"San Francisco, CA",136.6
+PRV-000782,Dr. Jennifer Young MD,Psychiatry,1796379397,In-Network,"San Francisco, CA",390.24
+PRV-000783,Dr. Alyssa Flores MD,Orthopedics,1970217298,In-Network,"New York, NY",402.99
+PRV-000784,Dr. Andre Kelly MD,Cardiology,1452062605,In-Network,"St. Louis, MO",371.65
+PRV-000785,Dr. Carlos Kim MD,Cardiology,1780579928,In-Network,"Columbus, OH",272.24
+PRV-000786,Dr. Xavier Miller MD,Psychiatry,1313267622,In-Network,"Savannah, GA",317.29
+PRV-000787,Dr. Trevon Martinez DO,General Surgery,1298337874,In-Network,"New York, NY",371.64
+PRV-000788,Dr. Ana Anderson MD,Family Medicine,1977246245,In-Network,"New York, NY",144.35
+PRV-000789,Dr. Thomas Hughes MD,Emergency Medicine,1194142387,In-Network,"Atlanta, GA",1712.47
+PRV-000790,Dr. Elizabeth Kim DO,Psychiatry,1165517620,In-Network,"Kansas City, MO",201.75
+PRV-000791,Dr. Wei Cruz MD,General Surgery,1179619035,In-Network,"St. Louis, MO",501.53
+PRV-000792,Dr. Miguel Anderson MD,Family Medicine,1498232236,In-Network,"Albany, NY",198.1
+PRV-000793,Dr. Jamal Robinson MD,Cardiology,1757640614,In-Network,"Los Angeles, CA",440.7
+PRV-000794,Dr. Charles Edwards MD,Cardiology,1338968079,In-Network,"Savannah, GA",349.2
+PRV-000795,Dr. Hassan Rivera DO,Ophthalmology,1463626557,In-Network,"Buffalo, NY",350.97
+PRV-000796,Dr. Michael Allen MD,Emergency Medicine,1419998159,In-Network,"New York, NY",1131.95
+PRV-000797,Dr. Lucia Harris MD,Pulmonology,1727694333,In-Network,"Buffalo, NY",391.41
+PRV-000798,Dr. John Johnson MD,Orthopedics,1563998215,In-Network,"Atlanta, GA",443.88
+PRV-000799,Dr. Richard Jones MD,Internal Medicine,1098721207,In-Network,"San Diego, CA",157.57
+PRV-000800,Dr. Dante Brooks MD,Internal Medicine,1128824444,Out-of-Network,"New York, NY",147.7
+PRV-000801,Dr. Priya Reed DO,Internal Medicine,1198393790,In-Network,"New York, NY",228.93
+PRV-000802,Dr. John Brooks MD,Physical Therapy,1296764585,In-Network,"Buffalo, NY",156.84
+PRV-000803,Dr. Thomas Lee MD,Psychiatry,1297735164,In-Network,"Buffalo, NY",362.21
+PRV-000804,Dr. Thomas Thompson MD,Psychiatry,1527982241,In-Network,"Los Angeles, CA",196.05
+PRV-000805,Dr. Michael Jackson MD,Ophthalmology,1463055004,In-Network,"Atlanta, GA",294.62
+PRV-000806,Dr. Michael Jones MD,Family Medicine,1613476544,Out-of-Network,"New York, NY",208.3
+PRV-000807,Dr. Priya Brooks MD,Gastroenterology,1040625696,In-Network,"St. Louis, MO",401.78
+PRV-000808,Dr. Xavier Smith MD,Orthopedics,1827844881,In-Network,"Savannah, GA",514.81
+PRV-000809,Dr. John Cooper MD,Pulmonology,1412771985,Out-of-Network,"San Diego, CA",420.85
+PRV-000810,Dr. Dwayne Nelson MD,Oncology,1430156867,In-Network,"St. Louis, MO",629.47
+PRV-000811,Dr. Aisha Hernandez DO,Internal Medicine,1816530277,In-Network,"Columbus, OH",169.76
+PRV-000812,Dr. Robert James MD,Psychiatry,1747197907,In-Network,"New York, NY",191.2
+PRV-000813,Dr. Hassan Cruz MD,Cardiology,1150262600,In-Network,"Atlanta, GA",364.11
+PRV-000814,Dr. Robert Rodriguez MD,Internal Medicine,1690853694,Out-of-Network,"Atlanta, GA",150.92
+PRV-000815,Dr. Mary Jones MD,Family Medicine,1362622584,Out-of-Network,"Sacramento, CA",171.18
+PRV-000816,Dr. Wei Gutierrez MD,Psychiatry,1728080516,In-Network,"Atlanta, GA",370.86
+PRV-000817,Dr. John Jones MD,Radiology,1524946696,In-Network,"Sacramento, CA",263.81
+PRV-000818,Dr. Carlos Wood MD,Orthopedics,1184950962,Out-of-Network,"San Francisco, CA",252.02
+PRV-000819,Dr. Brianna Perez DO,Orthopedics,1068673962,Out-of-Network,"Richmond, VA",267.77
+PRV-000820,Dr. Joseph Rodriguez DO,General Surgery,1457641077,In-Network,"Atlanta, GA",681.24
+PRV-000821,Dr. Linda Mendoza MD,Cardiology,1147456327,In-Network,"Kansas City, MO",339.78
+PRV-000822,Dr. Barbara Nelson MD,Cardiology,1294090757,In-Network,"Columbus, OH",237.13
+PRV-000823,Dr. Jerome Young DO,Internal Medicine,1043700111,In-Network,"San Diego, CA",197.68
+PRV-000824,Dr. William Williams DO,Internal Medicine,1086675240,In-Network,"St. Louis, MO",171.36
+PRV-000825,Dr. Charles Turner MD,Internal Medicine,1850661984,In-Network,"Atlanta, GA",212.29
+PRV-000826,Dr. Kiara Edwards MD,Psychiatry,1187420491,In-Network,"Buffalo, NY",331.72
+PRV-000827,Dr. Jennifer Watson DO,Emergency Medicine,1323410784,In-Network,"Atlanta, GA",1379.88
+PRV-000828,Dr. Kiara Gonzalez MD,Cardiology,1926350419,In-Network,"Atlanta, GA",257.84
+PRV-000829,Dr. Wei Clark MD,Psychiatry,1208004185,In-Network,"Sacramento, CA",362.26
+PRV-000830,Dr. Monica Thompson MD,Internal Medicine,1990712636,Out-of-Network,"Atlanta, GA",250.86
+PRV-000831,Dr. Aisha Ward DO,Internal Medicine,1814334414,In-Network,"New York, NY",180.05
+PRV-000832,Dr. William Brown MD,Endocrinology,1124623936,In-Network,"Atlanta, GA",331.41
+PRV-000833,Dr. Malik Sanchez MD,Internal Medicine,1964620400,In-Network,"Savannah, GA",201.59
+PRV-000834,Dr. Ana Evans DO,Cardiology,1403224831,In-Network,"St. Louis, MO",252.24
+PRV-000835,Dr. Latoya Jackson MD,Physical Therapy,1654374295,In-Network,"Atlanta, GA",104.85
+PRV-000836,Dr. Hassan Rivera DO,Endocrinology,1217122293,In-Network,"Los Angeles, CA",377.39
+PRV-000837,Dr. Linda Reyes MD,Cardiology,1183826012,In-Network,"Atlanta, GA",304.81
+PRV-000838,Dr. Hassan Ward DO,Psychiatry,1620753175,In-Network,"Atlanta, GA",218.69
+PRV-000839,Dr. Monica Ramirez MD,Ophthalmology,1898710123,In-Network,"Kansas City, MO",338.39
+PRV-000840,Dr. Jessica Adams MD,Pulmonology,1238807279,In-Network,"Atlanta, GA",445.6
+PRV-000841,Dr. James Turner DO,Physical Therapy,1043012678,In-Network,"New York, NY",170.29
+PRV-000842,Dr. Tanisha Morris DO,Ophthalmology,1748026005,In-Network,"Albany, NY",249.12
+PRV-000843,Dr. James Ruiz MD,General Surgery,1234082685,In-Network,"San Diego, CA",577.27
+PRV-000844,Dr. Andre Bennett MD,Internal Medicine,1755167444,In-Network,"Los Angeles, CA",128.97
+PRV-000845,Dr. Denise Foster MD,Endocrinology,1754985336,In-Network,"New York, NY",442.06
+PRV-000846,Dr. Hassan Smith DO,Endocrinology,1075912037,In-Network,"St. Louis, MO",313.0
+PRV-000847,Dr. Miguel Wright MD,Cardiology,1657668199,In-Network,"Buffalo, NY",309.42
+PRV-000848,Dr. Aisha Patel DO,Nephrology,1552694084,In-Network,"St. Louis, MO",239.59
+PRV-000849,Dr. Keisha Reyes MD,Oncology,1392529027,Out-of-Network,"Buffalo, NY",415.93
+PRV-000850,Dr. Lucia Clark MD,Cardiology,1359628007,In-Network,"New York, NY",385.5
+PRV-000851,Dr. Alyssa Hughes MD,Family Medicine,1799955602,In-Network,"Atlanta, GA",239.51
+PRV-000852,Dr. Latoya Scott MD,Psychiatry,1400305748,Out-of-Network,"Los Angeles, CA",299.83
+PRV-000853,Dr. Sofia Morgan MD,Cardiology,1572149194,In-Network,"San Francisco, CA",259.34
+PRV-000854,Dr. Carlos Rodriguez MD,Physical Therapy,1949165202,In-Network,"San Diego, CA",182.84
+PRV-000855,Dr. John Wilson MD,Endocrinology,1120285474,Out-of-Network,"Atlanta, GA",268.67
+PRV-000856,Dr. Hassan Williams MD,Orthopedics,1732725044,Out-of-Network,"San Francisco, CA",397.33
+PRV-000857,Dr. Priya Williams MD,Nephrology,1067591527,In-Network,"Atlanta, GA",340.84
+PRV-000858,Dr. Aisha Evans MD,Internal Medicine,1704117476,Out-of-Network,"St. Louis, MO",192.66
+PRV-000859,Dr. Renee Cruz MD,Orthopedics,1609081834,In-Network,"Los Angeles, CA",451.24
+PRV-000860,Dr. Andre Mitchell DO,Internal Medicine,1826512485,In-Network,"St. Louis, MO",154.11
+PRV-000861,Dr. Brianna Lee MD,General Surgery,1306281188,In-Network,"Atlanta, GA",749.08
+PRV-000862,Dr. Elizabeth Lee MD,Family Medicine,1044186034,In-Network,"Atlanta, GA",234.71
+PRV-000863,Dr. Susan Bailey MD,Ophthalmology,1714632395,In-Network,"New York, NY",237.52
+PRV-000864,Dr. William Morgan MD,Family Medicine,1988308458,In-Network,"Los Angeles, CA",183.81
+PRV-000865,Dr. Marcus Martin MD,Internal Medicine,1792952947,In-Network,"Norfolk, VA",256.25
+PRV-000866,Dr. Charles Long DO,Nephrology,1616035302,In-Network,"San Francisco, CA",299.46
+PRV-000867,Dr. Aisha Ruiz MD,Orthopedics,1514302181,In-Network,"St. Louis, MO",520.22
+PRV-000868,Dr. Tanisha Richardson DO,Physical Therapy,1478859534,In-Network,"Atlanta, GA",136.82
+PRV-000869,Dr. Kiara Lewis MD,Cardiology,1823662117,In-Network,"Los Angeles, CA",280.2
+PRV-000870,Dr. Wei Lopez DO,Family Medicine,1423509129,In-Network,"Atlanta, GA",170.64
+PRV-000871,Dr. Wei Campbell MD,Family Medicine,1768760242,In-Network,"Los Angeles, CA",240.1
+PRV-000872,Dr. Dwayne Flores DO,Radiology,1938774341,In-Network,"Los Angeles, CA",277.29
+PRV-000873,Dr. Malik Cruz MD,Emergency Medicine,1865084562,Out-of-Network,"Atlanta, GA",1640.85
+PRV-000874,Dr. Alyssa Kim MD,Gastroenterology,1223106146,In-Network,"Richmond, VA",375.47
+PRV-000875,Dr. Alyssa Long MD,Family Medicine,1007106953,In-Network,"Columbus, OH",155.29
+PRV-000876,Dr. Sofia Reed MD,Endocrinology,1147024288,In-Network,"Richmond, VA",336.07
+PRV-000877,Dr. Karen Howard MD,Family Medicine,1600523461,In-Network,"Kansas City, MO",176.94
+PRV-000878,Dr. Karen Brooks DO,Gastroenterology,1507387223,In-Network,"Savannah, GA",293.52
+PRV-000879,Dr. Carlos Chavez MD,Internal Medicine,1128156091,In-Network,"New York, NY",142.14
+PRV-000880,Dr. Keisha Howard MD,Psychiatry,1468224996,Out-of-Network,"San Francisco, CA",322.14
+PRV-000881,Dr. Linda Mitchell MD,Radiology,1617684683,In-Network,"New York, NY",384.2
+PRV-000882,Dr. Denise Ruiz MD,Internal Medicine,1175351550,In-Network,"Savannah, GA",137.2
+PRV-000883,Dr. Patricia Nguyen MD,Internal Medicine,1686063606,In-Network,"Los Angeles, CA",257.34
+PRV-000884,Dr. Michael Kim MD,Physical Therapy,1583806675,In-Network,"Sacramento, CA",121.09
+PRV-000885,Dr. Sarah Mendoza MD,Cardiology,1389255767,Out-of-Network,"Los Angeles, CA",454.36
+PRV-000886,Dr. Kiara Torres MD,Internal Medicine,1520656360,Out-of-Network,"New York, NY",117.42
+PRV-000887,Dr. Trevon Lewis DO,Endocrinology,1853739357,In-Network,"Richmond, VA",250.9
+PRV-000888,Dr. Jamal Alvarez MD,Physical Therapy,1812078177,Out-of-Network,"New York, NY",164.23
+PRV-000889,Dr. David Williams MD,General Surgery,1334549462,Out-of-Network,"San Diego, CA",386.36
+PRV-000890,Dr. Kiara Ross DO,Orthopedics,1184906027,In-Network,"Atlanta, GA",540.2
+PRV-000891,Dr. Carlos Jackson MD,Gastroenterology,1330098648,In-Network,"Atlanta, GA",315.04
+PRV-000892,Dr. Linda Martinez MD,Internal Medicine,1519964733,In-Network,"Atlanta, GA",218.09
+PRV-000893,Dr. Trevon Ramos MD,Psychiatry,1127691754,In-Network,"Atlanta, GA",367.57
+PRV-000894,Dr. Michael Thomas DO,Physical Therapy,1220547840,In-Network,"Atlanta, GA",99.29
+PRV-000895,Dr. Elizabeth Myers DO,Emergency Medicine,1622503273,In-Network,"Atlanta, GA",871.6
+PRV-000896,Dr. Jessica Cook MD,Cardiology,1106413916,In-Network,"Atlanta, GA",433.82
+PRV-000897,Dr. Charles Perez DO,General Surgery,1576735181,In-Network,"St. Louis, MO",645.23
+PRV-000898,Dr. Sofia Stewart MD,Internal Medicine,1632842568,Out-of-Network,"Albany, NY",252.19
+PRV-000899,Dr. Robert Diaz MD,Family Medicine,1244334478,In-Network,"Buffalo, NY",224.95
+PRV-000900,Dr. Kiara Moore MD,Endocrinology,1387889723,In-Network,"St. Louis, MO",313.41
+PRV-000901,Dr. Linda Roberts MD,Gastroenterology,1644663324,In-Network,"New York, NY",348.36
+PRV-000902,Dr. Malik Nguyen DO,Gastroenterology,1459520342,Out-of-Network,"Buffalo, NY",316.15
+PRV-000903,Dr. Mei Mitchell MD,Family Medicine,1723872620,Out-of-Network,"Atlanta, GA",174.86
+PRV-000904,Dr. Jennifer Thomas MD,Pulmonology,1430167052,In-Network,"Atlanta, GA",387.81
+PRV-000905,Dr. William Rodriguez MD,Orthopedics,1213767380,In-Network,"Columbus, OH",511.08
+PRV-000906,Dr. Latoya Castillo MD,Cardiology,1821216010,Out-of-Network,"New York, NY",259.36
+PRV-000907,Dr. Priya Phillips MD,Gastroenterology,1715838988,In-Network,"New York, NY",493.69
+PRV-000908,Dr. Lucia Collins MD,Emergency Medicine,1269176186,In-Network,"San Diego, CA",1141.2
+PRV-000909,Dr. Ana Miller DO,Pulmonology,1534868281,Out-of-Network,"Savannah, GA",218.03
+PRV-000910,Dr. Elizabeth Hill MD,Orthopedics,1103437444,In-Network,"Columbus, OH",445.84
+PRV-000911,Dr. Denise Sanchez MD,Psychiatry,1534615027,In-Network,"New York, NY",297.17
+PRV-000912,Dr. Jamal Williams DO,Pulmonology,1033928654,In-Network,"Savannah, GA",442.11
+PRV-000913,Dr. Robert Cruz MD,Ophthalmology,1035282942,In-Network,"Richmond, VA",254.17
+PRV-000914,Dr. William Morales MD,Family Medicine,1335501022,In-Network,"New York, NY",231.92
+PRV-000915,Dr. Wei Peterson MD,Gastroenterology,1614406057,In-Network,"San Francisco, CA",457.63
+PRV-000916,Dr. Thomas Murphy MD,Pulmonology,1405657194,In-Network,"New York, NY",225.05
+PRV-000917,Dr. Mary Ramos MD,Emergency Medicine,1898651200,Out-of-Network,"Los Angeles, CA",1186.12
+PRV-000918,Dr. Hassan Baker MD,Cardiology,1459720620,In-Network,"St. Louis, MO",444.38
+PRV-000919,Dr. Jessica Walker MD,Cardiology,1636226035,In-Network,"Los Angeles, CA",414.44
+PRV-000920,Dr. William Williams MD,Internal Medicine,1040133915,Out-of-Network,"Buffalo, NY",132.5
+PRV-000921,Dr. Sarah Williams MD,Pulmonology,1631348637,In-Network,"Kansas City, MO",453.38
+PRV-000922,Dr. Michael Morales MD,Internal Medicine,1724895234,In-Network,"Los Angeles, CA",163.38
+PRV-000923,Dr. William Ward MD,Family Medicine,1468141917,In-Network,"San Francisco, CA",201.6
+PRV-000924,Dr. Jamal Ramirez MD,Family Medicine,1051036409,Out-of-Network,"New York, NY",119.01
+PRV-000925,Dr. Jennifer Alvarez DO,Family Medicine,1101719440,In-Network,"New York, NY",195.63
+PRV-000926,Dr. Latoya Clark MD,Emergency Medicine,1082314758,In-Network,"Savannah, GA",1413.55
+PRV-000927,Dr. Jamal Green MD,Orthopedics,1431967365,In-Network,"Los Angeles, CA",370.47
+PRV-000928,Dr. Mary Watson MD,Family Medicine,1926327600,In-Network,"Sacramento, CA",184.88
+PRV-000929,Dr. Denise Wright DO,Family Medicine,1572003029,In-Network,"San Francisco, CA",223.44
+PRV-000930,Dr. Luis Watson MD,General Surgery,1215444177,Out-of-Network,"Kansas City, MO",739.76
+PRV-000931,Dr. Karen Parker MD,Cardiology,1923617629,In-Network,"Atlanta, GA",421.37
+PRV-000932,Dr. Charles Chavez MD,General Surgery,1737504834,In-Network,"Atlanta, GA",514.17
+PRV-000933,Dr. Jessica Flores MD,Emergency Medicine,1601107527,In-Network,"San Diego, CA",1047.27
+PRV-000934,Dr. Sarah Moore MD,Ophthalmology,1847901530,Out-of-Network,"San Diego, CA",202.81
+PRV-000935,Dr. Luis Morales MD,General Surgery,1059407206,In-Network,"New York, NY",704.29
+PRV-000936,Dr. Malik Campbell MD,Radiology,1951033912,In-Network,"Atlanta, GA",429.33
+PRV-000937,Dr. Linda Kelly MD,Internal Medicine,1129539022,In-Network,"Norfolk, VA",136.37
+PRV-000938,Dr. Thomas Murphy DO,Nephrology,1255633079,Out-of-Network,"Kansas City, MO",476.9
+PRV-000939,Dr. Ana Roberts DO,Emergency Medicine,1798819864,In-Network,"St. Louis, MO",1738.92
+PRV-000940,Dr. Sarah Cruz MD,Family Medicine,1926531746,In-Network,"San Diego, CA",132.93
+PRV-000941,Dr. Marcus Cooper MD,Emergency Medicine,1733084825,In-Network,"San Francisco, CA",1864.61
+PRV-000942,Dr. Andre Alvarez MD,Family Medicine,1330896521,In-Network,"Savannah, GA",128.72
+PRV-000943,Dr. Wei Miller MD,Internal Medicine,1846970463,In-Network,"Columbus, OH",240.46
+PRV-000944,Dr. Carlos Campbell DO,Orthopedics,1735779800,In-Network,"Savannah, GA",433.52
+PRV-000945,Dr. Tanisha Allen MD,Internal Medicine,1883375690,Out-of-Network,"Kansas City, MO",173.19
+PRV-000946,Dr. Jerome Watson MD,Psychiatry,1872144388,Out-of-Network,"Los Angeles, CA",219.49
+PRV-000947,Dr. Lucia Morales MD,Psychiatry,1443413836,In-Network,"San Diego, CA",384.75
+PRV-000948,Dr. Michael Lee MD,Physical Therapy,1543672548,In-Network,"Los Angeles, CA",213.74
+PRV-000949,Dr. Marcus Collins MD,Internal Medicine,1818164904,In-Network,"San Diego, CA",196.84
+PRV-000950,Dr. David Smith MD,Internal Medicine,1674627988,In-Network,"New York, NY",232.97
+PRV-000951,Dr. Sofia Foster DO,Family Medicine,1819439714,In-Network,"New York, NY",143.32
+PRV-000952,Dr. Jerome Morris DO,Internal Medicine,1143355059,In-Network,"New York, NY",255.0
+PRV-000953,Dr. Richard Hernandez MD,Family Medicine,1195302103,Out-of-Network,"Buffalo, NY",220.03
+PRV-000954,Dr. Mary Williams DO,Cardiology,1694825515,Out-of-Network,"Los Angeles, CA",388.27
+PRV-000955,Dr. Thomas Hughes DO,Emergency Medicine,1053454051,In-Network,"Savannah, GA",1339.42
+PRV-000956,Dr. Keisha Perez DO,Endocrinology,1126004164,In-Network,"San Diego, CA",218.44
+PRV-000957,Dr. Mei Murphy MD,Internal Medicine,1766183203,In-Network,"Sacramento, CA",253.35
+PRV-000958,Dr. Ana Murphy MD,Family Medicine,1463114070,In-Network,"Norfolk, VA",145.64
+PRV-000959,Dr. Mei Harris MD,Radiology,1438649410,Out-of-Network,"New York, NY",276.85
+PRV-000960,Dr. Jerome Young MD,Psychiatry,1734726187,Out-of-Network,"Atlanta, GA",237.1
+PRV-000961,Dr. Carlos Gomez MD,Orthopedics,1765938642,In-Network,"Atlanta, GA",504.66
+PRV-000962,Dr. Renee Davis MD,Cardiology,1999723009,In-Network,"San Diego, CA",245.04
+PRV-000963,Dr. Dante Price MD,Family Medicine,1048868001,Out-of-Network,"Richmond, VA",239.54
+PRV-000964,Dr. Wei Mitchell MD,Internal Medicine,1958020313,In-Network,"San Francisco, CA",260.66
+PRV-000965,Dr. Aisha Reyes MD,Emergency Medicine,1340716951,In-Network,"New York, NY",1384.05
+PRV-000966,Dr. David Murphy DO,Gastroenterology,1896364012,In-Network,"San Diego, CA",343.68
+PRV-000967,Dr. Thomas Ward DO,Family Medicine,1995054678,In-Network,"Los Angeles, CA",234.44
+PRV-000968,Dr. Monica Ross DO,Family Medicine,1596651173,Out-of-Network,"Los Angeles, CA",152.52
+PRV-000969,Dr. Elizabeth Miller MD,Radiology,1038506797,In-Network,"New York, NY",216.89
+PRV-000970,Dr. Monica Garcia MD,Pulmonology,1761314243,In-Network,"Atlanta, GA",241.33
+PRV-000971,Dr. Elizabeth Thomas MD,Emergency Medicine,1218757401,In-Network,"San Diego, CA",1617.35
+PRV-000972,Dr. Sarah Reed DO,Radiology,1628866327,In-Network,"Atlanta, GA",335.78
+PRV-000973,Dr. Barbara Turner DO,Family Medicine,1264309534,In-Network,"Columbus, OH",215.48
+PRV-000974,Dr. Mei Mendoza MD,Psychiatry,1401105178,Out-of-Network,"Buffalo, NY",188.08
+PRV-000975,Dr. Jennifer Collins DO,Emergency Medicine,1708174957,Out-of-Network,"Norfolk, VA",1006.08
+PRV-000976,Dr. Aisha Garcia MD,Pulmonology,1486514567,In-Network,"New York, NY",387.66
+PRV-000977,Dr. Xavier Taylor MD,Cardiology,1052272164,In-Network,"Albany, NY",499.73
+PRV-000978,Dr. Renee Cox MD,General Surgery,1428271054,In-Network,"Los Angeles, CA",657.32
+PRV-000979,Dr. Mary Clark MD,Family Medicine,1836973744,In-Network,"Savannah, GA",164.15
+PRV-000980,Dr. Karen Morales DO,Endocrinology,1790155099,Out-of-Network,"New York, NY",234.84
+PRV-000981,Dr. Wei Gonzalez DO,General Surgery,1550457212,In-Network,"Los Angeles, CA",392.72
+PRV-000982,Dr. Dante Diaz MD,Family Medicine,1453694944,In-Network,"San Diego, CA",145.95
+PRV-000983,Dr. Robert Rogers MD,General Surgery,1497706044,In-Network,"New York, NY",520.04
+PRV-000984,Dr. Kiara Watson MD,Orthopedics,1090162210,In-Network,"New York, NY",522.78
+PRV-000985,Dr. Elizabeth Taylor MD,Family Medicine,1322561333,Out-of-Network,"San Diego, CA",175.13
+PRV-000986,Dr. John Garcia MD,General Surgery,1548307963,In-Network,"Sacramento, CA",356.62
+PRV-000987,Dr. Thomas Rivera MD,Endocrinology,1087799393,In-Network,"Atlanta, GA",339.26
+PRV-000988,Dr. Barbara Gomez MD,Psychiatry,1446946709,In-Network,"Atlanta, GA",290.31
+PRV-000989,Dr. Wei Edwards MD,Radiology,1284621456,In-Network,"Los Angeles, CA",321.75
+PRV-000990,Dr. Jennifer Myers DO,Cardiology,1278440227,In-Network,"Richmond, VA",284.79
+PRV-000991,Dr. Linda Johnson MD,Radiology,1512303560,In-Network,"Atlanta, GA",204.53
+PRV-000992,Dr. Luis Morales MD,Pulmonology,1873094351,In-Network,"San Diego, CA",410.95
+PRV-000993,Dr. Tanisha Hill MD,Ophthalmology,1145077501,In-Network,"Los Angeles, CA",303.89
+PRV-000994,Dr. Mary Clark MD,Internal Medicine,1155858123,In-Network,"Atlanta, GA",259.62
+PRV-000995,Dr. Richard Lopez MD,Orthopedics,1497599404,In-Network,"San Diego, CA",479.74
+PRV-000996,Dr. Ana Hughes MD,Internal Medicine,1520815076,In-Network,"San Diego, CA",249.51
+PRV-000997,Dr. Xavier Gomez MD,Pulmonology,1008454944,In-Network,"Kansas City, MO",264.36
+PRV-000998,Dr. Monica Patel MD,Internal Medicine,1784989615,In-Network,"Kansas City, MO",177.23
+PRV-000999,Dr. Alyssa Castillo MD,Emergency Medicine,1728714124,In-Network,"Los Angeles, CA",1364.99
+PRV-001000,Dr. Mary Diaz MD,Physical Therapy,1594053774,In-Network,"Kansas City, MO",105.65
+PRV-001001,Dr. Monica Richardson DO,Internal Medicine,1372335133,In-Network,"Richmond, VA",185.79
+PRV-001002,Dr. Andre Hall MD,Endocrinology,1545069951,In-Network,"San Diego, CA",379.0
+PRV-001003,Dr. Sofia James MD,Family Medicine,1948300215,In-Network,"Richmond, VA",192.49
+PRV-001004,Dr. Mei Wood MD,Family Medicine,1854669136,Out-of-Network,"Albany, NY",224.71
+PRV-001005,Dr. Carlos Myers MD,Pulmonology,1518498938,In-Network,"Columbus, OH",265.95
+PRV-001006,Dr. Malik Murphy MD,Internal Medicine,1224876907,In-Network,"Atlanta, GA",130.48
+PRV-001007,Dr. Mei Lee MD,Emergency Medicine,1922839936,In-Network,"Columbus, OH",1121.67
+PRV-001008,Dr. Brianna Robinson MD,Physical Therapy,1240620860,In-Network,"Atlanta, GA",152.26
+PRV-001009,Dr. Lucia Bailey MD,Pulmonology,1162326542,In-Network,"Columbus, OH",417.73
+PRV-001010,Dr. Patricia Cruz MD,Radiology,1903657871,In-Network,"Kansas City, MO",230.18
+PRV-001011,Dr. Michael Bailey MD,Psychiatry,1113184291,In-Network,"Columbus, OH",324.66
+PRV-001012,Dr. Luis Nguyen MD,Family Medicine,1818153355,In-Network,"Atlanta, GA",158.95
+PRV-001013,Dr. Aisha Moore MD,Pulmonology,1216778095,In-Network,"Albany, NY",384.72
+PRV-001014,Dr. Andre Baker MD,Endocrinology,1183890958,In-Network,"San Diego, CA",257.82
+PRV-001015,Dr. Wei Young MD,Internal Medicine,1809072160,In-Network,"Los Angeles, CA",169.06
+PRV-001016,Dr. Malik Collins DO,Nephrology,1554217523,In-Network,"St. Louis, MO",336.64
+PRV-001017,Dr. James Alvarez DO,Psychiatry,1074712233,In-Network,"Los Angeles, CA",216.07
+PRV-001018,Dr. Patricia Gomez MD,Internal Medicine,1708858764,Out-of-Network,"Los Angeles, CA",139.9
+PRV-001019,Dr. Sofia James DO,Physical Therapy,1317531682,In-Network,"Atlanta, GA",221.19
+PRV-001020,Dr. Luis Myers MD,Endocrinology,1369536155,In-Network,"Richmond, VA",416.13
+PRV-001021,Dr. Carlos Phillips MD,Internal Medicine,1220260494,In-Network,"Savannah, GA",252.19
+PRV-001022,Dr. Dwayne Wood MD,Radiology,1211844701,In-Network,"New York, NY",318.4
+PRV-001023,Dr. Luis Patel DO,Radiology,1558850084,In-Network,"Atlanta, GA",304.79
+PRV-001024,Dr. Kiara Baker MD,Ophthalmology,1171828050,In-Network,"Los Angeles, CA",275.22
+PRV-001025,Dr. Lucia Hill MD,Internal Medicine,1542534457,In-Network,"Richmond, VA",153.92
+PRV-001026,Dr. Dwayne Thomas MD,Internal Medicine,1698965570,In-Network,"Atlanta, GA",208.61
+PRV-001027,Dr. Aisha Walker DO,Oncology,1624481610,In-Network,"San Diego, CA",366.44
+PRV-001028,Dr. Dante Robinson MD,Emergency Medicine,1305517657,In-Network,"Richmond, VA",1415.95
+PRV-001029,Dr. Robert Gutierrez MD,Orthopedics,1112986551,In-Network,"St. Louis, MO",280.83
+PRV-001030,Dr. Michael Jackson MD,Cardiology,1889528128,Out-of-Network,"New York, NY",328.05
+PRV-001031,Dr. Susan Edwards MD,Endocrinology,1726732562,In-Network,"Atlanta, GA",228.78
+PRV-001032,Dr. Thomas Howard MD,Nephrology,1454646119,In-Network,"New York, NY",327.14
+PRV-001033,Dr. Malik Lee MD,Ophthalmology,1136498330,Out-of-Network,"Buffalo, NY",312.47
+PRV-001034,Dr. Kiara Thomas MD,Pulmonology,1489016791,Out-of-Network,"San Diego, CA",348.56
+PRV-001035,Dr. Linda Cox DO,Pulmonology,1118472553,Out-of-Network,"St. Louis, MO",309.72
+PRV-001036,Dr. Keisha Flores DO,Internal Medicine,1325623035,In-Network,"New York, NY",138.27
+PRV-001037,Dr. Malik Miller DO,Family Medicine,1327667311,In-Network,"Atlanta, GA",217.84
+PRV-001038,Dr. Linda Peterson MD,Radiology,1934613381,In-Network,"Atlanta, GA",330.58
+PRV-001039,Dr. Aisha Carter MD,Internal Medicine,1773130074,In-Network,"San Francisco, CA",182.68
+PRV-001040,Dr. Miguel Edwards MD,General Surgery,1159968838,In-Network,"Atlanta, GA",610.95
+PRV-001041,Dr. Malik Roberts MD,Radiology,1424554436,In-Network,"Los Angeles, CA",376.44
+PRV-001042,Dr. Sarah Chavez MD,Cardiology,1177827512,In-Network,"Atlanta, GA",351.61
+PRV-001043,Dr. Renee Chavez MD,Gastroenterology,1600600523,In-Network,"New York, NY",467.83
+PRV-001044,Dr. Xavier Gutierrez MD,Internal Medicine,1510924682,In-Network,"Norfolk, VA",228.01
+PRV-001045,Dr. Mary Scott MD,Pulmonology,1263374581,In-Network,"Atlanta, GA",353.6
+PRV-001046,Dr. Jamal Cox MD,General Surgery,1632319072,In-Network,"Kansas City, MO",372.57
+PRV-001047,Dr. Malik Brown DO,Internal Medicine,1340786794,In-Network,"Kansas City, MO",180.4
+PRV-001048,Dr. Charles Jackson MD,Cardiology,1824960882,Out-of-Network,"Atlanta, GA",380.03
+PRV-001049,Dr. Brianna Adams MD,Internal Medicine,1765900715,In-Network,"Los Angeles, CA",140.62
+PRV-001050,Dr. Marcus King MD,Internal Medicine,1888780552,In-Network,"Los Angeles, CA",176.8
+PRV-001051,Dr. Jessica Murphy MD,Physical Therapy,1541618196,In-Network,"Atlanta, GA",173.22
+PRV-001052,Dr. Malik Rodriguez MD,Cardiology,1437543120,In-Network,"Atlanta, GA",357.87
+PRV-001053,Dr. Alyssa Gray MD,Orthopedics,1819241705,In-Network,"Richmond, VA",407.55
+PRV-001054,Dr. Jennifer Brooks MD,Emergency Medicine,1840612700,In-Network,"St. Louis, MO",1279.29
+PRV-001055,Dr. Jamal Diaz DO,Ophthalmology,1596090185,Out-of-Network,"Los Angeles, CA",322.88
+PRV-001056,Dr. Charles Wood DO,Endocrinology,1000582968,In-Network,"Atlanta, GA",405.0
+PRV-001057,Dr. Mei Carter DO,Internal Medicine,1904561632,In-Network,"Richmond, VA",152.76
+PRV-001058,Dr. Ana Morgan MD,Orthopedics,1322807973,In-Network,"New York, NY",251.92
+PRV-001059,Dr. Sarah Parker MD,Internal Medicine,1542046610,Out-of-Network,"Buffalo, NY",223.17
+PRV-001060,Dr. Thomas Long MD,Oncology,1293145630,In-Network,"Los Angeles, CA",524.35
+PRV-001061,Dr. Dante Nelson MD,Family Medicine,1742862979,In-Network,"Columbus, OH",172.64
+PRV-001062,Dr. James Gray MD,Internal Medicine,1596775664,In-Network,"Richmond, VA",116.14
+PRV-001063,Dr. Priya Wood MD,Physical Therapy,1033229644,In-Network,"Buffalo, NY",165.8
+PRV-001064,Dr. Robert Kim MD,Physical Therapy,1190252696,In-Network,"St. Louis, MO",113.55
+PRV-001065,Dr. Keisha Harris MD,General Surgery,1237856110,Out-of-Network,"St. Louis, MO",389.9
+PRV-001066,Dr. Richard Lopez DO,Gastroenterology,1671342645,In-Network,"St. Louis, MO",468.4
+PRV-001067,Dr. Keisha Jones MD,Family Medicine,1971207628,In-Network,"Albany, NY",177.39
+PRV-001068,Dr. Hassan Gomez MD,Gastroenterology,1297799667,In-Network,"New York, NY",555.04
+PRV-001069,Dr. Xavier Gray MD,Emergency Medicine,1606814705,In-Network,"San Francisco, CA",1552.63
+PRV-001070,Dr. Xavier Robinson DO,Family Medicine,1782649192,In-Network,"New York, NY",126.28
+PRV-001071,Dr. Carlos Gray MD,Psychiatry,1271571930,In-Network,"Atlanta, GA",414.12
+PRV-001072,Dr. Mei Wood MD,Orthopedics,1346817822,In-Network,"Richmond, VA",368.7
+PRV-001073,Dr. Denise Murphy MD,Endocrinology,1814993363,In-Network,"Columbus, OH",367.4
+PRV-001074,Dr. Jamal Edwards MD,Internal Medicine,1420755279,In-Network,"Albany, NY",251.88
+PRV-001075,Dr. Ana Lewis DO,Family Medicine,1455073531,In-Network,"Atlanta, GA",112.04
+PRV-001076,Dr. John Watson MD,Oncology,1029928143,In-Network,"Richmond, VA",518.08
+PRV-001077,Dr. Aisha Allen MD,Pulmonology,1508498927,In-Network,"St. Louis, MO",379.1
+PRV-001078,Dr. Jessica Martinez MD,Family Medicine,1665254520,In-Network,"Los Angeles, CA",155.04
+PRV-001079,Dr. Patricia Jones MD,Endocrinology,1955720128,In-Network,"Atlanta, GA",227.46
+PRV-001080,Dr. Jerome Davis MD,General Surgery,1672361249,In-Network,"Atlanta, GA",733.06
+PRV-001081,Dr. Robert Phillips MD,Endocrinology,1807414505,In-Network,"Atlanta, GA",209.16
+PRV-001082,Dr. Denise Roberts MD,Endocrinology,1459675039,In-Network,"Kansas City, MO",353.25
+PRV-001083,Dr. Mary Collins MD,Radiology,1631159790,In-Network,"New York, NY",447.71
+PRV-001084,Dr. Richard Kelly MD,Family Medicine,1546425072,In-Network,"Atlanta, GA",117.92
+PRV-001085,Dr. Jessica Moore MD,Family Medicine,1064951915,In-Network,"San Diego, CA",170.53
+PRV-001086,Dr. Dwayne Flores MD,Internal Medicine,1581048625,In-Network,"New York, NY",212.28
+PRV-001087,Dr. Keisha Johnson MD,Psychiatry,1706175094,In-Network,"Atlanta, GA",262.24
+PRV-001088,Dr. Patricia Diaz MD,Orthopedics,1215147688,In-Network,"Atlanta, GA",493.56
+PRV-001089,Dr. Andre Ruiz MD,Orthopedics,1501869492,In-Network,"Atlanta, GA",295.94
+PRV-001090,Dr. Brianna Hill MD,Emergency Medicine,1174246814,In-Network,"Los Angeles, CA",1880.11
+PRV-001091,Dr. James Brooks MD,Internal Medicine,1247254833,Out-of-Network,"Kansas City, MO",189.15
+PRV-001092,Dr. Aisha Patel MD,Pulmonology,1429832349,In-Network,"Atlanta, GA",417.45
+PRV-001093,Dr. Mary Bailey MD,Family Medicine,1312003832,In-Network,"Columbus, OH",118.79
+PRV-001094,Dr. Mary Sanchez MD,Endocrinology,1186988502,Out-of-Network,"New York, NY",286.7
+PRV-001095,Dr. Jessica Thompson MD,Family Medicine,1189061692,In-Network,"Savannah, GA",226.73
+PRV-001096,Dr. Robert Wood MD,General Surgery,1119152069,In-Network,"Richmond, VA",628.66
+PRV-001097,Dr. Keisha James MD,Cardiology,1565783275,In-Network,"Atlanta, GA",330.46
+PRV-001098,Dr. John Thomas MD,Ophthalmology,1992304378,Out-of-Network,"Columbus, OH",342.83
+PRV-001099,Dr. Marcus Kim MD,Internal Medicine,1683053289,In-Network,"Atlanta, GA",218.61
+PRV-001100,Dr. Jamal Nguyen MD,Family Medicine,1351844369,In-Network,"Atlanta, GA",134.88
+PRV-001101,Dr. Trevon Howard DO,Family Medicine,1224667128,In-Network,"New York, NY",126.14
+PRV-001102,Dr. William Rogers MD,Gastroenterology,1947493497,In-Network,"St. Louis, MO",438.69
+PRV-001103,Dr. Marcus Alvarez MD,Orthopedics,1745724084,In-Network,"San Francisco, CA",380.07
+PRV-001104,Dr. Hassan Howard MD,Pulmonology,1222478872,In-Network,"Norfolk, VA",366.92
+PRV-001105,Dr. Karen Diaz DO,Family Medicine,1613504282,Out-of-Network,"Atlanta, GA",163.73
+PRV-001106,Dr. Miguel Hernandez MD,Internal Medicine,1557079511,In-Network,"Kansas City, MO",128.09
+PRV-001107,Dr. Latoya Edwards MD,Cardiology,1439109702,In-Network,"New York, NY",402.88
+PRV-001108,Dr. Jerome Robinson MD,Cardiology,1081484595,In-Network,"San Francisco, CA",231.12
+PRV-001109,Dr. Priya Hernandez MD,Cardiology,1994935533,Out-of-Network,"Atlanta, GA",371.68
+PRV-001110,Dr. Aisha Sanchez MD,Family Medicine,1268460847,In-Network,"Atlanta, GA",184.67
+PRV-001111,Dr. Sofia Cox DO,Family Medicine,1918048415,In-Network,"St. Louis, MO",146.79
+PRV-001112,Dr. Karen Torres DO,Psychiatry,1840877558,Out-of-Network,"Albany, NY",184.0
+PRV-001113,Dr. James Stewart MD,Ophthalmology,1817289898,Out-of-Network,"Norfolk, VA",317.87
+PRV-001114,Dr. Susan Stewart MD,Oncology,1630290352,In-Network,"Kansas City, MO",702.52
+PRV-001115,Dr. Jennifer Green DO,Psychiatry,1460412945,In-Network,"St. Louis, MO",289.97
+PRV-001116,Dr. Renee Brown MD,Psychiatry,1620094969,In-Network,"Buffalo, NY",287.29
+PRV-001117,Dr. Wei Rivera MD,Radiology,1450056006,In-Network,"Los Angeles, CA",333.45
+PRV-001118,Dr. Karen Adams MD,Endocrinology,1609431623,In-Network,"St. Louis, MO",370.01
+PRV-001119,Dr. Aisha Reed MD,Psychiatry,1647469309,In-Network,"Richmond, VA",404.92
+PRV-001120,Dr. Tanisha Rodriguez MD,Physical Therapy,1202227118,In-Network,"New York, NY",146.05
+PRV-001121,Dr. Karen Lopez MD,Pulmonology,1724652824,Out-of-Network,"Los Angeles, CA",382.53
+PRV-001122,Dr. Barbara Sanchez MD,Emergency Medicine,1414350655,In-Network,"Atlanta, GA",1367.7
+PRV-001123,Dr. Patricia Mitchell MD,Family Medicine,1184496457,In-Network,"Savannah, GA",118.26
+PRV-001124,Dr. David Morgan MD,Cardiology,1797943460,In-Network,"Richmond, VA",509.0
+PRV-001125,Dr. Susan Flores MD,Internal Medicine,1762004093,Out-of-Network,"Norfolk, VA",134.79
+PRV-001126,Dr. Richard Cook MD,Orthopedics,1492800720,In-Network,"Atlanta, GA",332.96
+PRV-001127,Dr. Tanisha Cox DO,Family Medicine,1564634125,In-Network,"Atlanta, GA",117.42
+PRV-001128,Dr. Robert Patel MD,Cardiology,1693958412,In-Network,"New York, NY",357.26
+PRV-001129,Dr. Karen Gomez MD,Radiology,1869714515,In-Network,"San Diego, CA",388.74
+PRV-001130,Dr. Latoya Collins MD,General Surgery,1707681800,In-Network,"San Diego, CA",602.86
+PRV-001131,Dr. Jessica Lee MD,Family Medicine,1674399203,In-Network,"New York, NY",240.42
+PRV-001132,Dr. Susan Murphy MD,Nephrology,1818041802,In-Network,"New York, NY",419.7
+PRV-001133,Dr. Lucia Jimenez MD,Emergency Medicine,1484188831,In-Network,"Columbus, OH",953.64
+PRV-001134,Dr. Hassan Ruiz MD,Family Medicine,1495965611,In-Network,"Atlanta, GA",112.23
+PRV-001135,Dr. James Allen MD,Cardiology,1984768333,Out-of-Network,"St. Louis, MO",338.24
+PRV-001136,Dr. Jennifer Peterson MD,Internal Medicine,1766202339,In-Network,"Buffalo, NY",184.01
+PRV-001137,Dr. William Williams MD,Oncology,1190306358,Out-of-Network,"Atlanta, GA",757.85
+PRV-001138,Dr. Miguel Johnson MD,Family Medicine,1164815590,In-Network,"Sacramento, CA",119.32
+PRV-001139,Dr. Jamal Ramirez MD,Endocrinology,1051277635,In-Network,"Atlanta, GA",420.96
+PRV-001140,Dr. Michael Roberts MD,General Surgery,1476727072,In-Network,"St. Louis, MO",645.49
+PRV-001141,Dr. Jessica Mitchell DO,Internal Medicine,1214733002,In-Network,"Atlanta, GA",229.42
+PRV-001142,Dr. Richard Mendoza MD,Internal Medicine,1236832921,Out-of-Network,"San Diego, CA",165.56
+PRV-001143,Dr. Luis Perez MD,Oncology,1550292797,Out-of-Network,"Atlanta, GA",674.8
+PRV-001144,Dr. Susan Cooper MD,Internal Medicine,1459432973,In-Network,"Los Angeles, CA",143.65
+PRV-001145,Dr. Tanisha Wood MD,Internal Medicine,1417885994,In-Network,"Atlanta, GA",141.28
+PRV-001146,Dr. Brianna Mitchell MD,Family Medicine,1950755490,In-Network,"Savannah, GA",147.34
+PRV-001147,Dr. Michael Alvarez MD,Family Medicine,1990230381,In-Network,"Los Angeles, CA",245.64
+PRV-001148,Dr. Hassan Hughes MD,Radiology,1992731648,Out-of-Network,"Atlanta, GA",359.57
+PRV-001149,Dr. Carlos Green DO,Ophthalmology,1715509975,In-Network,"Buffalo, NY",292.52
+PRV-001150,Dr. Robert Rogers MD,Pulmonology,1249564952,In-Network,"Los Angeles, CA",367.96
+PRV-001151,Dr. Miguel Thomas MD,Pulmonology,1792328358,In-Network,"Buffalo, NY",215.73
+PRV-001152,Dr. Monica Nguyen MD,Endocrinology,1403456280,In-Network,"Savannah, GA",230.66
+PRV-001153,Dr. Jerome Patel DO,Family Medicine,1144168106,Out-of-Network,"Atlanta, GA",191.93
+PRV-001154,Dr. Malik Chavez DO,Family Medicine,1805897904,In-Network,"New York, NY",181.16
+PRV-001155,Dr. Jamal Miller DO,Internal Medicine,1714044769,In-Network,"Kansas City, MO",151.47
+PRV-001156,Dr. Robert Gutierrez MD,Ophthalmology,1474981389,In-Network,"St. Louis, MO",207.05
+PRV-001157,Dr. Patricia Brooks DO,Emergency Medicine,1219279570,In-Network,"Atlanta, GA",1869.95
+PRV-001158,Dr. Susan Walker MD,Internal Medicine,1457671519,In-Network,"Atlanta, GA",233.59
+PRV-001159,Dr. Barbara Cox MD,Gastroenterology,1306395333,In-Network,"Los Angeles, CA",322.15
+PRV-001160,Dr. Andre Hernandez DO,Emergency Medicine,1386098163,In-Network,"Columbus, OH",1771.42
+PRV-001161,Dr. Ana Parker MD,Cardiology,1880042882,In-Network,"Atlanta, GA",369.52
+PRV-001162,Dr. Jennifer Ross DO,Oncology,1322371175,In-Network,"San Francisco, CA",564.02
+PRV-001163,Dr. Denise Flores MD,Emergency Medicine,1402810902,In-Network,"Atlanta, GA",1117.88
+PRV-001164,Dr. Richard Martin DO,Emergency Medicine,1004488833,In-Network,"San Francisco, CA",1612.05
+PRV-001165,Dr. Malik Gomez DO,Internal Medicine,1400661283,In-Network,"San Francisco, CA",188.48
+PRV-001166,Dr. Robert Thomas MD,Cardiology,1607317600,Out-of-Network,"Los Angeles, CA",244.52
+PRV-001167,Dr. Miguel Castillo MD,Family Medicine,1761420895,Out-of-Network,"St. Louis, MO",216.09
+PRV-001168,Dr. Latoya Patel MD,Pulmonology,1512953915,In-Network,"Buffalo, NY",385.74
+PRV-001169,Dr. Carlos Bennett MD,Internal Medicine,1280601699,In-Network,"St. Louis, MO",215.95
+PRV-001170,Dr. Alyssa James DO,Emergency Medicine,1013247168,In-Network,"Norfolk, VA",1107.21
+PRV-001171,Dr. Sofia Ramos DO,Internal Medicine,1086273351,In-Network,"Atlanta, GA",172.58
+PRV-001172,Dr. Thomas Ruiz MD,Nephrology,1572520551,In-Network,"Atlanta, GA",448.5
+PRV-001173,Dr. Luis Lopez MD,Orthopedics,1614837122,In-Network,"Los Angeles, CA",363.95
+PRV-001174,Dr. Ana Gomez MD,Psychiatry,1006893748,In-Network,"Los Angeles, CA",357.2
+PRV-001175,Dr. Carlos Turner MD,Ophthalmology,1702786783,In-Network,"St. Louis, MO",175.46
+PRV-001176,Dr. David Sanchez MD,Family Medicine,1539677407,In-Network,"San Diego, CA",134.5
+PRV-001177,Dr. Patricia Myers MD,Oncology,1815146872,In-Network,"San Diego, CA",450.88
+PRV-001178,Dr. Brianna Wilson DO,Family Medicine,1178376576,Out-of-Network,"Columbus, OH",169.98
+PRV-001179,Dr. Mary Howard MD,Internal Medicine,1520973469,In-Network,"Atlanta, GA",125.04
+PRV-001180,Dr. James Bennett MD,Orthopedics,1044946135,In-Network,"Atlanta, GA",468.05
+PRV-001181,Dr. Miguel Wright DO,Internal Medicine,1508128757,In-Network,"Sacramento, CA",205.04
+PRV-001182,Dr. Aisha Green DO,Psychiatry,1387846953,In-Network,"New York, NY",341.56
+PRV-001183,Dr. Aisha Gonzalez MD,Orthopedics,1934736830,In-Network,"Los Angeles, CA",346.94
+PRV-001184,Dr. Dante Thomas DO,Orthopedics,1300075968,Out-of-Network,"Albany, NY",280.49
+PRV-001185,Dr. Mei James DO,Oncology,1552884702,In-Network,"St. Louis, MO",575.5
+PRV-001186,Dr. Marcus Williams MD,Endocrinology,1937843145,Out-of-Network,"Atlanta, GA",437.3
+PRV-001187,Dr. Dante Morales MD,Internal Medicine,1657766018,In-Network,"St. Louis, MO",181.48
+PRV-001188,Dr. Andre James DO,Psychiatry,1971954064,Out-of-Network,"Los Angeles, CA",402.31
+PRV-001189,Dr. Kiara Kelly MD,Internal Medicine,1769513858,In-Network,"Los Angeles, CA",221.22
+PRV-001190,Dr. Mei Peterson DO,Pulmonology,1501225954,In-Network,"Atlanta, GA",291.36
+PRV-001191,Dr. Jessica Young MD,Family Medicine,1808798730,In-Network,"San Diego, CA",200.94
+PRV-001192,Dr. Mary Lee DO,Oncology,1350577559,In-Network,"Buffalo, NY",828.89
+PRV-001193,Dr. Andre Bennett MD,Physical Therapy,1145767354,In-Network,"St. Louis, MO",130.46
+PRV-001194,Dr. Aisha Lewis DO,Physical Therapy,1822848498,In-Network,"New York, NY",198.24
+PRV-001195,Dr. Ana Patel MD,Physical Therapy,1702140873,In-Network,"Atlanta, GA",212.68
+PRV-001196,Dr. Joseph King MD,Orthopedics,1094146051,Out-of-Network,"New York, NY",485.38
+PRV-001197,Dr. Linda Kelly MD,Internal Medicine,1916256440,In-Network,"Los Angeles, CA",143.44
+PRV-001198,Dr. Alyssa Morgan MD,Family Medicine,1416768084,In-Network,"Los Angeles, CA",151.86
+PRV-001199,Dr. David Gutierrez MD,Ophthalmology,1634340885,In-Network,"Los Angeles, CA",301.62
+PRV-001200,Dr. Elizabeth Nguyen DO,Family Medicine,1536691235,In-Network,"Los Angeles, CA",172.75
+PRV-001201,Dr. Carlos Jones MD,Orthopedics,1331669646,In-Network,"Atlanta, GA",466.6
+PRV-001202,Dr. Xavier Morris MD,Pulmonology,1231611548,In-Network,"Buffalo, NY",438.87
+PRV-001203,Dr. Aisha Martin DO,Pulmonology,1226144079,In-Network,"Buffalo, NY",474.91
+PRV-001204,Dr. Lucia Thompson DO,General Surgery,1781034931,In-Network,"Norfolk, VA",653.83
+PRV-001205,Dr. Mary Peterson MD,Cardiology,1453588778,In-Network,"Columbus, OH",468.37
+PRV-001206,Dr. Kiara Sanders MD,Orthopedics,1747728374,In-Network,"Columbus, OH",357.67
+PRV-001207,Dr. Marcus Long MD,Physical Therapy,1929705188,In-Network,"Buffalo, NY",110.26
+PRV-001208,Dr. William Kelly MD,General Surgery,1747276554,In-Network,"Kansas City, MO",533.65
+PRV-001209,Dr. Richard Patel MD,Pulmonology,1388936964,In-Network,"Richmond, VA",427.18
+PRV-001210,Dr. Elizabeth Carter DO,Gastroenterology,1458607012,In-Network,"New York, NY",556.37
+PRV-001211,Dr. Andre Thompson DO,Orthopedics,1126000213,In-Network,"Atlanta, GA",346.81
+PRV-001212,Dr. Hassan Castillo MD,Ophthalmology,1036499524,In-Network,"New York, NY",361.73
+PRV-001213,Dr. Barbara Wood MD,Internal Medicine,1833062386,In-Network,"Los Angeles, CA",204.03
+PRV-001214,Dr. Priya Carter MD,Orthopedics,1701363302,In-Network,"St. Louis, MO",475.99
+PRV-001215,Dr. Priya Bennett DO,Endocrinology,1241522162,In-Network,"Atlanta, GA",226.76
+PRV-001216,Dr. Ana Gonzalez MD,Internal Medicine,1194450987,In-Network,"New York, NY",156.15
+PRV-001217,Dr. David Gonzalez MD,Cardiology,1766402704,In-Network,"Columbus, OH",309.93
+PRV-001218,Dr. Mary Gomez MD,Physical Therapy,1575973140,In-Network,"St. Louis, MO",200.42
+PRV-001219,Dr. Jamal Alvarez DO,Psychiatry,1699758257,In-Network,"Sacramento, CA",377.89
+PRV-001220,Dr. Barbara Kim MD,Internal Medicine,1005716605,Out-of-Network,"St. Louis, MO",248.79
+PRV-001221,Dr. Susan Wood MD,Emergency Medicine,1603975707,In-Network,"St. Louis, MO",979.12
+PRV-001222,Dr. Karen Campbell DO,Family Medicine,1184257535,In-Network,"St. Louis, MO",125.9
+PRV-001223,Dr. Kiara Nguyen MD,Endocrinology,1477729523,In-Network,"Norfolk, VA",271.75
+PRV-001224,Dr. Dwayne Cox MD,Internal Medicine,1225313451,In-Network,"San Francisco, CA",250.75
+PRV-001225,Dr. Elizabeth Hill DO,Orthopedics,1231083132,In-Network,"New York, NY",249.24
+PRV-001226,Dr. David Sanders MD,Oncology,1079843077,In-Network,"New York, NY",532.04
+PRV-001227,Dr. Denise Hernandez DO,Nephrology,1726413906,In-Network,"Savannah, GA",262.57
+PRV-001228,Dr. Luis Wright DO,Endocrinology,1748186455,In-Network,"Buffalo, NY",213.78
+PRV-001229,Dr. Trevon Cox MD,Orthopedics,1882151713,In-Network,"Albany, NY",436.22
+PRV-001230,Dr. Dante Young MD,Internal Medicine,1133811016,In-Network,"Columbus, OH",119.35
+PRV-001231,Dr. Jennifer Campbell DO,Nephrology,1835447323,In-Network,"Buffalo, NY",308.89
+PRV-001232,Dr. Robert Lewis MD,Family Medicine,1112745817,In-Network,"Kansas City, MO",109.88
+PRV-001233,Dr. Alyssa Morales MD,Psychiatry,1374628744,In-Network,"Atlanta, GA",386.87
+PRV-001234,Dr. Patricia Perez MD,Gastroenterology,1807317394,In-Network,"Kansas City, MO",436.35
+PRV-001235,Dr. Jamal Peterson MD,Cardiology,1912283280,In-Network,"Los Angeles, CA",502.78
+PRV-001236,Dr. Sofia Martin MD,Endocrinology,1153190896,In-Network,"New York, NY",369.04
+PRV-001237,Dr. Keisha Price MD,Cardiology,1728228055,In-Network,"Albany, NY",432.92
+PRV-001238,Dr. Denise Cook MD,Emergency Medicine,1459309261,In-Network,"Buffalo, NY",1905.15
+PRV-001239,Dr. Hassan Lopez DO,Nephrology,1436491927,Out-of-Network,"Albany, NY",280.83
+PRV-001240,Dr. Jessica Lopez MD,Psychiatry,1061645155,In-Network,"Kansas City, MO",199.95
+PRV-001241,Dr. James Diaz MD,Internal Medicine,1784687698,Out-of-Network,"Los Angeles, CA",235.54
+PRV-001242,Dr. Jamal Hughes MD,Internal Medicine,1014925291,In-Network,"San Francisco, CA",216.0
+PRV-001243,Dr. Carlos Morgan MD,Emergency Medicine,1262235929,In-Network,"Richmond, VA",1611.29
+PRV-001244,Dr. Kiara Mendoza MD,Ophthalmology,1652162382,Out-of-Network,"New York, NY",367.83
+PRV-001245,Dr. Joseph Thompson MD,Endocrinology,1901308480,Out-of-Network,"Atlanta, GA",388.46
+PRV-001246,Dr. William Mitchell DO,Internal Medicine,1362880277,In-Network,"Los Angeles, CA",189.08
+PRV-001247,Dr. Linda Nguyen MD,Physical Therapy,1315191584,In-Network,"Savannah, GA",194.57
+PRV-001248,Dr. Karen Chavez MD,Family Medicine,1959300121,In-Network,"Atlanta, GA",163.41
+PRV-001249,Dr. Dwayne Smith MD,Internal Medicine,1352779815,In-Network,"San Francisco, CA",188.01
+PRV-001250,Dr. Tanisha Rivera MD,Family Medicine,1462572075,In-Network,"Atlanta, GA",209.28
+PRV-001251,Dr. Linda Morales MD,Pulmonology,1826188073,In-Network,"Atlanta, GA",251.5
+PRV-001252,Dr. Latoya White MD,Orthopedics,1289353749,In-Network,"Savannah, GA",329.58
+PRV-001253,Dr. Dwayne Myers MD,Internal Medicine,1385727515,Out-of-Network,"San Diego, CA",139.53
+PRV-001254,Dr. David Gomez MD,Radiology,1355637797,In-Network,"Buffalo, NY",277.36
+PRV-001255,Dr. Wei Wright MD,Physical Therapy,1525132584,In-Network,"Atlanta, GA",158.39
+PRV-001256,Dr. Miguel Jimenez DO,Emergency Medicine,1538866546,In-Network,"St. Louis, MO",1190.88
+PRV-001257,Dr. Michael Williams MD,Gastroenterology,1369496625,Out-of-Network,"St. Louis, MO",286.4
+PRV-001258,Dr. Aisha Diaz DO,Pulmonology,1791811110,In-Network,"St. Louis, MO",393.14
+PRV-001259,Dr. Latoya Young MD,Internal Medicine,1783024695,In-Network,"San Francisco, CA",127.77
+PRV-001260,Dr. Carlos Young MD,Nephrology,1460805888,In-Network,"Savannah, GA",458.1
+PRV-001261,Dr. Trevon Ward MD,Family Medicine,1917911734,In-Network,"Buffalo, NY",206.31
+PRV-001262,Dr. Robert Scott DO,Emergency Medicine,1997611739,In-Network,"New York, NY",982.88
+PRV-001263,Dr. Robert Evans MD,Internal Medicine,1751789855,In-Network,"Atlanta, GA",243.86
+PRV-001264,Dr. Trevon Diaz MD,Orthopedics,1326728893,In-Network,"Savannah, GA",384.63
+PRV-001265,Dr. Jessica Green DO,Internal Medicine,1195154324,Out-of-Network,"Los Angeles, CA",221.17
+PRV-001266,Dr. Andre Scott DO,Internal Medicine,1108192050,In-Network,"Atlanta, GA",146.98
+PRV-001267,Dr. Linda Gonzalez MD,Endocrinology,1733324339,In-Network,"Savannah, GA",280.24
+PRV-001268,Dr. Keisha Myers MD,Emergency Medicine,1567861313,In-Network,"Kansas City, MO",1640.6
+PRV-001269,Dr. Jennifer Wilson MD,Emergency Medicine,1797347186,In-Network,"Savannah, GA",1471.07
+PRV-001270,Dr. Richard Harris MD,Emergency Medicine,1993748748,Out-of-Network,"Atlanta, GA",1794.76
+PRV-001271,Dr. Andre Ross MD,Internal Medicine,1773920320,In-Network,"Norfolk, VA",160.27
+PRV-001272,Dr. Miguel Bailey DO,Internal Medicine,1960905548,In-Network,"Atlanta, GA",221.17
+PRV-001273,Dr. Andre Turner MD,Cardiology,1541025679,In-Network,"New York, NY",349.6
+PRV-001274,Dr. Charles Garcia DO,Psychiatry,1065276405,In-Network,"Atlanta, GA",408.39
+PRV-001275,Dr. Mei Morgan DO,Psychiatry,1080515099,In-Network,"Buffalo, NY",275.01
+PRV-001276,Dr. Tanisha Cox MD,Family Medicine,1197639735,In-Network,"St. Louis, MO",217.22
+PRV-001277,Dr. Trevon Collins MD,Internal Medicine,1773715986,In-Network,"New York, NY",116.82
+PRV-001278,Dr. Renee Thomas MD,Nephrology,1048976013,In-Network,"Los Angeles, CA",414.6
+PRV-001279,Dr. Sarah Moore MD,Nephrology,1848923178,In-Network,"Los Angeles, CA",479.83
+PRV-001280,Dr. Linda Smith MD,Internal Medicine,1679338069,Out-of-Network,"Columbus, OH",146.68
+PRV-001281,Dr. Renee King MD,Emergency Medicine,1438454827,In-Network,"Los Angeles, CA",1601.9
+PRV-001282,Dr. James Rivera MD,Physical Therapy,1300314642,Out-of-Network,"Los Angeles, CA",176.87
+PRV-001283,Dr. Lucia Jimenez MD,Family Medicine,1775888196,In-Network,"Columbus, OH",245.04
+PRV-001284,Dr. Hassan Cox MD,Gastroenterology,1877082820,In-Network,"Los Angeles, CA",519.06
+PRV-001285,Dr. Miguel Gomez MD,Endocrinology,1248810825,In-Network,"Los Angeles, CA",354.71
+PRV-001286,Dr. Monica White MD,Gastroenterology,1875741671,In-Network,"San Diego, CA",395.89
+PRV-001287,Dr. Priya Torres MD,Radiology,1174932560,In-Network,"Atlanta, GA",393.39
+PRV-001288,Dr. Elizabeth Martinez MD,Radiology,1488578468,In-Network,"St. Louis, MO",252.03
+PRV-001289,Dr. Luis Long DO,Physical Therapy,1647781482,In-Network,"Columbus, OH",164.37
+PRV-001290,Dr. Priya Garcia MD,Internal Medicine,1826907506,In-Network,"Los Angeles, CA",117.51
+PRV-001291,Dr. James Wilson MD,Internal Medicine,1878595000,In-Network,"Atlanta, GA",117.5
+PRV-001292,Dr. Xavier Cruz DO,Cardiology,1330052121,In-Network,"Buffalo, NY",362.36
+PRV-001293,Dr. Hassan Cooper MD,Cardiology,1885756373,In-Network,"Atlanta, GA",423.31
+PRV-001294,Dr. Malik Jackson MD,Internal Medicine,1240853982,In-Network,"Sacramento, CA",247.14
+PRV-001295,Dr. Joseph Mendoza MD,Internal Medicine,1949428199,In-Network,"San Diego, CA",212.82
+PRV-001296,Dr. Joseph Wilson DO,Gastroenterology,1302595772,In-Network,"Richmond, VA",557.09
+PRV-001297,Dr. Jennifer Garcia MD,Cardiology,1191198819,In-Network,"New York, NY",489.92
+PRV-001298,Dr. Wei Mendoza MD,Endocrinology,1877851100,In-Network,"Los Angeles, CA",303.16
+PRV-001299,Dr. Keisha King DO,Family Medicine,1763759729,In-Network,"Kansas City, MO",178.15
+PRV-001300,Dr. Lucia Wood MD,Psychiatry,1158677766,Out-of-Network,"St. Louis, MO",410.86
+PRV-001301,Dr. John Anderson MD,Cardiology,1780296481,In-Network,"Albany, NY",361.79
+PRV-001302,Dr. Robert Rivera MD,Family Medicine,1455086222,Out-of-Network,"Atlanta, GA",133.87
+PRV-001303,Dr. David Wood DO,Pulmonology,1411441988,In-Network,"Columbus, OH",381.88
+PRV-001304,Dr. Joseph Roberts MD,Endocrinology,1767640638,In-Network,"San Francisco, CA",330.18
+PRV-001305,Dr. Carlos Lopez MD,Endocrinology,1003077456,In-Network,"New York, NY",384.57
+PRV-001306,Dr. David Anderson MD,Family Medicine,1375109063,In-Network,"Kansas City, MO",174.61
+PRV-001307,Dr. Denise Jackson DO,Cardiology,1592169029,In-Network,"Kansas City, MO",264.13
+PRV-001308,Dr. Patricia Myers MD,Ophthalmology,1747088874,In-Network,"Richmond, VA",332.36
+PRV-001309,Dr. Keisha Miller MD,Gastroenterology,1711619517,In-Network,"Los Angeles, CA",548.95
+PRV-001310,Dr. Elizabeth Campbell MD,Emergency Medicine,1263115935,In-Network,"San Francisco, CA",1010.83
+PRV-001311,Dr. Barbara Stewart MD,Internal Medicine,1803273909,In-Network,"New York, NY",137.73
+PRV-001312,Dr. Jerome Chavez MD,Nephrology,1307915944,In-Network,"Norfolk, VA",418.59
+PRV-001313,Dr. Barbara Cook MD,Internal Medicine,1425621256,In-Network,"Atlanta, GA",205.22
+PRV-001314,Dr. Thomas Kelly MD,General Surgery,1761661789,Out-of-Network,"Buffalo, NY",575.4
+PRV-001315,Dr. Robert Taylor MD,Family Medicine,1429928824,In-Network,"Norfolk, VA",121.33
+PRV-001316,Dr. Renee Cox DO,Emergency Medicine,1876773369,In-Network,"Atlanta, GA",1645.68
+PRV-001317,Dr. Robert Perez MD,Orthopedics,1398871608,In-Network,"San Francisco, CA",361.96
+PRV-001318,Dr. Dante Jimenez DO,Orthopedics,1030117239,In-Network,"Atlanta, GA",261.81
+PRV-001319,Dr. James Long DO,Family Medicine,1201588378,In-Network,"Atlanta, GA",138.06
+PRV-001320,Dr. Xavier Reed MD,Emergency Medicine,1848498387,In-Network,"New York, NY",1130.7
+PRV-001321,Dr. Dwayne Long MD,Pulmonology,1427495689,In-Network,"Atlanta, GA",293.32
+PRV-001322,Dr. David Hughes MD,Pulmonology,1355750197,In-Network,"Los Angeles, CA",306.08
+PRV-001323,Dr. Elizabeth Brown MD,Endocrinology,1410289350,In-Network,"St. Louis, MO",399.49
+PRV-001324,Dr. Mei Reyes MD,Pulmonology,1672111616,In-Network,"Kansas City, MO",253.53
+PRV-001325,Dr. Priya Jackson MD,Internal Medicine,1172922927,Out-of-Network,"Albany, NY",235.41
+PRV-001326,Dr. Kiara Foster MD,Ophthalmology,1843265140,Out-of-Network,"San Francisco, CA",287.01
+PRV-001327,Dr. Robert Alvarez MD,Internal Medicine,1416219135,In-Network,"Los Angeles, CA",255.11
+PRV-001328,Dr. Xavier Watson DO,Family Medicine,1104588938,In-Network,"Columbus, OH",242.14
+PRV-001329,Dr. Jennifer Murphy MD,General Surgery,1336852895,Out-of-Network,"Atlanta, GA",572.36
+PRV-001330,Dr. Dwayne Lopez MD,Family Medicine,1763060026,In-Network,"Los Angeles, CA",188.92
+PRV-001331,Dr. Jerome Wood DO,Psychiatry,1133107713,In-Network,"Savannah, GA",241.91
+PRV-001332,Dr. Malik Richardson DO,Ophthalmology,1138495768,In-Network,"San Francisco, CA",220.33
+PRV-001333,Dr. Jennifer Mendoza MD,Endocrinology,1483282903,In-Network,"Sacramento, CA",275.04
+PRV-001334,Dr. Priya Davis MD,Family Medicine,1262870021,In-Network,"Kansas City, MO",195.08
+PRV-001335,Dr. Robert Lee MD,Orthopedics,1916792119,In-Network,"New York, NY",270.22
+PRV-001336,Dr. Denise Reyes MD,Internal Medicine,1966503480,In-Network,"Los Angeles, CA",129.39
+PRV-001337,Dr. Tanisha Foster MD,General Surgery,1431129323,In-Network,"Atlanta, GA",382.81
+PRV-001338,Dr. Carlos Patel MD,Cardiology,1298902947,Out-of-Network,"Los Angeles, CA",364.05
+PRV-001339,Dr. Susan Green MD,Endocrinology,1645401958,Out-of-Network,"Sacramento, CA",232.67
+PRV-001340,Dr. Andre Ramirez MD,Psychiatry,1932030027,In-Network,"Atlanta, GA",366.76
+PRV-001341,Dr. Barbara Hernandez MD,Internal Medicine,1294103594,In-Network,"St. Louis, MO",152.93
+PRV-001342,Dr. Kiara Ramirez MD,Endocrinology,1278579341,In-Network,"Los Angeles, CA",415.56
+PRV-001343,Dr. Miguel Hill MD,Family Medicine,1375032525,Out-of-Network,"Atlanta, GA",168.28
+PRV-001344,Dr. Carlos Parker MD,Oncology,1743997253,In-Network,"San Francisco, CA",730.85
+PRV-001345,Dr. Richard Martinez MD,Emergency Medicine,1621148221,In-Network,"Kansas City, MO",1805.28
+PRV-001346,Dr. Ana Patel MD,Emergency Medicine,1015232939,Out-of-Network,"Los Angeles, CA",1854.09
+PRV-001347,Dr. Linda Gray MD,Internal Medicine,1559088455,In-Network,"San Diego, CA",243.85
+PRV-001348,Dr. Hassan Edwards MD,Gastroenterology,1621027598,Out-of-Network,"Columbus, OH",515.04
+PRV-001349,Dr. Jamal Jimenez MD,Internal Medicine,1405398280,Out-of-Network,"Atlanta, GA",177.9
+PRV-001350,Dr. James Mitchell DO,Family Medicine,1017385244,In-Network,"Atlanta, GA",203.31
+PRV-001351,Dr. Monica Wood DO,Family Medicine,1444586800,In-Network,"Los Angeles, CA",125.9
+PRV-001352,Dr. Miguel Nelson MD,Endocrinology,1188778639,In-Network,"Los Angeles, CA",327.84
+PRV-001353,Dr. Latoya Carter MD,Endocrinology,1708246120,In-Network,"Los Angeles, CA",236.99
+PRV-001354,Dr. Michael Lopez DO,Orthopedics,1111467331,In-Network,"San Diego, CA",427.84
+PRV-001355,Dr. Ana Long MD,Internal Medicine,1584903401,Out-of-Network,"Atlanta, GA",130.9
+PRV-001356,Dr. Charles Turner MD,Internal Medicine,1834168821,In-Network,"San Diego, CA",120.35
+PRV-001357,Dr. Linda Hall DO,Endocrinology,1981431510,In-Network,"Los Angeles, CA",314.33
+PRV-001358,Dr. Tanisha Smith DO,Pulmonology,1839876620,In-Network,"Richmond, VA",421.85
+PRV-001359,Dr. Malik Gray MD,Family Medicine,1966568701,Out-of-Network,"Los Angeles, CA",145.4
+PRV-001360,Dr. Kiara Patel MD,Physical Therapy,1359800080,In-Network,"Atlanta, GA",197.6
+PRV-001361,Dr. Tanisha Harris MD,Family Medicine,1422321705,In-Network,"New York, NY",186.03
+PRV-001362,Dr. Hassan Roberts DO,General Surgery,1186527496,In-Network,"St. Louis, MO",391.67
+PRV-001363,Dr. Sofia Taylor MD,Endocrinology,1678004684,In-Network,"Los Angeles, CA",254.2
+PRV-001364,Dr. Renee Lee DO,Emergency Medicine,1218788403,In-Network,"Los Angeles, CA",1830.0
+PRV-001365,Dr. Elizabeth Brown MD,Internal Medicine,1583763884,In-Network,"Atlanta, GA",229.85
+PRV-001366,Dr. David Collins MD,Physical Therapy,1834930639,In-Network,"Atlanta, GA",191.53
+PRV-001367,Dr. Jamal Young MD,Cardiology,1866614227,Out-of-Network,"Savannah, GA",309.51
+PRV-001368,Dr. Elizabeth Watson MD,Psychiatry,1622077234,In-Network,"St. Louis, MO",246.34
+PRV-001369,Dr. Elizabeth Torres MD,Radiology,1193947512,Out-of-Network,"Atlanta, GA",235.02
+PRV-001370,Dr. Tanisha Gonzalez MD,Internal Medicine,1023576118,In-Network,"San Francisco, CA",239.99
+PRV-001371,Dr. Malik Carter DO,Endocrinology,1680271060,In-Network,"San Francisco, CA",248.99
+PRV-001372,Dr. Barbara James MD,Physical Therapy,1651390692,In-Network,"St. Louis, MO",99.28
+PRV-001373,Dr. Brianna Kim MD,Radiology,1170068104,In-Network,"Atlanta, GA",293.51
+PRV-001374,Dr. Jamal Williams MD,Nephrology,1817075631,In-Network,"Savannah, GA",386.1
+PRV-001375,Dr. Marcus Moore MD,Internal Medicine,1781409059,In-Network,"Kansas City, MO",147.72
+PRV-001376,Dr. Jennifer Hall MD,Orthopedics,1699998639,In-Network,"Atlanta, GA",298.97
+PRV-001377,Dr. Tanisha Harris MD,Family Medicine,1212468211,In-Network,"St. Louis, MO",180.02
+PRV-001378,Dr. Alyssa Foster MD,Orthopedics,1177868678,In-Network,"Richmond, VA",358.2
+PRV-001379,Dr. Latoya Kim MD,Psychiatry,1876057581,In-Network,"Norfolk, VA",388.59
+PRV-001380,Dr. Dwayne Mitchell DO,Family Medicine,1879761446,In-Network,"Atlanta, GA",136.36
+PRV-001381,Dr. Alyssa Evans MD,Internal Medicine,1887647778,In-Network,"Atlanta, GA",191.44
+PRV-001382,Dr. Linda White DO,Radiology,1461050563,In-Network,"Norfolk, VA",306.96
+PRV-001383,Dr. Keisha Jackson MD,Psychiatry,1131322499,In-Network,"Los Angeles, CA",335.73
+PRV-001384,Dr. Xavier Adams DO,Internal Medicine,1603056990,In-Network,"Buffalo, NY",147.25
+PRV-001385,Dr. Renee Scott MD,Internal Medicine,1948500706,In-Network,"Los Angeles, CA",147.79
+PRV-001386,Dr. Mei Long MD,General Surgery,1873375668,In-Network,"Buffalo, NY",615.19
+PRV-001387,Dr. Sarah Turner MD,Cardiology,1486174310,In-Network,"Atlanta, GA",367.61
+PRV-001388,Dr. Charles Williams MD,Family Medicine,1919233666,In-Network,"Los Angeles, CA",188.91
+PRV-001389,Dr. Tanisha Jones DO,Emergency Medicine,1985732018,In-Network,"Atlanta, GA",981.54
+PRV-001390,Dr. Malik Castillo MD,Nephrology,1340579806,In-Network,"Los Angeles, CA",348.1
+PRV-001391,Dr. Brianna Miller MD,Psychiatry,1747814942,In-Network,"San Diego, CA",255.28
+PRV-001392,Dr. Keisha Richardson MD,Ophthalmology,1240533586,In-Network,"San Francisco, CA",349.47
+PRV-001393,Dr. Carlos Castillo MD,Internal Medicine,1182741683,In-Network,"Atlanta, GA",163.44
+PRV-001394,Dr. Jamal Smith DO,Internal Medicine,1932023874,In-Network,"Albany, NY",236.7
+PRV-001395,Dr. Karen Martinez MD,Internal Medicine,1738650189,In-Network,"Richmond, VA",122.63
+PRV-001396,Dr. David Howard MD,Emergency Medicine,1135601470,In-Network,"St. Louis, MO",1023.97
+PRV-001397,Dr. Malik Brooks MD,Family Medicine,1131397339,In-Network,"Atlanta, GA",227.1
+PRV-001398,Dr. Sarah Adams MD,Nephrology,1518301959,In-Network,"Savannah, GA",353.74
+PRV-001399,Dr. Renee Young MD,Family Medicine,1789488302,In-Network,"Savannah, GA",120.05
+PRV-001400,Dr. Susan Johnson MD,Radiology,1502672650,In-Network,"Buffalo, NY",332.09
+PRV-001401,Dr. Alyssa Ross MD,General Surgery,1921763158,In-Network,"Atlanta, GA",426.14
+PRV-001402,Dr. Trevon Wilson DO,Family Medicine,1234918423,In-Network,"Norfolk, VA",199.91
+PRV-001403,Dr. Richard Jimenez MD,Physical Therapy,1073700896,In-Network,"Los Angeles, CA",176.18
+PRV-001404,Dr. Priya Wilson MD,Family Medicine,1940808545,In-Network,"Atlanta, GA",229.84
+PRV-001405,Dr. Sarah Brown MD,Internal Medicine,1570033865,In-Network,"Atlanta, GA",183.94
+PRV-001406,Dr. Latoya Ramirez MD,Endocrinology,1539222830,Out-of-Network,"Savannah, GA",217.18
+PRV-001407,Dr. Patricia Wood MD,Endocrinology,1996453844,In-Network,"Los Angeles, CA",289.18
+PRV-001408,Dr. Kiara Cox MD,Endocrinology,1465537242,In-Network,"Los Angeles, CA",345.7
+PRV-001409,Dr. Linda Miller DO,Internal Medicine,1617649055,In-Network,"Atlanta, GA",132.0
+PRV-001410,Dr. Brianna Hughes MD,Family Medicine,1420808111,In-Network,"Atlanta, GA",140.09
+PRV-001411,Dr. Monica Clark MD,Cardiology,1218587507,Out-of-Network,"Atlanta, GA",423.2
+PRV-001412,Dr. Michael White MD,Cardiology,1752125249,In-Network,"Los Angeles, CA",435.36
+PRV-001413,Dr. William Green MD,Emergency Medicine,1178934197,Out-of-Network,"Albany, NY",1582.97
+PRV-001414,Dr. Andre Diaz MD,Family Medicine,1190605328,In-Network,"Richmond, VA",110.28
+PRV-001415,Dr. James Kim MD,Ophthalmology,1508771260,In-Network,"Richmond, VA",318.37
+PRV-001416,Dr. Mary Reed MD,Emergency Medicine,1312092259,In-Network,"San Francisco, CA",958.14
+PRV-001417,Dr. Michael Gonzalez MD,General Surgery,1790474196,In-Network,"Sacramento, CA",399.32
+PRV-001418,Dr. Wei Morales MD,Cardiology,1492579883,In-Network,"San Francisco, CA",381.17
+PRV-001419,Dr. Lucia James DO,Internal Medicine,1968694254,In-Network,"Los Angeles, CA",247.87
+PRV-001420,Dr. Hassan Williams MD,General Surgery,1440576610,In-Network,"San Francisco, CA",560.34
+PRV-001421,Dr. Jessica Kelly MD,Radiology,1462482630,In-Network,"New York, NY",332.93
+PRV-001422,Dr. Hassan Wilson DO,Cardiology,1941826234,In-Network,"St. Louis, MO",498.99
+PRV-001423,Dr. Kiara Thompson MD,Emergency Medicine,1729141955,Out-of-Network,"Sacramento, CA",1906.32
+PRV-001424,Dr. Sarah Flores MD,Cardiology,1622251460,In-Network,"Los Angeles, CA",496.24
+PRV-001425,Dr. Denise Reed DO,Nephrology,1850769147,In-Network,"Los Angeles, CA",337.94
+PRV-001426,Dr. Elizabeth Reyes MD,Cardiology,1561766871,In-Network,"Atlanta, GA",491.04
+PRV-001427,Dr. Charles Rodriguez MD,Ophthalmology,1016742210,In-Network,"New York, NY",223.85
+PRV-001428,Dr. Monica Flores MD,Endocrinology,1378231483,Out-of-Network,"Atlanta, GA",227.11
+PRV-001429,Dr. Charles Cook MD,Orthopedics,1825584388,In-Network,"Atlanta, GA",345.17
+PRV-001430,Dr. Luis Sanchez MD,Emergency Medicine,1985973997,In-Network,"Norfolk, VA",994.06
+PRV-001431,Dr. Mei Brooks MD,Internal Medicine,1428544960,In-Network,"Atlanta, GA",168.16
+PRV-001432,Dr. Karen Thompson MD,Ophthalmology,1728988247,In-Network,"Atlanta, GA",223.52
+PRV-001433,Dr. Thomas Moore MD,Radiology,1214236379,In-Network,"St. Louis, MO",403.36
+PRV-001434,Dr. Jamal White MD,Family Medicine,1940513527,In-Network,"Atlanta, GA",196.15
+PRV-001435,Dr. Trevon Mendoza MD,General Surgery,1502917984,In-Network,"Atlanta, GA",635.87
+PRV-001436,Dr. Renee Brown DO,Cardiology,1451957931,Out-of-Network,"San Francisco, CA",356.85
+PRV-001437,Dr. Alyssa Rogers MD,Internal Medicine,1666675282,Out-of-Network,"Atlanta, GA",232.31
+PRV-001438,Dr. Tanisha Taylor MD,Nephrology,1006391818,In-Network,"New York, NY",427.74
+PRV-001439,Dr. Jennifer Davis MD,Pulmonology,1697803278,In-Network,"St. Louis, MO",436.58
+PRV-001440,Dr. Carlos Nelson DO,Internal Medicine,1130398085,Out-of-Network,"New York, NY",199.47
+PRV-001441,Dr. Susan Gutierrez MD,Gastroenterology,1795024339,In-Network,"Buffalo, NY",261.7
+PRV-001442,Dr. Elizabeth Hill MD,Ophthalmology,1772172887,Out-of-Network,"Atlanta, GA",293.41
+PRV-001443,Dr. Linda Rodriguez MD,Ophthalmology,1648315285,In-Network,"Atlanta, GA",303.37
+PRV-001444,Dr. Mary Cook MD,Radiology,1059757124,In-Network,"Sacramento, CA",230.04
+PRV-001445,Dr. Jessica Cooper MD,Physical Therapy,1657946096,In-Network,"Los Angeles, CA",121.19
+PRV-001446,Dr. Hassan Williams MD,Orthopedics,1878911479,In-Network,"Kansas City, MO",370.3
+PRV-001447,Dr. Richard Stewart MD,Gastroenterology,1310793531,In-Network,"Savannah, GA",465.38
+PRV-001448,Dr. Tanisha Roberts MD,Orthopedics,1115250981,In-Network,"Norfolk, VA",442.32
+PRV-001449,Dr. Linda Reed MD,Pulmonology,1623348011,In-Network,"St. Louis, MO",286.52
+PRV-001450,Dr. Robert Rivera DO,Family Medicine,1502411429,Out-of-Network,"New York, NY",194.97
+PRV-001451,Dr. Trevon Cook MD,Radiology,1969106241,In-Network,"San Diego, CA",244.32
+PRV-001452,Dr. Dwayne Wood MD,Gastroenterology,1364311019,In-Network,"Los Angeles, CA",451.61
+PRV-001453,Dr. Wei Hill DO,Endocrinology,1073240044,In-Network,"Kansas City, MO",393.81
+PRV-001454,Dr. Wei White MD,Physical Therapy,1995801319,In-Network,"New York, NY",157.44
+PRV-001455,Dr. Alyssa Howard MD,Pulmonology,1663008755,In-Network,"New York, NY",398.4
+PRV-001456,Dr. Joseph Gonzalez MD,General Surgery,1536263065,In-Network,"Atlanta, GA",652.6
+PRV-001457,Dr. Luis Walker MD,Physical Therapy,1945703923,In-Network,"San Francisco, CA",221.65
+PRV-001458,Dr. John Davis MD,Family Medicine,1122915292,In-Network,"Richmond, VA",167.1
+PRV-001459,Dr. Hassan Brown DO,Internal Medicine,1344842082,In-Network,"St. Louis, MO",171.09
+PRV-001460,Dr. Renee Sanchez MD,Internal Medicine,1527317852,In-Network,"San Diego, CA",210.15
+PRV-001461,Dr. Kiara Harris MD,Endocrinology,1026030781,In-Network,"Los Angeles, CA",236.85
+PRV-001462,Dr. James Campbell MD,Emergency Medicine,1610202137,In-Network,"New York, NY",1714.81
+PRV-001463,Dr. Luis Chavez MD,Nephrology,1204157942,In-Network,"Atlanta, GA",420.66
+PRV-001464,Dr. Brianna Bailey DO,General Surgery,1860707039,In-Network,"New York, NY",488.11
+PRV-001465,Dr. Jennifer Taylor MD,Internal Medicine,1320218787,In-Network,"San Diego, CA",126.02
+PRV-001466,Dr. Mary Lewis DO,Internal Medicine,1311273968,In-Network,"San Francisco, CA",195.77
+PRV-001467,Dr. William Torres MD,Physical Therapy,1617783670,In-Network,"Savannah, GA",106.56
+PRV-001468,Dr. Brianna Davis MD,Family Medicine,1957571952,In-Network,"Sacramento, CA",152.06
+PRV-001469,Dr. Mary Jones MD,Internal Medicine,1280118955,Out-of-Network,"San Francisco, CA",154.56
+PRV-001470,Dr. Luis Nelson DO,Family Medicine,1712251737,In-Network,"Richmond, VA",136.99
+PRV-001471,Dr. Xavier Ward MD,Physical Therapy,1822029059,In-Network,"Atlanta, GA",199.51
+PRV-001472,Dr. Ana Ward DO,General Surgery,1952965878,In-Network,"Los Angeles, CA",515.82
+PRV-001473,Dr. Robert Murphy MD,Emergency Medicine,1698294005,In-Network,"Norfolk, VA",885.08
+PRV-001474,Dr. Joseph Williams DO,Cardiology,1028297197,In-Network,"San Francisco, CA",476.42
+PRV-001475,Dr. Mei Mendoza MD,Psychiatry,1593238019,In-Network,"St. Louis, MO",383.31
+PRV-001476,Dr. Carlos Diaz MD,Pulmonology,1124106516,In-Network,"Los Angeles, CA",243.81
+PRV-001477,Dr. Richard Baker MD,Endocrinology,1062193817,Out-of-Network,"Richmond, VA",288.66
+PRV-001478,Dr. Miguel Morgan MD,Family Medicine,1860890866,In-Network,"Atlanta, GA",166.12
+PRV-001479,Dr. David Cruz MD,Internal Medicine,1046943379,In-Network,"Albany, NY",126.88
+PRV-001480,Dr. David Cox MD,Family Medicine,1706074176,Out-of-Network,"New York, NY",247.73
+PRV-001481,Dr. Monica Price MD,Internal Medicine,1383281071,In-Network,"Atlanta, GA",196.23
+PRV-001482,Dr. Keisha Jimenez MD,Physical Therapy,1933050440,In-Network,"Kansas City, MO",136.14
+PRV-001483,Dr. Trevon Wilson MD,Orthopedics,1966824388,In-Network,"Sacramento, CA",451.52
+PRV-001484,Dr. David Gutierrez MD,Endocrinology,1796618355,In-Network,"Norfolk, VA",215.77
+PRV-001485,Dr. Robert Walker MD,Emergency Medicine,1697833491,In-Network,"Atlanta, GA",1690.98
+PRV-001486,Dr. Sarah Scott MD,Psychiatry,1322565839,In-Network,"Norfolk, VA",377.7
+PRV-001487,Dr. Monica Williams DO,General Surgery,1413029019,In-Network,"Atlanta, GA",599.41
+PRV-001488,Dr. Jamal Miller MD,Endocrinology,1033614668,In-Network,"Savannah, GA",362.3
+PRV-001489,Dr. Aisha King DO,Nephrology,1634536994,In-Network,"Los Angeles, CA",386.84
+PRV-001490,Dr. Latoya Sanders DO,Family Medicine,1807884127,In-Network,"Atlanta, GA",195.2
+PRV-001491,Dr. Mei Torres DO,Internal Medicine,1574195660,In-Network,"Atlanta, GA",222.61
+PRV-001492,Dr. William Carter MD,Pulmonology,1992847336,In-Network,"New York, NY",350.11
+PRV-001493,Dr. Sarah Hernandez DO,Family Medicine,1828219165,In-Network,"Richmond, VA",203.72
+PRV-001494,Dr. Keisha Wright MD,Nephrology,1840123824,In-Network,"Los Angeles, CA",388.74
+PRV-001495,Dr. Wei Adams DO,Orthopedics,1910095696,In-Network,"St. Louis, MO",331.91
+PRV-001496,Dr. Dwayne Morris MD,Family Medicine,1597653732,In-Network,"San Francisco, CA",173.57
+PRV-001497,Dr. Brianna Peterson MD,Family Medicine,1068766169,Out-of-Network,"Atlanta, GA",147.06
+PRV-001498,Dr. Monica Taylor MD,Endocrinology,1187362923,In-Network,"Savannah, GA",261.4
+PRV-001499,Dr. Robert White MD,Internal Medicine,1924030303,In-Network,"New York, NY",132.5
+PRV-001500,Dr. Sofia King DO,Endocrinology,1017306759,In-Network,"Los Angeles, CA",253.44
+PRV-001501,Dr. Dante Walker MD,Orthopedics,1083192595,In-Network,"Kansas City, MO",457.81
+PRV-001502,Dr. Xavier Mitchell DO,Pulmonology,1731235642,In-Network,"Atlanta, GA",265.09
+PRV-001503,Dr. Marcus Cox MD,Endocrinology,1359688246,Out-of-Network,"New York, NY",232.06
+PRV-001504,Dr. Charles Richardson MD,Ophthalmology,1395461170,In-Network,"Richmond, VA",356.09
+PRV-001505,Dr. Dante Ramirez DO,Internal Medicine,1548463178,Out-of-Network,"Norfolk, VA",119.29
+PRV-001506,Dr. Susan Carter DO,Gastroenterology,1035003475,In-Network,"St. Louis, MO",469.54
+PRV-001507,Dr. John Lewis MD,Orthopedics,1616799441,In-Network,"Atlanta, GA",436.66
+PRV-001508,Dr. Kiara Miller MD,Orthopedics,1707808200,In-Network,"Albany, NY",275.1
+PRV-001509,Dr. Charles Young MD,Nephrology,1857926104,In-Network,"San Diego, CA",450.25
+PRV-001510,Dr. Linda Ruiz MD,Psychiatry,1786836215,In-Network,"Los Angeles, CA",357.08
+PRV-001511,Dr. John Campbell MD,Oncology,1649848507,In-Network,"San Diego, CA",626.29
+PRV-001512,Dr. David Morgan MD,Family Medicine,1976316652,In-Network,"St. Louis, MO",223.98
+PRV-001513,Dr. Charles Baker MD,Endocrinology,1087516357,In-Network,"New York, NY",261.59
+PRV-001514,Dr. Lucia Sanchez DO,Endocrinology,1941033454,In-Network,"San Francisco, CA",320.54
+PRV-001515,Dr. Sofia Stewart MD,Endocrinology,1135718766,In-Network,"Atlanta, GA",388.91
+PRV-001516,Dr. John Taylor MD,Radiology,1568341938,In-Network,"Kansas City, MO",246.57
+PRV-001517,Dr. Renee Walker MD,Physical Therapy,1127807104,In-Network,"Richmond, VA",148.69
+PRV-001518,Dr. Michael Castillo MD,Cardiology,1793225078,In-Network,"Kansas City, MO",399.32
+PRV-001519,Dr. Ana Parker MD,Physical Therapy,1512288719,Out-of-Network,"Norfolk, VA",177.48
+PRV-001520,Dr. Trevon Hernandez MD,Gastroenterology,1008357729,In-Network,"Albany, NY",430.71
+PRV-001521,Dr. Jerome Thompson MD,Emergency Medicine,1631447036,In-Network,"Los Angeles, CA",1249.72
+PRV-001522,Dr. Patricia Reed MD,Family Medicine,1563922382,In-Network,"St. Louis, MO",177.31
+PRV-001523,Dr. Marcus Long MD,Emergency Medicine,1153756136,In-Network,"Kansas City, MO",1188.62
+PRV-001524,Dr. Latoya Gutierrez MD,Internal Medicine,1944445854,Out-of-Network,"Norfolk, VA",224.05
+PRV-001525,Dr. Sarah Morales MD,Emergency Medicine,1950636431,In-Network,"Atlanta, GA",968.04
+PRV-001526,Dr. Michael Robinson MD,Family Medicine,1151400959,In-Network,"Norfolk, VA",193.06
+PRV-001527,Dr. Dante Garcia DO,Internal Medicine,1579637778,In-Network,"New York, NY",140.57
+PRV-001528,Dr. Keisha Clark MD,Nephrology,1613283921,In-Network,"Atlanta, GA",446.45
+PRV-001529,Dr. Linda Alvarez MD,Endocrinology,1907037099,In-Network,"San Diego, CA",310.37
+PRV-001530,Dr. David Scott MD,Internal Medicine,1125050802,In-Network,"Richmond, VA",128.4
+PRV-001531,Dr. John Adams MD,Ophthalmology,1360065542,In-Network,"St. Louis, MO",207.05
+PRV-001532,Dr. Sofia Ruiz MD,Family Medicine,1992921259,In-Network,"New York, NY",216.9
+PRV-001533,Dr. Richard Bailey MD,Internal Medicine,1942287403,In-Network,"Atlanta, GA",192.91
+PRV-001534,Dr. Alyssa Carter DO,Emergency Medicine,1236448207,In-Network,"Norfolk, VA",1105.59
+PRV-001535,Dr. Luis Murphy MD,Orthopedics,1213216097,In-Network,"Savannah, GA",487.04
+PRV-001536,Dr. Susan Smith MD,Orthopedics,1526875613,In-Network,"Atlanta, GA",459.32
+PRV-001537,Dr. Thomas Ward MD,Emergency Medicine,1626956729,In-Network,"Atlanta, GA",1291.61
+PRV-001538,Dr. Karen Robinson DO,Family Medicine,1717233555,In-Network,"Los Angeles, CA",241.63
+PRV-001539,Dr. Andre Nguyen MD,Pulmonology,1120653592,In-Network,"St. Louis, MO",306.42
+PRV-001540,Dr. Jerome Adams MD,Ophthalmology,1456195626,In-Network,"Richmond, VA",247.86
+PRV-001541,Dr. Carlos Gomez MD,Internal Medicine,1830734482,In-Network,"San Francisco, CA",132.36
+PRV-001542,Dr. Mei Walker MD,Radiology,1287681056,Out-of-Network,"Kansas City, MO",359.88
+PRV-001543,Dr. Lucia Adams MD,Pulmonology,1341040118,In-Network,"Richmond, VA",226.42
+PRV-001544,Dr. Patricia Wright MD,Endocrinology,1235093839,In-Network,"St. Louis, MO",261.7
+PRV-001545,Dr. Xavier Perez MD,Cardiology,1837037587,In-Network,"St. Louis, MO",342.03
+PRV-001546,Dr. Dante Cooper MD,Emergency Medicine,1775487184,In-Network,"Norfolk, VA",1196.06
+PRV-001547,Dr. Dwayne Foster MD,Internal Medicine,1068144785,In-Network,"Los Angeles, CA",164.99
+PRV-001548,Dr. William Morgan MD,Orthopedics,1770753896,In-Network,"Sacramento, CA",298.72
+PRV-001549,Dr. Susan Peterson MD,Family Medicine,1014646795,Out-of-Network,"St. Louis, MO",154.74
+PRV-001550,Dr. Tanisha Morales MD,Internal Medicine,1303965278,Out-of-Network,"Atlanta, GA",130.72
+PRV-001551,Dr. Sarah Myers MD,Family Medicine,1841871156,In-Network,"Savannah, GA",143.0
+PRV-001552,Dr. Jennifer Martinez MD,Cardiology,1775362788,In-Network,"San Diego, CA",476.47
+PRV-001553,Dr. Jamal Cox DO,Gastroenterology,1102603195,In-Network,"Albany, NY",478.94
+PRV-001554,Dr. Karen Adams MD,Gastroenterology,1798309178,In-Network,"St. Louis, MO",435.79
+PRV-001555,Dr. Priya Kelly MD,Internal Medicine,1312715124,In-Network,"Savannah, GA",154.74
+PRV-001556,Dr. Charles Hughes MD,Endocrinology,1262652326,In-Network,"Savannah, GA",266.2
+PRV-001557,Dr. Miguel Cooper MD,Cardiology,1485621597,In-Network,"Columbus, OH",498.02
+PRV-001558,Dr. Keisha Morris MD,Family Medicine,1690221180,In-Network,"Columbus, OH",140.88
+PRV-001559,Dr. Renee Perez MD,Family Medicine,1525931052,In-Network,"Atlanta, GA",120.17
+PRV-001560,Dr. Kiara Castillo DO,Emergency Medicine,1816668272,In-Network,"Atlanta, GA",1745.12
+PRV-001561,Dr. Aisha Martin MD,Family Medicine,1739805543,In-Network,"St. Louis, MO",151.95
+PRV-001562,Dr. Miguel Bailey MD,Emergency Medicine,1585821445,In-Network,"San Diego, CA",1585.63
+PRV-001563,Dr. Andre Rogers MD,Pulmonology,1794230707,In-Network,"Norfolk, VA",334.57
+PRV-001564,Dr. Robert Taylor MD,Ophthalmology,1174046155,In-Network,"Atlanta, GA",305.75
+PRV-001565,Dr. Linda Jones DO,Nephrology,1531700342,In-Network,"Atlanta, GA",459.66
+PRV-001566,Dr. Renee Turner MD,Family Medicine,1318633988,In-Network,"St. Louis, MO",212.98
+PRV-001567,Dr. Sarah Gutierrez MD,Internal Medicine,1955141773,In-Network,"Columbus, OH",246.21
+PRV-001568,Dr. Susan Ward DO,Cardiology,1398630206,In-Network,"New York, NY",374.7
+PRV-001569,Dr. Ana Castillo DO,Nephrology,1996262389,In-Network,"Savannah, GA",478.2
+PRV-001570,Dr. Malik Thompson MD,Internal Medicine,1071992253,Out-of-Network,"Sacramento, CA",116.96
+PRV-001571,Dr. Michael Morgan MD,Ophthalmology,1101698998,In-Network,"Atlanta, GA",202.25
+PRV-001572,Dr. Renee Lewis MD,Internal Medicine,1015171420,In-Network,"San Francisco, CA",167.54
+PRV-001573,Dr. Alyssa Sanders MD,Physical Therapy,1670552774,Out-of-Network,"Savannah, GA",207.38
+PRV-001574,Dr. Richard Martinez MD,Psychiatry,1110569940,In-Network,"Norfolk, VA",332.13
+PRV-001575,Dr. Kiara Ramos MD,Gastroenterology,1411185693,In-Network,"Savannah, GA",277.23
+PRV-001576,Dr. Ana Ward MD,Cardiology,1508316723,In-Network,"St. Louis, MO",303.84
+PRV-001577,Dr. Brianna Jackson MD,Family Medicine,1510525583,In-Network,"Atlanta, GA",138.69
+PRV-001578,Dr. Trevon Cruz MD,Radiology,1506472290,Out-of-Network,"Los Angeles, CA",216.62
+PRV-001579,Dr. Robert Jimenez MD,Cardiology,1509466879,In-Network,"San Francisco, CA",385.32
+PRV-001580,Dr. Dante Ramirez DO,Cardiology,1680505229,In-Network,"Kansas City, MO",246.52
+PRV-001581,Dr. Monica Ruiz MD,General Surgery,1735907840,Out-of-Network,"Albany, NY",578.13
+PRV-001582,Dr. Keisha Reyes MD,Internal Medicine,1371505606,In-Network,"Richmond, VA",141.93
+PRV-001583,Dr. Richard Carter MD,Gastroenterology,1802759981,In-Network,"Atlanta, GA",559.34
+PRV-001584,Dr. Alyssa Flores MD,Ophthalmology,1978222564,In-Network,"Atlanta, GA",201.34
+PRV-001585,Dr. Robert Chavez MD,Cardiology,1514037655,Out-of-Network,"Savannah, GA",398.75
+PRV-001586,Dr. Patricia Kelly DO,Cardiology,1926838176,In-Network,"Columbus, OH",302.96
+PRV-001587,Dr. Barbara Stewart MD,Gastroenterology,1695299896,In-Network,"San Francisco, CA",388.16
+PRV-001588,Dr. Sofia Martin MD,Psychiatry,1189953165,In-Network,"St. Louis, MO",188.75
+PRV-001589,Dr. Patricia Cruz MD,Radiology,1066921466,In-Network,"Atlanta, GA",423.75
+PRV-001590,Dr. Priya Ward MD,Family Medicine,1357196310,In-Network,"Kansas City, MO",227.43
+PRV-001591,Dr. Alyssa Castillo DO,General Surgery,1554416338,In-Network,"Kansas City, MO",642.42
+PRV-001592,Dr. Patricia Rodriguez MD,Internal Medicine,1817432212,In-Network,"New York, NY",214.66
+PRV-001593,Dr. Sarah Cox MD,Pulmonology,1542739803,In-Network,"Albany, NY",329.72
+PRV-001594,Dr. Karen Scott MD,Endocrinology,1126395063,Out-of-Network,"New York, NY",433.15
+PRV-001595,Dr. Denise Lopez MD,Cardiology,1097239910,In-Network,"New York, NY",387.06
+PRV-001596,Dr. Mary Foster MD,Family Medicine,1011208472,In-Network,"Atlanta, GA",195.91
+PRV-001597,Dr. Jessica Flores DO,Family Medicine,1689683047,In-Network,"Los Angeles, CA",209.54
+PRV-001598,Dr. Karen Miller MD,Oncology,1308246106,In-Network,"Kansas City, MO",709.44
+PRV-001599,Dr. Richard Wright DO,Family Medicine,1190172648,In-Network,"Atlanta, GA",140.02
+PRV-001600,Dr. Dwayne Howard MD,Ophthalmology,1829326555,In-Network,"Savannah, GA",180.13
+PRV-001601,Dr. Robert Howard MD,Orthopedics,1577618107,In-Network,"San Diego, CA",492.51
+PRV-001602,Dr. Mei Torres MD,Emergency Medicine,1751247570,In-Network,"Columbus, OH",1537.69
+PRV-001603,Dr. Trevon Foster MD,Ophthalmology,1234349438,In-Network,"New York, NY",216.67
+PRV-001604,Dr. Barbara Stewart MD,Pulmonology,1630093997,In-Network,"Atlanta, GA",387.75
+PRV-001605,Dr. Marcus Hughes MD,Cardiology,1385348915,In-Network,"New York, NY",483.57
+PRV-001606,Dr. Priya Gonzalez MD,Radiology,1384404444,In-Network,"Atlanta, GA",290.36
+PRV-001607,Dr. Brianna Collins MD,Family Medicine,1745712019,In-Network,"San Francisco, CA",111.53
+PRV-001608,Dr. Keisha Kim MD,Endocrinology,1728593785,Out-of-Network,"Los Angeles, CA",259.65
+PRV-001609,Dr. Trevon Wilson MD,Endocrinology,1831153961,Out-of-Network,"Atlanta, GA",255.04
+PRV-001610,Dr. William Hill DO,Family Medicine,1749076127,In-Network,"New York, NY",131.38
+PRV-001611,Dr. David James MD,Oncology,1057767414,Out-of-Network,"Atlanta, GA",715.87
+PRV-001612,Dr. Denise Gomez MD,Ophthalmology,1000905387,In-Network,"Los Angeles, CA",326.91
+PRV-001613,Dr. Barbara Walker DO,Orthopedics,1468740794,In-Network,"Atlanta, GA",332.1
+PRV-001614,Dr. Keisha Smith MD,Internal Medicine,1370131551,In-Network,"Savannah, GA",241.08
+PRV-001615,Dr. Andre Bennett MD,Internal Medicine,1497662137,In-Network,"Sacramento, CA",147.06
+PRV-001616,Dr. Miguel Moore MD,Gastroenterology,1351233662,In-Network,"St. Louis, MO",285.48
+PRV-001617,Dr. Tanisha Morgan MD,Physical Therapy,1524318145,In-Network,"St. Louis, MO",151.5
+PRV-001618,Dr. Barbara Foster MD,Orthopedics,1388995663,In-Network,"Columbus, OH",508.99
+PRV-001619,Dr. John Chavez MD,Cardiology,1536816895,In-Network,"Kansas City, MO",440.49
+PRV-001620,Dr. Priya White MD,Family Medicine,1305977902,In-Network,"Atlanta, GA",155.87
+PRV-001621,Dr. Malik Thompson MD,Family Medicine,1732656759,In-Network,"Buffalo, NY",144.91
+PRV-001622,Dr. Luis Gonzalez MD,Nephrology,1434300167,In-Network,"Atlanta, GA",313.61
+PRV-001623,Dr. Robert Mendoza MD,General Surgery,1521988185,In-Network,"Atlanta, GA",584.26
+PRV-001624,Dr. Latoya King MD,Orthopedics,1124509405,In-Network,"Buffalo, NY",254.68
+PRV-001625,Dr. Andre Alvarez MD,Emergency Medicine,1574477822,In-Network,"St. Louis, MO",1242.65
+PRV-001626,Dr. Miguel Roberts DO,Ophthalmology,1085909132,In-Network,"Atlanta, GA",248.78
+PRV-001627,Dr. Richard Rogers DO,Internal Medicine,1781285439,Out-of-Network,"Los Angeles, CA",203.14
+PRV-001628,Dr. Monica Collins MD,Radiology,1954734652,In-Network,"San Diego, CA",213.4
+PRV-001629,Dr. Lucia Brown MD,Emergency Medicine,1191907920,In-Network,"Los Angeles, CA",1569.0
+PRV-001630,Dr. Robert Kim MD,Family Medicine,1785876277,In-Network,"San Diego, CA",150.03
+PRV-001631,Dr. Michael Taylor MD,Internal Medicine,1679592700,In-Network,"Albany, NY",127.98
+PRV-001632,Dr. Brianna Young DO,Pulmonology,1970212147,In-Network,"Richmond, VA",333.67
+PRV-001633,Dr. John Adams MD,General Surgery,1157572094,In-Network,"Albany, NY",534.04
+PRV-001634,Dr. Trevon Castillo MD,Emergency Medicine,1995831710,In-Network,"Albany, NY",949.21
+PRV-001635,Dr. Ana Allen MD,Orthopedics,1797451849,In-Network,"Los Angeles, CA",294.28
+PRV-001636,Dr. Richard Kelly MD,Radiology,1325560046,In-Network,"Kansas City, MO",233.39
+PRV-001637,Dr. Patricia Mitchell MD,Emergency Medicine,1231079186,In-Network,"Sacramento, CA",1589.8
+PRV-001638,Dr. Sarah Cook MD,Psychiatry,1649208541,In-Network,"San Diego, CA",364.12
+PRV-001639,Dr. Susan Williams MD,Cardiology,1705676856,In-Network,"Atlanta, GA",225.45
+PRV-001640,Dr. Marcus Gonzalez MD,Internal Medicine,1019405653,In-Network,"Savannah, GA",260.42
+PRV-001641,Dr. Dante Collins MD,Gastroenterology,1681581955,In-Network,"Savannah, GA",474.37
+PRV-001642,Dr. Aisha Baker MD,Emergency Medicine,1883290841,In-Network,"Sacramento, CA",1442.27
+PRV-001643,Dr. Carlos Perez MD,Endocrinology,1274547837,In-Network,"San Francisco, CA",249.08
+PRV-001644,Dr. Monica Bailey DO,Endocrinology,1089219358,In-Network,"New York, NY",215.81
+PRV-001645,Dr. Marcus Edwards MD,Family Medicine,1031744717,In-Network,"Columbus, OH",149.21
+PRV-001646,Dr. Malik Ross MD,Internal Medicine,1304822078,In-Network,"New York, NY",199.39
+PRV-001647,Dr. David Carter MD,Emergency Medicine,1912324279,In-Network,"San Francisco, CA",1834.87
+PRV-001648,Dr. Charles Thompson DO,Internal Medicine,1823425368,In-Network,"Los Angeles, CA",131.93
+PRV-001649,Dr. Miguel Ramirez MD,Psychiatry,1643438223,In-Network,"Albany, NY",277.59
+PRV-001650,Dr. Mei Brooks MD,Family Medicine,1341208413,In-Network,"St. Louis, MO",201.16
+PRV-001651,Dr. Miguel Reyes MD,Pulmonology,1992728359,In-Network,"Sacramento, CA",319.07
+PRV-001652,Dr. Jamal Nelson MD,Endocrinology,1704579307,In-Network,"Richmond, VA",268.68
+PRV-001653,Dr. Malik Evans MD,Family Medicine,1031182529,In-Network,"Richmond, VA",199.61
+PRV-001654,Dr. Dante Kelly MD,Emergency Medicine,1024517413,In-Network,"Atlanta, GA",1918.82
+PRV-001655,Dr. Jennifer Mitchell MD,Cardiology,1645686685,In-Network,"Savannah, GA",359.91
+PRV-001656,Dr. William Collins MD,Radiology,1939148501,In-Network,"New York, NY",428.36
+PRV-001657,Dr. David Nguyen MD,Family Medicine,1033167626,In-Network,"San Francisco, CA",136.37
+PRV-001658,Dr. Jessica Thompson DO,Family Medicine,1537101700,In-Network,"San Francisco, CA",192.65
+PRV-001659,Dr. William Young MD,Orthopedics,1074992570,Out-of-Network,"St. Louis, MO",504.86
+PRV-001660,Dr. Andre Roberts MD,Internal Medicine,1447846556,In-Network,"Atlanta, GA",244.26
+PRV-001661,Dr. Dante Chavez DO,Oncology,1767472238,In-Network,"Richmond, VA",698.99
+PRV-001662,Dr. Tanisha Castillo MD,Internal Medicine,1390169075,In-Network,"San Francisco, CA",159.01
+PRV-001663,Dr. Linda Wilson MD,Cardiology,1281856258,In-Network,"Richmond, VA",350.73
+PRV-001664,Dr. Keisha Evans MD,Psychiatry,1152417753,In-Network,"New York, NY",350.95
+PRV-001665,Dr. Priya Ruiz MD,Physical Therapy,1965503611,In-Network,"St. Louis, MO",110.24
+PRV-001666,Dr. Carlos Cruz MD,Gastroenterology,1483587718,In-Network,"St. Louis, MO",352.87
+PRV-001667,Dr. Elizabeth Gutierrez MD,Orthopedics,1237320065,In-Network,"New York, NY",470.96
+PRV-001668,Dr. Sofia Lee MD,Radiology,1327213547,In-Network,"New York, NY",283.04
+PRV-001669,Dr. Carlos Taylor MD,Pulmonology,1313890036,In-Network,"San Diego, CA",410.81
+PRV-001670,Dr. Alyssa Hill MD,Radiology,1012956537,In-Network,"Savannah, GA",425.09
+PRV-001671,Dr. Tanisha Morris MD,Family Medicine,1182976474,In-Network,"Albany, NY",247.46
+PRV-001672,Dr. Kiara Mitchell MD,Ophthalmology,1994373298,In-Network,"New York, NY",264.73
+PRV-001673,Dr. Robert Johnson MD,Pulmonology,1069527574,In-Network,"Atlanta, GA",257.35
+PRV-001674,Dr. Lucia Sanders MD,Cardiology,1697928604,In-Network,"Los Angeles, CA",304.15
+PRV-001675,Dr. James Myers DO,Family Medicine,1840833730,In-Network,"San Francisco, CA",197.59
+PRV-001676,Dr. Robert Phillips MD,Psychiatry,1353814126,In-Network,"Richmond, VA",267.07
+PRV-001677,Dr. Jamal Hernandez DO,Pulmonology,1060102484,Out-of-Network,"Savannah, GA",438.58
+PRV-001678,Dr. Barbara Ruiz DO,Endocrinology,1920757888,In-Network,"Sacramento, CA",396.91
+PRV-001679,Dr. Dante Wright MD,Family Medicine,1098096189,In-Network,"Buffalo, NY",114.11
+PRV-001680,Dr. David Gutierrez MD,Gastroenterology,1223050590,Out-of-Network,"Albany, NY",530.43
+PRV-001681,Dr. Jamal Miller MD,Family Medicine,1680651069,In-Network,"New York, NY",173.27
+PRV-001682,Dr. Michael Cooper MD,Internal Medicine,1642413041,In-Network,"San Francisco, CA",186.19
+PRV-001683,Dr. Linda Castillo DO,Pulmonology,1834722451,In-Network,"New York, NY",442.51
+PRV-001684,Dr. James Allen MD,Orthopedics,1645699103,In-Network,"New York, NY",469.2
+PRV-001685,Dr. Charles Chavez MD,Family Medicine,1931214369,In-Network,"New York, NY",175.92
+PRV-001686,Dr. Hassan Cruz MD,Nephrology,1812406191,In-Network,"Los Angeles, CA",357.35
+PRV-001687,Dr. Andre Murphy MD,Oncology,1070393950,In-Network,"San Francisco, CA",820.0
+PRV-001688,Dr. Aisha Brooks MD,Psychiatry,1883214584,In-Network,"Buffalo, NY",383.71
+PRV-001689,Dr. Trevon Flores MD,Family Medicine,1569512145,In-Network,"St. Louis, MO",138.24
+PRV-001690,Dr. Mei Martin MD,Pulmonology,1206055421,Out-of-Network,"Buffalo, NY",266.78
+PRV-001691,Dr. William Adams DO,Psychiatry,1508712246,Out-of-Network,"St. Louis, MO",324.77
+PRV-001692,Dr. Thomas Stewart DO,Orthopedics,1895972094,In-Network,"St. Louis, MO",320.43
+PRV-001693,Dr. Ana Green MD,Family Medicine,1456660155,In-Network,"Atlanta, GA",157.87
+PRV-001694,Dr. Patricia Evans MD,Emergency Medicine,1864760270,In-Network,"St. Louis, MO",1855.19
+PRV-001695,Dr. Richard Clark MD,Internal Medicine,1274802025,In-Network,"San Diego, CA",237.05
+PRV-001696,Dr. Marcus Bailey MD,Family Medicine,1214160107,In-Network,"Los Angeles, CA",218.83
+PRV-001697,Dr. John Young MD,Psychiatry,1776153361,In-Network,"New York, NY",246.11
+PRV-001698,Dr. Robert Jimenez MD,Pulmonology,1738520660,In-Network,"Albany, NY",472.21
+PRV-001699,Dr. Alyssa Carter MD,Oncology,1060252553,In-Network,"Buffalo, NY",825.88
+PRV-001700,Dr. Linda Stewart MD,Orthopedics,1805119762,In-Network,"Savannah, GA",520.62
+PRV-001701,Dr. Elizabeth Ramos MD,Internal Medicine,1214742250,In-Network,"Columbus, OH",237.91
+PRV-001702,Dr. Wei King MD,Emergency Medicine,1877579923,In-Network,"San Diego, CA",1430.31
+PRV-001703,Dr. Carlos Alvarez MD,Family Medicine,1916367059,In-Network,"Atlanta, GA",117.99
+PRV-001704,Dr. Marcus Reyes MD,Cardiology,1388913367,In-Network,"St. Louis, MO",285.87
+PRV-001705,Dr. Ana Williams MD,Cardiology,1689600203,In-Network,"Buffalo, NY",297.54
+PRV-001706,Dr. Kiara Davis DO,Endocrinology,1550036781,In-Network,"Los Angeles, CA",208.1
+PRV-001707,Dr. Marcus Morgan MD,Cardiology,1617203413,Out-of-Network,"New York, NY",500.42
+PRV-001708,Dr. Renee Jimenez MD,Cardiology,1169891638,In-Network,"Atlanta, GA",250.54
+PRV-001709,Dr. Brianna Wood DO,Psychiatry,1807354368,In-Network,"Kansas City, MO",397.86
+PRV-001710,Dr. Ana Martin MD,Internal Medicine,1078410847,In-Network,"Buffalo, NY",184.66
+PRV-001711,Dr. Ana Parker DO,Family Medicine,1431070910,In-Network,"New York, NY",217.47
+PRV-001712,Dr. Joseph Adams MD,Emergency Medicine,1277941235,Out-of-Network,"Atlanta, GA",860.38
+PRV-001713,Dr. Priya Bennett MD,Radiology,1882105481,In-Network,"New York, NY",341.95
+PRV-001714,Dr. Elizabeth Harris MD,Emergency Medicine,1221345622,Out-of-Network,"Los Angeles, CA",1776.62
+PRV-001715,Dr. Robert Jimenez MD,Family Medicine,1374220071,In-Network,"Atlanta, GA",240.26
+PRV-001716,Dr. Susan Sanchez MD,Oncology,1455571081,In-Network,"Los Angeles, CA",471.69
+PRV-001717,Dr. Mary Moore DO,Ophthalmology,1472060870,Out-of-Network,"Savannah, GA",320.88
+PRV-001718,Dr. Ana Clark MD,Internal Medicine,1479761146,In-Network,"Norfolk, VA",244.33
+PRV-001719,Dr. Linda Lopez DO,Endocrinology,1544068557,In-Network,"Atlanta, GA",344.73
+PRV-001720,Dr. Linda Morales MD,Physical Therapy,1384818710,In-Network,"Albany, NY",193.33
+PRV-001721,Dr. Trevon Campbell MD,Gastroenterology,1546250322,In-Network,"Los Angeles, CA",555.32
+PRV-001722,Dr. Tanisha Gonzalez MD,Internal Medicine,1332840339,In-Network,"San Diego, CA",234.81
+PRV-001723,Dr. Carlos Hernandez MD,General Surgery,1869912793,Out-of-Network,"San Diego, CA",465.9
+PRV-001724,Dr. Priya Adams MD,Cardiology,1909904720,Out-of-Network,"San Francisco, CA",303.12
+PRV-001725,Dr. Carlos Stewart MD,Family Medicine,1065693093,In-Network,"New York, NY",130.23
+PRV-001726,Dr. Brianna Turner DO,Emergency Medicine,1450154608,In-Network,"Atlanta, GA",1156.53
+PRV-001727,Dr. Wei White MD,Family Medicine,1993162326,Out-of-Network,"Norfolk, VA",212.0
+PRV-001728,Dr. Hassan Mitchell DO,Internal Medicine,1284736299,In-Network,"Atlanta, GA",160.95
+PRV-001729,Dr. Andre Jones MD,Emergency Medicine,1154984763,In-Network,"Atlanta, GA",870.78
+PRV-001730,Dr. Kiara Perez MD,Physical Therapy,1016040051,In-Network,"Atlanta, GA",173.41
+PRV-001731,Dr. Andre Reyes DO,Cardiology,1919273776,In-Network,"Savannah, GA",243.1
+PRV-001732,Dr. James Flores MD,Physical Therapy,1965883371,Out-of-Network,"San Diego, CA",199.99
+PRV-001733,Dr. Brianna Bennett MD,Physical Therapy,1513022936,In-Network,"Atlanta, GA",144.06
+PRV-001734,Dr. Trevon Taylor DO,Pulmonology,1153110789,In-Network,"Kansas City, MO",243.97
+PRV-001735,Dr. Brianna Wilson MD,Family Medicine,1269155621,In-Network,"Atlanta, GA",164.84
+PRV-001736,Dr. Wei Ramos MD,Family Medicine,1619728459,In-Network,"New York, NY",244.37
+PRV-001737,Dr. Keisha James MD,Ophthalmology,1790714563,Out-of-Network,"Savannah, GA",228.88
+PRV-001738,Dr. Patricia Sanchez DO,Physical Therapy,1015377844,Out-of-Network,"Atlanta, GA",146.51
+PRV-001739,Dr. Marcus Johnson MD,Internal Medicine,1519524460,In-Network,"Atlanta, GA",139.54
+PRV-001740,Dr. Tanisha Edwards DO,Radiology,1486612913,Out-of-Network,"Atlanta, GA",456.37
+PRV-001741,Dr. Lucia Rogers DO,Emergency Medicine,1362124359,In-Network,"Sacramento, CA",1141.65
+PRV-001742,Dr. Lucia Peterson MD,Ophthalmology,1103619750,In-Network,"Atlanta, GA",341.5
+PRV-001743,Dr. Keisha Diaz MD,Orthopedics,1583384105,In-Network,"Los Angeles, CA",257.31
+PRV-001744,Dr. Renee Alvarez MD,Internal Medicine,1937705973,In-Network,"Savannah, GA",132.0
+PRV-001745,Dr. Trevon White MD,Cardiology,1950931821,In-Network,"San Diego, CA",494.59
+PRV-001746,Dr. Mary Sanchez MD,Ophthalmology,1380036422,Out-of-Network,"Atlanta, GA",206.92
+PRV-001747,Dr. Patricia Morgan MD,Nephrology,1247415399,In-Network,"St. Louis, MO",365.03
+PRV-001748,Dr. Mei Perez MD,Orthopedics,1922280674,In-Network,"Columbus, OH",286.58
+PRV-001749,Dr. Brianna Diaz DO,Emergency Medicine,1298952685,In-Network,"Kansas City, MO",1004.22
+PRV-001750,Dr. Kiara Turner DO,Internal Medicine,1502515629,In-Network,"Columbus, OH",173.38
+PRV-001751,Dr. Sofia Bailey MD,Cardiology,1224148755,In-Network,"Albany, NY",245.56
+PRV-001752,Dr. Malik Moore MD,Physical Therapy,1883089574,Out-of-Network,"New York, NY",105.46
+PRV-001753,Dr. Tanisha Lee MD,Family Medicine,1419832695,Out-of-Network,"Columbus, OH",244.98
+PRV-001754,Dr. Sarah Moore DO,Emergency Medicine,1132576429,In-Network,"Savannah, GA",1084.41
+PRV-001755,Dr. Elizabeth Gray MD,Gastroenterology,1351617643,In-Network,"New York, NY",309.84
+PRV-001756,Dr. Hassan Kim MD,Internal Medicine,1709122115,In-Network,"Atlanta, GA",130.74
+PRV-001757,Dr. Elizabeth Martinez DO,Endocrinology,1809870047,In-Network,"Kansas City, MO",349.73
+PRV-001758,Dr. Robert Allen MD,Physical Therapy,1500928138,In-Network,"Los Angeles, CA",222.48
+PRV-001759,Dr. Monica Ross MD,Endocrinology,1561394434,In-Network,"Atlanta, GA",414.11
+PRV-001760,Dr. Keisha Walker DO,Internal Medicine,1713942334,In-Network,"Columbus, OH",204.46
+PRV-001761,Dr. Michael Foster MD,Pulmonology,1777445311,In-Network,"Buffalo, NY",225.3
+PRV-001762,Dr. Wei Allen DO,Gastroenterology,1089220818,In-Network,"Richmond, VA",348.58
+PRV-001763,Dr. Joseph Ramos MD,Internal Medicine,1285351360,In-Network,"Albany, NY",202.49
+PRV-001764,Dr. Xavier Carter MD,Internal Medicine,1934577861,In-Network,"St. Louis, MO",198.76
+PRV-001765,Dr. Priya Gonzalez MD,Physical Therapy,1126136059,In-Network,"Los Angeles, CA",172.38
+PRV-001766,Dr. Dante Turner DO,Ophthalmology,1771256936,In-Network,"Savannah, GA",307.83
+PRV-001767,Dr. Xavier Gutierrez MD,Gastroenterology,1428093064,In-Network,"Los Angeles, CA",513.45
+PRV-001768,Dr. Mary Ramirez MD,General Surgery,1025924873,In-Network,"New York, NY",625.04
+PRV-001769,Dr. Mary Sanders MD,Orthopedics,1956644529,In-Network,"Los Angeles, CA",364.12
+PRV-001770,Dr. Jessica Scott MD,Family Medicine,1051323907,In-Network,"St. Louis, MO",244.31
+PRV-001771,Dr. William Clark MD,Cardiology,1927157710,In-Network,"Buffalo, NY",445.36
+PRV-001772,Dr. Barbara Murphy DO,Nephrology,1358375577,In-Network,"Los Angeles, CA",314.24
+PRV-001773,Dr. Marcus Flores MD,Cardiology,1775177891,In-Network,"Sacramento, CA",502.18
+PRV-001774,Dr. Miguel Carter MD,Internal Medicine,1919097228,In-Network,"San Diego, CA",210.46
+PRV-001775,Dr. Miguel Lee DO,Gastroenterology,1346560674,In-Network,"Los Angeles, CA",527.17
+PRV-001776,Dr. Priya Bailey MD,Internal Medicine,1601210879,In-Network,"Atlanta, GA",190.66
+PRV-001777,Dr. Jennifer Alvarez MD,Nephrology,1941599689,In-Network,"Los Angeles, CA",272.41
+PRV-001778,Dr. Dwayne Gomez MD,Orthopedics,1413648472,In-Network,"Kansas City, MO",342.09
+PRV-001779,Dr. Charles Ward MD,Internal Medicine,1088274038,In-Network,"Norfolk, VA",247.29
+PRV-001780,Dr. Elizabeth Bennett DO,Cardiology,1028302963,Out-of-Network,"Savannah, GA",294.82
+PRV-001781,Dr. Joseph Cruz MD,Pulmonology,1231893977,Out-of-Network,"Kansas City, MO",276.24
+PRV-001782,Dr. Andre Cruz MD,Internal Medicine,1591874571,Out-of-Network,"Los Angeles, CA",242.84
+PRV-001783,Dr. Tanisha Watson MD,Ophthalmology,1968883082,In-Network,"Atlanta, GA",268.34
+PRV-001784,Dr. Thomas Parker MD,Ophthalmology,1966424392,In-Network,"St. Louis, MO",364.26
+PRV-001785,Dr. Carlos Moore MD,Physical Therapy,1888465406,In-Network,"Savannah, GA",107.71
+PRV-001786,Dr. Trevon Price MD,Ophthalmology,1336601726,In-Network,"Savannah, GA",187.65
+PRV-001787,Dr. Carlos Chavez DO,Internal Medicine,1881625287,In-Network,"Kansas City, MO",167.23
+PRV-001788,Dr. Brianna Cruz MD,Ophthalmology,1468349279,In-Network,"San Francisco, CA",172.01
+PRV-001789,Dr. Priya Davis DO,Internal Medicine,1511773745,In-Network,"Columbus, OH",182.1
+PRV-001790,Dr. Luis Scott MD,Radiology,1962640616,In-Network,"Atlanta, GA",220.07
+PRV-001791,Dr. David Gomez MD,Gastroenterology,1485451267,In-Network,"Albany, NY",466.83
+PRV-001792,Dr. Trevon Evans MD,Family Medicine,1579404629,In-Network,"Buffalo, NY",140.94
+PRV-001793,Dr. Patricia Alvarez MD,Ophthalmology,1630767136,Out-of-Network,"New York, NY",361.97
+PRV-001794,Dr. Luis Lee MD,Internal Medicine,1267146461,In-Network,"Columbus, OH",194.17
+PRV-001795,Dr. Mary Wood DO,Ophthalmology,1782400360,Out-of-Network,"St. Louis, MO",334.0
+PRV-001796,Dr. Mei Roberts DO,Internal Medicine,1409407781,Out-of-Network,"Atlanta, GA",200.74
+PRV-001797,Dr. Dwayne Thompson MD,Orthopedics,1943888359,In-Network,"Atlanta, GA",267.33
+PRV-001798,Dr. Dwayne Chavez MD,Family Medicine,1364771758,In-Network,"Atlanta, GA",136.48
+PRV-001799,Dr. Patricia Bailey MD,Endocrinology,1400663522,In-Network,"Atlanta, GA",417.58
+PRV-001800,Dr. Marcus Roberts MD,Internal Medicine,1859034445,Out-of-Network,"Atlanta, GA",117.37
+PRV-001801,Dr. Richard Brooks MD,Physical Therapy,1195191987,Out-of-Network,"New York, NY",218.42
+PRV-001802,Dr. Elizabeth Kim MD,Nephrology,1189975300,In-Network,"Columbus, OH",407.61
+PRV-001803,Dr. Elizabeth Cruz MD,Physical Therapy,1041633567,Out-of-Network,"Buffalo, NY",120.36
+PRV-001804,Dr. Karen Nguyen MD,Physical Therapy,1733400081,In-Network,"Richmond, VA",113.16
+PRV-001805,Dr. Dante Martin DO,Family Medicine,1987841559,Out-of-Network,"Sacramento, CA",177.92
+PRV-001806,Dr. Jerome Anderson MD,Cardiology,1070290990,In-Network,"San Diego, CA",463.55
+PRV-001807,Dr. Richard Phillips MD,Cardiology,1062947233,In-Network,"Los Angeles, CA",459.46
+PRV-001808,Dr. Sofia Long DO,Physical Therapy,1106064610,In-Network,"Richmond, VA",212.62
+PRV-001809,Dr. Xavier Kelly MD,General Surgery,1560141924,In-Network,"Atlanta, GA",729.93
+PRV-001810,Dr. Jerome Ross MD,Cardiology,1672526678,In-Network,"Sacramento, CA",316.25
+PRV-001811,Dr. Michael Adams MD,Endocrinology,1654620914,In-Network,"San Diego, CA",202.01
+PRV-001812,Dr. Mei Hughes MD,Cardiology,1892555626,In-Network,"San Francisco, CA",306.71
+PRV-001813,Dr. Xavier Cooper MD,Internal Medicine,1336783022,In-Network,"Norfolk, VA",202.74
+PRV-001814,Dr. Richard Rivera DO,Gastroenterology,1056301926,In-Network,"Sacramento, CA",340.43
+PRV-001815,Dr. Barbara Rogers MD,General Surgery,1750742158,In-Network,"Buffalo, NY",555.62
+PRV-001816,Dr. Joseph Alvarez MD,Internal Medicine,1766688784,In-Network,"Atlanta, GA",143.08
+PRV-001817,Dr. Robert Clark DO,Family Medicine,1124909482,In-Network,"Atlanta, GA",110.68
+PRV-001818,Dr. Aisha Thompson DO,Physical Therapy,1887525153,In-Network,"Atlanta, GA",200.52
+PRV-001819,Dr. Dante Young MD,Family Medicine,1277224347,In-Network,"Richmond, VA",130.25
+PRV-001820,Dr. Hassan Flores MD,Radiology,1943476589,In-Network,"San Diego, CA",428.44
+PRV-001821,Dr. Malik Carter MD,Orthopedics,1967522782,In-Network,"Richmond, VA",241.13
+PRV-001822,Dr. Carlos Gomez MD,Family Medicine,1823695925,In-Network,"St. Louis, MO",109.95
+PRV-001823,Dr. Linda Lee DO,Endocrinology,1524562407,In-Network,"New York, NY",356.67
+PRV-001824,Dr. Mei Alvarez DO,Internal Medicine,1427568870,In-Network,"Sacramento, CA",225.4
+PRV-001825,Dr. Miguel Thomas MD,Family Medicine,1950905360,Out-of-Network,"Los Angeles, CA",144.98
+PRV-001826,Dr. David Gutierrez DO,Radiology,1503538733,In-Network,"Norfolk, VA",332.97
+PRV-001827,Dr. Jennifer Ross MD,Pulmonology,1072370603,In-Network,"Atlanta, GA",314.78
+PRV-001828,Dr. Dante Foster MD,Family Medicine,1540757095,In-Network,"New York, NY",128.41
+PRV-001829,Dr. Xavier Johnson DO,Psychiatry,1366519073,In-Network,"Atlanta, GA",256.39
+PRV-001830,Dr. Priya Davis MD,Radiology,1164387203,In-Network,"Savannah, GA",323.59
+PRV-001831,Dr. Aisha James MD,Oncology,1027176053,In-Network,"San Francisco, CA",657.54
+PRV-001832,Dr. Renee Lee MD,Radiology,1340970538,In-Network,"Atlanta, GA",340.95
+PRV-001833,Dr. Brianna Castillo MD,Internal Medicine,1345375777,In-Network,"Buffalo, NY",194.84
+PRV-001834,Dr. Robert Smith MD,Cardiology,1873710236,In-Network,"Atlanta, GA",291.29
+PRV-001835,Dr. Robert Reed MD,Cardiology,1021252959,Out-of-Network,"New York, NY",443.51
+PRV-001836,Dr. Charles Mendoza MD,Orthopedics,1482830779,Out-of-Network,"Richmond, VA",435.31
+PRV-001837,Dr. Hassan Collins MD,Physical Therapy,1964839440,In-Network,"Savannah, GA",129.51
+PRV-001838,Dr. Hassan Sanders MD,Internal Medicine,1417096917,In-Network,"Sacramento, CA",136.94
+PRV-001839,Dr. Karen Jackson MD,Ophthalmology,1440632991,In-Network,"Richmond, VA",165.33
+PRV-001840,Dr. Hassan Rivera MD,Gastroenterology,1435716227,In-Network,"Sacramento, CA",371.7
+PRV-001841,Dr. Robert Reyes MD,Endocrinology,1350051628,In-Network,"San Diego, CA",307.86
+PRV-001842,Dr. Sofia Harris MD,Orthopedics,1938027446,In-Network,"Atlanta, GA",313.28
+PRV-001843,Dr. Miguel Evans MD,Gastroenterology,1329530273,In-Network,"St. Louis, MO",390.96
+PRV-001844,Dr. Karen Jimenez DO,Family Medicine,1442508175,In-Network,"Atlanta, GA",199.49
+PRV-001845,Dr. Robert Gutierrez MD,Internal Medicine,1475646523,In-Network,"Atlanta, GA",138.77
+PRV-001846,Dr. Ana Mendoza MD,Internal Medicine,1167348766,In-Network,"Atlanta, GA",141.09
+PRV-001847,Dr. Marcus Reyes MD,Orthopedics,1792921493,In-Network,"New York, NY",284.11
+PRV-001848,Dr. Brianna Ortiz MD,Internal Medicine,1940508262,In-Network,"Norfolk, VA",254.05
+PRV-001849,Dr. Patricia Nelson DO,Internal Medicine,1336396741,In-Network,"Atlanta, GA",118.69
+PRV-001850,Dr. Karen Rodriguez MD,Physical Therapy,1976295039,In-Network,"Los Angeles, CA",218.7
+PRV-001851,Dr. Barbara Nguyen MD,Family Medicine,1861501642,In-Network,"Richmond, VA",155.74
+PRV-001852,Dr. Jamal Richardson MD,Emergency Medicine,1603082206,In-Network,"Richmond, VA",1288.4
+PRV-001853,Dr. Jessica Anderson MD,Emergency Medicine,1157460250,Out-of-Network,"San Francisco, CA",1585.16
+PRV-001854,Dr. Andre Carter MD,Physical Therapy,1823708262,In-Network,"Atlanta, GA",208.91
+PRV-001855,Dr. Alyssa Kelly MD,Internal Medicine,1959912352,In-Network,"Buffalo, NY",253.74
+PRV-001856,Dr. Aisha Hernandez DO,Internal Medicine,1073970067,In-Network,"San Francisco, CA",166.56
+PRV-001857,Dr. Linda Bennett MD,Family Medicine,1680991511,In-Network,"New York, NY",236.39
+PRV-001858,Dr. Dante Murphy MD,Cardiology,1956755182,Out-of-Network,"Albany, NY",247.92
+PRV-001859,Dr. Trevon Scott DO,Emergency Medicine,1970963114,In-Network,"Columbus, OH",1112.93
+PRV-001860,Dr. Jessica Hughes MD,Physical Therapy,1482036062,Out-of-Network,"San Francisco, CA",104.55
+PRV-001861,Dr. Wei Collins MD,Ophthalmology,1357468907,In-Network,"Los Angeles, CA",366.99
+PRV-001862,Dr. Ana Kelly MD,Emergency Medicine,1408742503,Out-of-Network,"Atlanta, GA",1514.1
+PRV-001863,Dr. Sarah Hughes MD,Family Medicine,1393841945,In-Network,"San Francisco, CA",205.49
+PRV-001864,Dr. Aisha Taylor DO,General Surgery,1772146119,In-Network,"Kansas City, MO",511.91
+PRV-001865,Dr. Jerome Bennett MD,Family Medicine,1715351059,In-Network,"Atlanta, GA",120.12
+PRV-001866,Dr. David Ross MD,Physical Therapy,1079902102,Out-of-Network,"Kansas City, MO",100.9
+PRV-001867,Dr. Jennifer Martinez MD,Family Medicine,1014438845,In-Network,"Atlanta, GA",141.55
+PRV-001868,Dr. Alyssa Watson DO,Gastroenterology,1494740501,Out-of-Network,"Los Angeles, CA",267.17
+PRV-001869,Dr. Patricia Price MD,Orthopedics,1985697320,In-Network,"Los Angeles, CA",425.44
+PRV-001870,Dr. James Parker MD,Gastroenterology,1250263177,In-Network,"Atlanta, GA",544.69
+PRV-001871,Dr. Richard Stewart DO,Family Medicine,1760464354,In-Network,"Albany, NY",195.75
+PRV-001872,Dr. Mei Ramos DO,Ophthalmology,1065784237,In-Network,"New York, NY",220.63
+PRV-001873,Dr. Thomas Jackson DO,Endocrinology,1617867634,In-Network,"San Francisco, CA",441.5
+PRV-001874,Dr. Barbara Adams MD,Ophthalmology,1244507704,In-Network,"Buffalo, NY",176.69
+PRV-001875,Dr. Trevon Brooks MD,Family Medicine,1457975918,In-Network,"New York, NY",192.42
+PRV-001876,Dr. Mei Allen MD,Family Medicine,1173156086,In-Network,"Los Angeles, CA",109.47
+PRV-001877,Dr. Brianna Long DO,Internal Medicine,1085847386,In-Network,"Atlanta, GA",224.34
+PRV-001878,Dr. Mei Lopez MD,Orthopedics,1828269527,In-Network,"Richmond, VA",537.01
+PRV-001879,Dr. John Reed MD,Physical Therapy,1901648041,In-Network,"Los Angeles, CA",183.45
+PRV-001880,Dr. Karen Ross MD,Family Medicine,1586173802,In-Network,"Los Angeles, CA",160.18
+PRV-001881,Dr. Dwayne Evans MD,Ophthalmology,1495682408,In-Network,"Atlanta, GA",169.84
+PRV-001882,Dr. Denise Edwards MD,Cardiology,1792270274,Out-of-Network,"St. Louis, MO",340.13
+PRV-001883,Dr. Marcus Carter DO,Psychiatry,1678812108,In-Network,"San Diego, CA",214.63
+PRV-001884,Dr. Barbara Martin MD,Internal Medicine,1197471450,In-Network,"Los Angeles, CA",236.88
+PRV-001885,Dr. Richard Williams MD,Family Medicine,1169990879,In-Network,"Atlanta, GA",146.29
+PRV-001886,Dr. Monica Cox MD,Family Medicine,1464775853,In-Network,"Norfolk, VA",140.27
+PRV-001887,Dr. Dwayne Wilson MD,Endocrinology,1347121938,In-Network,"Kansas City, MO",363.78
+PRV-001888,Dr. Monica Ramirez MD,Gastroenterology,1013923840,In-Network,"New York, NY",408.41
+PRV-001889,Dr. Brianna Diaz MD,Oncology,1643295718,In-Network,"New York, NY",509.37
+PRV-001890,Dr. David Mitchell MD,Internal Medicine,1508441503,In-Network,"Los Angeles, CA",235.36
+PRV-001891,Dr. Marcus Ruiz MD,Internal Medicine,1936167340,In-Network,"San Diego, CA",146.6
+PRV-001892,Dr. Sarah Bailey MD,Physical Therapy,1852355607,Out-of-Network,"New York, NY",158.0
+PRV-001893,Dr. Hassan Kelly DO,Cardiology,1245808173,In-Network,"Atlanta, GA",316.69
+PRV-001894,Dr. Xavier Stewart DO,Gastroenterology,1336575164,In-Network,"New York, NY",323.47
+PRV-001895,Dr. Jennifer Ortiz MD,Nephrology,1647036581,In-Network,"Atlanta, GA",390.99
+PRV-001896,Dr. Robert Jimenez MD,Physical Therapy,1826722888,In-Network,"Norfolk, VA",106.43
+PRV-001897,Dr. Jessica Lewis MD,Family Medicine,1351343765,Out-of-Network,"Atlanta, GA",116.73
+PRV-001898,Dr. Marcus Morales DO,Cardiology,1649367938,In-Network,"New York, NY",449.7
+PRV-001899,Dr. Dante Cox MD,Radiology,1787503642,In-Network,"Atlanta, GA",252.12
+PRV-001900,Dr. Jessica Carter MD,Internal Medicine,1878950598,In-Network,"Richmond, VA",190.36
+PRV-001901,Dr. Mary Wood MD,Radiology,1452499748,In-Network,"Los Angeles, CA",280.28
+PRV-001902,Dr. Hassan Carter MD,Internal Medicine,1637636286,Out-of-Network,"San Francisco, CA",137.42
+PRV-001903,Dr. Richard Price MD,Endocrinology,1305761709,Out-of-Network,"Los Angeles, CA",310.9
+PRV-001904,Dr. Marcus Peterson MD,Family Medicine,1152205955,Out-of-Network,"Atlanta, GA",125.79
+PRV-001905,Dr. Priya Adams MD,Family Medicine,1350695315,In-Network,"Albany, NY",196.23
+PRV-001906,Dr. Miguel Reed MD,Emergency Medicine,1549442680,In-Network,"St. Louis, MO",1189.94
+PRV-001907,Dr. John Moore MD,Internal Medicine,1561331376,In-Network,"Albany, NY",124.99
+PRV-001908,Dr. Dwayne Baker MD,Family Medicine,1368908800,In-Network,"Albany, NY",158.76
+PRV-001909,Dr. Priya Gomez MD,Psychiatry,1588515227,In-Network,"San Francisco, CA",304.77
+PRV-001910,Dr. Thomas Robinson MD,General Surgery,1692304249,In-Network,"St. Louis, MO",385.79
+PRV-001911,Dr. Andre Garcia MD,Orthopedics,1814462961,In-Network,"Atlanta, GA",451.37
+PRV-001912,Dr. Marcus Roberts MD,Family Medicine,1719689421,Out-of-Network,"Atlanta, GA",178.33
+PRV-001913,Dr. Sofia Hughes MD,Cardiology,1072973151,In-Network,"Sacramento, CA",230.77
+PRV-001914,Dr. James Hall MD,Internal Medicine,1624470223,In-Network,"New York, NY",202.04
+PRV-001915,Dr. Elizabeth Morgan MD,Radiology,1673966041,Out-of-Network,"San Francisco, CA",306.66
+PRV-001916,Dr. William Sanchez MD,Gastroenterology,1275176652,In-Network,"Los Angeles, CA",405.93
+PRV-001917,Dr. Charles Edwards MD,Cardiology,1647861303,In-Network,"Los Angeles, CA",258.32
+PRV-001918,Dr. Linda Garcia MD,Ophthalmology,1114600057,In-Network,"Buffalo, NY",203.35
+PRV-001919,Dr. Ana Hill DO,Gastroenterology,1723923536,In-Network,"Kansas City, MO",424.62
+PRV-001920,Dr. Priya Watson MD,Family Medicine,1955851964,In-Network,"New York, NY",173.2
+PRV-001921,Dr. Susan White DO,Radiology,1221569527,In-Network,"Savannah, GA",283.88
+PRV-001922,Dr. Tanisha Cox MD,Pulmonology,1988721817,In-Network,"Albany, NY",333.63
+PRV-001923,Dr. Jessica Martinez MD,Pulmonology,1949630539,In-Network,"New York, NY",476.43
+PRV-001924,Dr. Sarah Smith MD,Internal Medicine,1409547590,In-Network,"Atlanta, GA",117.16
+PRV-001925,Dr. Priya Harris DO,Gastroenterology,1796551594,In-Network,"Columbus, OH",360.94
+PRV-001926,Dr. Lucia Jones DO,Radiology,1324323843,In-Network,"Atlanta, GA",208.84
+PRV-001927,Dr. Susan Thomas DO,Internal Medicine,1799143659,Out-of-Network,"San Diego, CA",261.52
+PRV-001928,Dr. Barbara Johnson MD,Oncology,1778257769,Out-of-Network,"St. Louis, MO",800.2
+PRV-001929,Dr. Sarah Williams MD,Family Medicine,1515100796,In-Network,"Kansas City, MO",186.26
+PRV-001930,Dr. Robert Brown MD,Internal Medicine,1464379938,In-Network,"Buffalo, NY",174.53
+PRV-001931,Dr. Robert James MD,General Surgery,1826279823,Out-of-Network,"San Diego, CA",585.16
+PRV-001932,Dr. Sarah Brown MD,Radiology,1936293818,In-Network,"Buffalo, NY",255.9
+PRV-001933,Dr. Robert Reed DO,Family Medicine,1467447593,In-Network,"Buffalo, NY",247.42
+PRV-001934,Dr. Ana Miller MD,Emergency Medicine,1094935958,In-Network,"Buffalo, NY",1612.81
+PRV-001935,Dr. Wei Mitchell MD,Emergency Medicine,1580644162,In-Network,"San Diego, CA",1017.01
+PRV-001936,Dr. Tanisha Mitchell MD,Internal Medicine,1373057766,In-Network,"Albany, NY",141.33
+PRV-001937,Dr. Mei Cooper MD,Psychiatry,1463546514,In-Network,"Atlanta, GA",390.13
+PRV-001938,Dr. Priya Reyes MD,Internal Medicine,1578974253,In-Network,"Savannah, GA",252.82
+PRV-001939,Dr. Hassan Jackson MD,Radiology,1580047190,In-Network,"Atlanta, GA",335.16
+PRV-001940,Dr. Susan Ruiz MD,Orthopedics,1884165585,Out-of-Network,"St. Louis, MO",413.55
+PRV-001941,Dr. Michael Kelly MD,Endocrinology,1591039645,In-Network,"Atlanta, GA",206.58
+PRV-001942,Dr. Aisha Morales MD,Orthopedics,1785822999,In-Network,"Atlanta, GA",455.18
+PRV-001943,Dr. Tanisha Lewis MD,General Surgery,1805119873,Out-of-Network,"Los Angeles, CA",561.99
+PRV-001944,Dr. Denise Martin DO,Endocrinology,1961250562,In-Network,"St. Louis, MO",357.4
+PRV-001945,Dr. Michael Murphy MD,Psychiatry,1077531324,Out-of-Network,"Albany, NY",408.81
+PRV-001946,Dr. Susan Cooper MD,Orthopedics,1874556653,In-Network,"Los Angeles, CA",330.67
+PRV-001947,Dr. Lucia Mendoza MD,Family Medicine,1272122580,In-Network,"Atlanta, GA",137.39
+PRV-001948,Dr. James Hughes MD,Endocrinology,1368475537,Out-of-Network,"Atlanta, GA",362.72
+PRV-001949,Dr. Andre Brooks MD,Cardiology,1044962808,In-Network,"Atlanta, GA",393.83
+PRV-001950,Dr. Thomas Hughes MD,Orthopedics,1856665307,In-Network,"Columbus, OH",345.56
+PRV-001951,Dr. Brianna Hall DO,Cardiology,1735350127,In-Network,"Sacramento, CA",422.31
+PRV-001952,Dr. Jennifer Stewart MD,Pulmonology,1098836690,In-Network,"Atlanta, GA",341.61
+PRV-001953,Dr. Denise Carter MD,Internal Medicine,1259178336,In-Network,"Albany, NY",252.46
+PRV-001954,Dr. Sofia Edwards MD,Emergency Medicine,1440886010,In-Network,"San Francisco, CA",1436.84
+PRV-001955,Dr. Mary Cook MD,Internal Medicine,1539096367,In-Network,"Buffalo, NY",215.77
+PRV-001956,Dr. Jamal Wood MD,Family Medicine,1271876053,In-Network,"Savannah, GA",220.28
+PRV-001957,Dr. Charles Lee MD,Emergency Medicine,1645448057,In-Network,"Buffalo, NY",1814.44
+PRV-001958,Dr. Richard Morris MD,Cardiology,1006112278,In-Network,"Atlanta, GA",465.16
+PRV-001959,Dr. Robert Garcia MD,Cardiology,1239898241,In-Network,"St. Louis, MO",274.87
+PRV-001960,Dr. Jerome Hughes DO,Cardiology,1124650196,Out-of-Network,"Buffalo, NY",289.87
+PRV-001961,Dr. Xavier Brown MD,Internal Medicine,1393714969,In-Network,"Atlanta, GA",256.08
+PRV-001962,Dr. Keisha Brooks MD,Psychiatry,1449494734,In-Network,"San Diego, CA",392.06
+PRV-001963,Dr. John Lopez MD,Pulmonology,1713718675,In-Network,"Savannah, GA",324.01
+PRV-001964,Dr. David Thomas MD,Cardiology,1092747165,Out-of-Network,"San Diego, CA",485.11
+PRV-001965,Dr. Keisha Bailey MD,Emergency Medicine,1071746227,In-Network,"New York, NY",1916.24
+PRV-001966,Dr. Robert Robinson MD,Ophthalmology,1322490952,In-Network,"New York, NY",184.98
+PRV-001967,Dr. James Anderson MD,Internal Medicine,1285494550,In-Network,"Buffalo, NY",124.41
+PRV-001968,Dr. Jessica Morris DO,Emergency Medicine,1202579662,Out-of-Network,"Atlanta, GA",988.03
+PRV-001969,Dr. Renee Brooks MD,Orthopedics,1922014373,In-Network,"San Francisco, CA",290.76
+PRV-001970,Dr. Miguel Rodriguez MD,General Surgery,1077943017,In-Network,"Atlanta, GA",556.26
+PRV-001971,Dr. Keisha Lewis DO,Emergency Medicine,1436359513,In-Network,"Savannah, GA",1746.95
+PRV-001972,Dr. Mary Harris MD,Internal Medicine,1999417397,Out-of-Network,"San Diego, CA",231.42
+PRV-001973,Dr. David Morris MD,Cardiology,1848758119,Out-of-Network,"San Diego, CA",288.72
+PRV-001974,Dr. Jessica Kim MD,Pulmonology,1533793013,Out-of-Network,"San Diego, CA",381.54
+PRV-001975,Dr. Jennifer Price DO,Psychiatry,1156297926,In-Network,"San Diego, CA",197.52
+PRV-001976,Dr. Priya Baker MD,Psychiatry,1574764286,In-Network,"Atlanta, GA",247.72
+PRV-001977,Dr. Monica Roberts MD,Emergency Medicine,1901414529,Out-of-Network,"Richmond, VA",1347.5
+PRV-001978,Dr. Wei Kelly MD,Orthopedics,1361931800,Out-of-Network,"Buffalo, NY",423.19
+PRV-001979,Dr. Hassan Rodriguez MD,Internal Medicine,1287990035,In-Network,"San Francisco, CA",192.27
+PRV-001980,Dr. Marcus Walker MD,Physical Therapy,1374213212,In-Network,"Kansas City, MO",126.71
+PRV-001981,Dr. Sarah King MD,Ophthalmology,1719068385,In-Network,"Atlanta, GA",300.95
+PRV-001982,Dr. Lucia Ruiz MD,Orthopedics,1737771633,Out-of-Network,"St. Louis, MO",280.62
+PRV-001983,Dr. Denise Howard MD,Orthopedics,1125854097,In-Network,"Albany, NY",300.57
+PRV-001984,Dr. Hassan Baker MD,Gastroenterology,1695223488,In-Network,"Kansas City, MO",309.81
+PRV-001985,Dr. Xavier Collins MD,General Surgery,1157131290,In-Network,"Los Angeles, CA",645.76
+PRV-001986,Dr. Renee Gomez MD,Family Medicine,1202859986,In-Network,"Atlanta, GA",161.03
+PRV-001987,Dr. Renee Howard DO,General Surgery,1548809213,In-Network,"Savannah, GA",739.81
+PRV-001988,Dr. Monica Kim MD,Emergency Medicine,1469410109,In-Network,"Atlanta, GA",1301.92
+PRV-001989,Dr. Patricia Garcia DO,Cardiology,1297808762,In-Network,"Atlanta, GA",328.06
+PRV-001990,Dr. Ana Mendoza MD,Internal Medicine,1042882439,In-Network,"Sacramento, CA",129.74
+PRV-001991,Dr. Brianna Castillo MD,Physical Therapy,1461497079,In-Network,"New York, NY",140.54
+PRV-001992,Dr. Renee Rivera DO,Family Medicine,1162889747,In-Network,"Savannah, GA",213.37
+PRV-001993,Dr. Robert Clark MD,Internal Medicine,1018726669,In-Network,"New York, NY",141.02
+PRV-001994,Dr. Sarah Morales MD,Oncology,1264347668,In-Network,"Atlanta, GA",822.02
+PRV-001995,Dr. Barbara Lewis MD,General Surgery,1003402003,In-Network,"Savannah, GA",407.56
+PRV-001996,Dr. Robert Edwards MD,Family Medicine,1107767824,In-Network,"Los Angeles, CA",192.16
+PRV-001997,Dr. Robert Ward MD,General Surgery,1024724610,In-Network,"San Diego, CA",400.97
+PRV-001998,Dr. Kiara Baker MD,Nephrology,1535831691,Out-of-Network,"Savannah, GA",354.13
+PRV-001999,Dr. Elizabeth Price MD,Pulmonology,1898657208,In-Network,"Los Angeles, CA",265.48
+PRV-002000,Dr. Marcus Rivera MD,Orthopedics,1267110093,In-Network,"Los Angeles, CA",301.38

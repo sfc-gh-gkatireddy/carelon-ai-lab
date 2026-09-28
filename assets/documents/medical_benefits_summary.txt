@@ -1,0 +1,110 @@
+Blue Advantage Medical Benefits Summary
+Elevance Health — Plan Year 2026
+Document ID: MED-2026-002
+Effective: January 1, 2026
+
+SECTION 1 — PREVENTIVE CARE
+
+Preventive services aligned with USPSTF A and B recommendations are covered
+at 100% with no member cost sharing when rendered by an in-network provider:
+
+- Annual wellness visit (CPT 99391, 99395): one per plan year
+- Colorectal cancer screening (CPT 45378 colonoscopy): members age 45-75,
+  once every 10 years, or fecal immunochemical test annually
+- Mammography: members age 40+, annually
+- Diabetes screening (HbA1c, CPT 83036): members with risk factors, annually
+- Immunizations (CPT Z23-related administration codes): no cost share
+- Annual lipid panel and blood pressure screening
+
+Diagnostic (as opposed to screening) colonoscopies are subject to normal
+cost sharing: 20% coinsurance after deductible for PPO plans, $25 copayment
+for HMO plans.
+
+SECTION 2 — OFFICE VISITS AND SPECIALIST REFERRALS
+
+Primary care office visit (CPT 99213-99215):
+- HMO/EPO: $25 copayment
+- PPO: $30 copayment in-network, 40% coinsurance out-of-network
+- HDHP: deductible applies, then 20% coinsurance
+
+Specialist visits:
+- HMO plans require a referral from the assigned PCP before a specialist
+  visit. Services rendered without a referral are not covered except for
+  OB/GYN direct access and behavioral health.
+- PPO plans do not require referrals but out-of-network cost sharing applies
+  when the provider is out-of-network.
+
+SECTION 3 — EMERGENCY CARE
+
+Emergency room visits (CPT 99284, 99285) are covered at all facilities
+regardless of network status. Cost sharing is applied at the in-network
+level when the member presents with a prudent layperson emergency:
+- HMO/EPO: $150 copayment, waived if admitted
+- PPO: $150 copayment, waived if admitted
+- Ground ambulance: $100 copayment
+
+Post-stabilization services and observation follow in-network rules; members
+should transfer to an in-network facility when medically appropriate.
+
+SECTION 4 — MENTAL HEALTH AND BEHAVIORAL HEALTH
+
+Mental health parity applies. In-person psychotherapy (CPT 90834, 90837):
+- HMO: $25 copayment, no PCP referral required for behavioral health
+- PPO: $30 copayment in-network
+Telebehavioral health visits are covered at the same cost sharing level.
+Annual maximum: unlimited visits subject to medical necessity review after
+20 visits per year.
+
+SECTION 5 — PHYSICAL THERAPY
+
+Physical therapy (CPT 97110, 97140):
+- Covered when prescribed for restoration of function following injury,
+  surgery, or acute exacerbation of a chronic condition
+- HMO: $25 copayment per visit; PPO: $30 copayment
+- Prior authorization required after 12 visits per condition per plan year
+- Maintenance therapy for chronic conditions without functional improvement
+  documentation is not covered
+
+SECTION 6 — DURABLE MEDICAL EQUIPMENT (DME)
+
+- Covered at 20% coinsurance after deductible (all plan types)
+- Requires prior authorization for items over $500 (wheelchairs, hospital
+  beds, CPAP machines)
+- CPAP machines require documented sleep study (AHI >= 5 with symptoms)
+- Rental vs purchase: equipment rented for 10 months is considered purchased
+
+SECTION 7 — SURGICAL SERVICES
+
+Inpatient surgery (CPT 27447 total knee replacement, 47562 cholecystectomy,
+29881 knee arthroscopy, 45380 colonoscopy with biopsy):
+- Prior authorization required for all inpatient surgical admissions and
+  elective outpatient surgical procedures
+- HMO: 10% coinsurance; PPO: 10% in-network, 40% out-of-network
+- Centers of Excellence program: knee and hip replacement at designated
+  facilities have $0 member cost share
+
+SECTION 8 — ADVANCED IMAGING
+
+CT (CPT 70450, 74177) and echocardiography (93351):
+- Prior authorization required for non-emergency advanced imaging
+- HMO: $100 copayment; PPO: $100 in-network, 50% out-of-network
+- Chest X-ray (71046): no PA required, $25 copayment
+
+SECTION 9 — MEMBER COST-SHARING SUMMARY TABLE
+
+Service | HMO | PPO (In-Network) | HDHP
+Annual deductible (individual) | $0 | $500 | $3,000
+Primary care visit | $25 | $30 | Deductible + 20%
+Specialist visit | $25 referral req | $30 | Deductible + 20%
+Emergency room | $150 | $150 | Deductible + 20%
+Inpatient admission | $500 per admission | $500 | Deductible + 20%
+Outpatient surgery | 10% | 10% | Deductible + 20%
+Prescription drugs | Per formulary tier | Per formulary tier | Deductible + 20% after ded.
+Out-of-pocket maximum | $4,000 | $5,000 | $8,000
+
+SECTION 10 — CLAIMS AND APPEALS
+
+Claims must be submitted within 12 months of the date of service. Appeals of
+denied claims follow the same three-level process as pharmacy appeals:
+internal Level 1 (30 days), internal Level 2 with medical director review
+(30 days), then external independent review (4 months to request).
