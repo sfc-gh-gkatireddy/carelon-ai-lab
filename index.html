@@ -992,6 +992,25 @@ Finally, after the CREATE AGENT statement, also generate the statement that regi
   <p>Because your agent has the <code>data_to_chart</code> tool, trend and ranking questions come back with a chart as well as a table. When one is worth keeping, select <strong>Save</strong> on the chart to turn it into an <strong>artifact</strong>.</p>
   <p>An artifact is not a screenshot. It stores the query and the chart specification, so it re-runs against live data when you open it later — and it re-runs under each viewer's credentials. Share one with a colleague and they see the same chart filtered through their own permissions, which is what makes this safe to pass around in a payer setting. Your saved artifacts live in the artifacts hub in the left nav.</p>
 
+  <h3>Automate a Recurring Query</h3>
+  <p>Some questions are worth asking every day — cost trends, denial spikes, care gap counts. Instead of remembering to ask your agent each morning, you can turn any CoWork conversation into a <strong>scheduled automation</strong> that runs on a cadence and delivers the results to you automatically.</p>
+
+  <p>Try it now with this example:</p>
+  <ol>
+    <li>Ask your agent: <em>"Show me the top 10 members by total medical spend this month."</em></li>
+    <li>Once you get a response, click the <strong>Automate</strong> button (clock icon) on the response card.</li>
+    <li>Set the schedule — for example, <strong>Daily at 8:00 AM</strong>.</li>
+    <li>Choose where the results should be delivered — CoWork will surface them in your <strong>Automations</strong> tab in the left nav, and optionally notify you via email.</li>
+    <li>Click <strong>Save</strong>.</li>
+  </ol>
+
+  <p>Every morning at 8 AM, CoWork will re-run the query against live claims data and have the fresh results waiting for you — no SQL, no scheduling infrastructure, no analyst ticket. The automation runs under your credentials, so row-access policies and column masking apply automatically.</p>
+
+  <div class="callout tip">
+    <div class="callout-title">Good candidates for automation</div>
+    <p>Think about the questions your team asks repeatedly: daily denial counts by service type, weekly pharmacy spend by drug class, monthly care gap lists for outreach. Any question your agent can answer today can become a scheduled delivery tomorrow.</p>
+  </div>
+
   <div class="callout tip">
     <div class="callout-title">Try your own question</div>
     <p>Think of a question you'd actually want answered in your team — something that currently takes a ticket to the analytics team. Try it on your agent. If it doesn't work well, use CoCo to iterate on the semantic view or agent instructions.</p>
