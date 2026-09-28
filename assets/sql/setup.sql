@@ -1,8 +1,10 @@
 -- ═══════════════════════════════════════════════════════════════════════════
 -- Elevance AI Lab — Setup Script
 -- Creates the lab database, tables, warehouse, role, and loads synthetic data.
--- Run as ACCOUNTADMIN from a SQL worksheet after creating the Git repository:
---   EXECUTE IMMEDIATE FROM @ELEVANCE_LAB_REPO/branches/main/assets/sql/setup.sql;
+-- Run as ACCOUNTADMIN from a SQL worksheet after running the bootstrap snippet
+-- that creates the warehouse and Git repository (see Step 3b in the lab guide).
+-- The bootstrap snippet creates the warehouse first because EXECUTE IMMEDIATE
+-- FROM requires an active warehouse in the session.
 -- All data is 100% synthetic. No real member, patient, or PHI data.
 -- ═══════════════════════════════════════════════════════════════════════════
 
@@ -15,6 +17,9 @@ USE DATABASE ELEVANCE_LAB_DB;
 USE SCHEMA PAYER;
 
 -- ── 2. Warehouse and role ───────────────────────────────────────────────────
+-- The warehouse is created by the bootstrap snippet *before* this script runs
+-- (EXECUTE IMMEDIATE FROM requires a warehouse in the session). Re-creating
+-- it here is a safe no-op if it already exists.
 CREATE WAREHOUSE IF NOT EXISTS ELEVANCE_LAB_WH
   WAREHOUSE_SIZE = 'MEDIUM'
   AUTO_SUSPEND = 60

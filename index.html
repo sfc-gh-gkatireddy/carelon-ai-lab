@@ -423,6 +423,19 @@ td code { font-size: 11.5px; }
     <div class="code-header"><span class="lang">SQL</span><span class="desc">Bootstrap snippet — copy and run as ACCOUNTADMIN · ~2 minutes</span></div>
     <pre><code><span class="kw">USE ROLE</span> ACCOUNTADMIN;
 
+<span class="comment">-- Create the warehouse first — EXECUTE IMMEDIATE FROM requires one in the session</span>
+<span class="kw">CREATE WAREHOUSE IF NOT EXISTS</span> ELEVANCE_LAB_WH
+  WAREHOUSE_SIZE = <span class="str">'MEDIUM'</span>
+  AUTO_SUSPEND = 60
+  AUTO_RESUME = TRUE
+  INITIALLY_SUSPENDED = TRUE;
+<span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
+
+<span class="comment">-- Create the database so the Git repository has a home</span>
+<span class="kw">CREATE DATABASE IF NOT EXISTS</span> ELEVANCE_LAB_DB;
+<span class="kw">CREATE SCHEMA IF NOT EXISTS</span> ELEVANCE_LAB_DB.PAYER;
+<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+
 <span class="comment">-- Connect to the public lab GitHub repo (no credentials needed)</span>
 <span class="kw">CREATE OR REPLACE API INTEGRATION</span> ELEVANCE_LAB_GIT
   API_PROVIDER = git_https_api
