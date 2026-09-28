@@ -123,25 +123,39 @@ CREATE OR REPLACE TABLE PROVIDERS (
 );
 
 -- ── 5. Load data from the Git repo stage ────────────────────────────────────
+-- COPY INTO does not support Git Repository stages directly. First copy the
+-- CSV files into a temporary internal stage, then load from there.
+
+CREATE OR REPLACE STAGE LAB_DATA
+  COMMENT = 'Temporary stage for CSV data files from the Git repo';
+
+COPY FILES INTO @LAB_DATA
+  FROM @ELEVANCE_LAB_REPO/branches/main/assets/data/
+  FILES = ('members.csv', 'medical_claims.csv', 'pharmacy_claims.csv', 'providers.csv');
+
 COPY INTO MEMBERS
-FROM @ELEVANCE_LAB_REPO/branches/main/assets/data/members.csv
-FILE_FORMAT = (FORMAT_NAME = TEXT_FORMAT)
-ON_ERROR = 'ABORT_STATEMENT';
+  FROM @LAB_DATA
+  FILES = ('members.csv')
+  FILE_FORMAT = (FORMAT_NAME = TEXT_FORMAT)
+  ON_ERROR = 'ABORT_STATEMENT';
 
 COPY INTO MEDICAL_CLAIMS
-FROM @ELEVANCE_LAB_REPO/branches/main/assets/data/medical_claims.csv
-FILE_FORMAT = (FORMAT_NAME = TEXT_FORMAT)
-ON_ERROR = 'ABORT_STATEMENT';
+  FROM @LAB_DATA
+  FILES = ('medical_claims.csv')
+  FILE_FORMAT = (FORMAT_NAME = TEXT_FORMAT)
+  ON_ERROR = 'ABORT_STATEMENT';
 
 COPY INTO PHARMACY_CLAIMS
-FROM @ELEVANCE_LAB_REPO/branches/main/assets/data/pharmacy_claims.csv
-FILE_FORMAT = (FORMAT_NAME = TEXT_FORMAT)
-ON_ERROR = 'ABORT_STATEMENT';
+  FROM @LAB_DATA
+  FILES = ('pharmacy_claims.csv')
+  FILE_FORMAT = (FORMAT_NAME = TEXT_FORMAT)
+  ON_ERROR = 'ABORT_STATEMENT';
 
 COPY INTO PROVIDERS
-FROM @ELEVANCE_LAB_REPO/branches/main/assets/data/providers.csv
-FILE_FORMAT = (FORMAT_NAME = TEXT_FORMAT)
-ON_ERROR = 'ABORT_STATEMENT';
+  FROM @LAB_DATA
+  FILES = ('providers.csv')
+  FILE_FORMAT = (FORMAT_NAME = TEXT_FORMAT)
+  ON_ERROR = 'ABORT_STATEMENT';
 
 -- ── 6. Internal stages for lab artifacts ────────────────────────────────────
 CREATE OR REPLACE STAGE POLICY_DOCS
