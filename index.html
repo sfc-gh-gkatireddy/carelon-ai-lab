@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Build a Member Intelligence Agent on Snowflake — Elevance AI Lab</title>
+<title>Build a Member Intelligence Agent on Snowflake — Carelon AI Lab</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%2329B5E8'/%3E%3Cpath fill='white' d='M12 26l8-16 8 16-8-5z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -213,7 +213,7 @@ td code { font-size: 11.5px; }
 <div class="topbar">
   <div class="topbar-logo">
     <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#29B5E8"/><path fill="white" d="M12 26l8-16 8 16-8-5z"/></svg>
-    <span class="topbar-title">Elevance AI Lab</span>
+    <span class="topbar-title">Carelon AI Lab</span>
     <span class="topbar-sep">|</span>
     <span class="topbar-sub">Hands-On Lab</span>
   </div>
@@ -250,7 +250,7 @@ td code { font-size: 11.5px; }
     <span class="section-time">5 MIN</span>
   </div>
 
-  <p>Elevance teams spend significant time answering recurring questions about member cost drivers, quality gaps, and care utilization. Answers are often locked inside claims databases and scattered benefit policy documents — requiring manual SQL or analyst requests that take days.</p>
+  <p>Carelon teams spend significant time answering recurring questions about member cost drivers, quality gaps, and care utilization. Answers are often locked inside claims databases and scattered benefit policy documents — requiring manual SQL or analyst requests that take days.</p>
 
   <p>In this lab, you will build a <strong>Member Intelligence Agent</strong>: an agentic AI experience that lets any team member ask natural language questions and get answers that draw on both structured claims data and unstructured policy documents — all governed, all within Snowflake.</p>
 
@@ -297,10 +297,10 @@ td code { font-size: 11.5px; }
     <li>A Cortex Search service over benefit policy text</li>
     <li>Structured extraction from a PA denial letter PDF using <code>AI_EXTRACT</code></li>
     <li>A Member Intelligence Cortex Agent with Analyst, Search, and a custom <code>AI_CLASSIFY</code> tool</li>
-    <li>A live Snowflake CoWork session answering real Elevance-style questions</li>
+    <li>A live Snowflake CoWork session answering real Carelon-style questions</li>
   </ul>
 
-  <h3>Use Case Context — Why This Matters for Elevance</h3>
+  <h3>Use Case Context — Why This Matters for Carelon</h3>
   <p>This lab is grounded in three of a payer's highest-priority AI patterns:</p>
   <ul>
     <li><strong>Cost-of-care analytics</strong> — which members, providers, and conditions are driving cost?</li>
@@ -424,39 +424,39 @@ td code { font-size: 11.5px; }
     <pre><code><span class="kw">USE ROLE</span> ACCOUNTADMIN;
 
 <span class="comment">-- Create the warehouse first — EXECUTE IMMEDIATE FROM requires one in the session</span>
-<span class="kw">CREATE WAREHOUSE IF NOT EXISTS</span> ELEVANCE_LAB_WH
+<span class="kw">CREATE WAREHOUSE IF NOT EXISTS</span> CARELON_LAB_WH
   WAREHOUSE_SIZE = <span class="str">'MEDIUM'</span>
   AUTO_SUSPEND = 60
   AUTO_RESUME = TRUE
   INITIALLY_SUSPENDED = TRUE;
-<span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
+<span class="kw">USE WAREHOUSE</span> CARELON_LAB_WH;
 
 <span class="comment">-- Create the database so the Git repository has a home</span>
-<span class="kw">CREATE DATABASE IF NOT EXISTS</span> ELEVANCE_LAB_DB;
-<span class="kw">CREATE SCHEMA IF NOT EXISTS</span> ELEVANCE_LAB_DB.PAYER;
-<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+<span class="kw">CREATE DATABASE IF NOT EXISTS</span> CARELON_LAB_DB;
+<span class="kw">CREATE SCHEMA IF NOT EXISTS</span> CARELON_LAB_DB.PAYER;
+<span class="kw">USE DATABASE</span> CARELON_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
 
 <span class="comment">-- Connect to the public lab GitHub repo (no credentials needed)</span>
-<span class="kw">CREATE OR REPLACE API INTEGRATION</span> ELEVANCE_LAB_GIT
+<span class="kw">CREATE OR REPLACE API INTEGRATION</span> CARELON_LAB_GIT
   API_PROVIDER = git_https_api
   API_ALLOWED_PREFIXES = (<span class="str">'https://github.com/sfc-gh-gkatireddy/'</span>)
   ENABLED = TRUE;
 
-<span class="kw">CREATE OR REPLACE GIT REPOSITORY</span> ELEVANCE_LAB_REPO
-  API_INTEGRATION = ELEVANCE_LAB_GIT
-  ORIGIN = <span class="str">'https://github.com/sfc-gh-gkatireddy/elevance-ai-lab.git'</span>;
+<span class="kw">CREATE OR REPLACE GIT REPOSITORY</span> CARELON_LAB_REPO
+  API_INTEGRATION = CARELON_LAB_GIT
+  ORIGIN = <span class="str">'https://github.com/sfc-gh-gkatireddy/carelon-ai-lab.git'</span>;
 
-<span class="kw">ALTER GIT REPOSITORY</span> ELEVANCE_LAB_REPO FETCH;
+<span class="kw">ALTER GIT REPOSITORY</span> CARELON_LAB_REPO FETCH;
 
 <span class="comment">-- Run the full setup script from the repo</span>
-<span class="kw">EXECUTE IMMEDIATE FROM</span> @ELEVANCE_LAB_REPO/branches/main/assets/sql/setup.sql;</code></pre>
+<span class="kw">EXECUTE IMMEDIATE FROM</span> @CARELON_LAB_REPO/branches/main/assets/sql/setup.sql;</code></pre>
   </div>
 
   <p>The <code>setup.sql</code> script (run automatically above) creates:</p>
   <ul>
-    <li><code>ELEVANCE_LAB_DB</code> database with <code>PAYER</code> and <code>AGENTS</code> schemas</li>
+    <li><code>CARELON_LAB_DB</code> database with <code>PAYER</code> and <code>AGENTS</code> schemas</li>
     <li>Four payer tables: <code>MEMBERS</code>, <code>MEDICAL_CLAIMS</code>, <code>PHARMACY_CLAIMS</code>, <code>PROVIDERS</code></li>
-    <li><code>ELEVANCE_LAB_WH</code> warehouse (MEDIUM), <code>ELEVANCE_LAB_ROLE</code>, and all required grants</li>
+    <li><code>CARELON_LAB_WH</code> warehouse (MEDIUM), <code>CARELON_LAB_ROLE</code>, and all required grants</li>
     <li>Loads ~185,000 rows from CSVs in the Git repo via <code>COPY INTO</code></li>
     <li>Internal stages for lab artifacts (policy docs, semantic model)</li>
     <li>The Snowflake Intelligence object used to register your agent in CoWork</li>
@@ -464,7 +464,7 @@ td code { font-size: 11.5px; }
 
   <div class="callout warn">
     <div class="callout-title">After the script completes</div>
-    <p>The final query shows row counts for all four tables. Switch your active role in Snowsight to <code>ELEVANCE_LAB_ROLE</code> — you will use this role for all remaining steps (Steps 4–9).</p>
+    <p>The final query shows row counts for all four tables. Switch your active role in Snowsight to <code>CARELON_LAB_ROLE</code> — you will use this role for all remaining steps (Steps 4–9).</p>
   </div>
 
   <h3>Data Schema — What You Are Working With</h3>
@@ -479,8 +479,8 @@ td code { font-size: 11.5px; }
   <h3>Verify the Load</h3>
   <div class="code-block">
     <div class="code-header"><span class="lang">SQL</span><span class="desc">Verification query</span></div>
-    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
-<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+    <pre><code><span class="kw">USE ROLE</span> CARELON_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> CARELON_LAB_WH;
+<span class="kw">USE DATABASE</span> CARELON_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
 
 <span class="kw">SELECT</span> <span class="str">'MEMBERS'</span> <span class="kw">AS</span> tbl, COUNT(*) <span class="kw">AS</span> row_count <span class="kw">FROM</span> MEMBERS
 <span class="kw">UNION ALL SELECT</span> <span class="str">'MEDICAL_CLAIMS'</span>, COUNT(*) <span class="kw">FROM</span> MEDICAL_CLAIMS
@@ -493,9 +493,9 @@ td code { font-size: 11.5px; }
   <p>Run these five queries to get familiar with the data and to <strong>seed query history</strong> — Semantic View Autopilot in Step 4 uses your account's query history to suggest better metrics and dimensions, so running these now improves the generated view.</p>
 
   <div class="code-block">
-    <div class="code-header"><span class="lang">SQL</span><span class="desc">Exploratory queries — run as ELEVANCE_LAB_ROLE</span></div>
-    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
-<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Exploratory queries — run as CARELON_LAB_ROLE</span></div>
+    <pre><code><span class="kw">USE ROLE</span> CARELON_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> CARELON_LAB_WH;
+<span class="kw">USE DATABASE</span> CARELON_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
 
 <span class="comment">-- 1. Member population by chronic condition</span>
 <span class="kw">SELECT</span> chronic_condition, COUNT(*) <span class="kw">AS</span> member_count
@@ -547,31 +547,31 @@ td code { font-size: 11.5px; }
 
   <div class="callout info">
     <div class="callout-title">What is Semantic View Autopilot?</div>
-    <p>It is an AI assistant built into Snowsight's Analyst interface that reads your table schemas, column names, data samples, and recent query history, then generates a Semantic View — a native Snowflake object stored in your database schema, just like a regular view. It includes dimensions, measures, table relationships, and verified sample queries — with zero manual YAML editing required. You review, refine, and save it directly to <code>ELEVANCE_LAB_DB.PAYER</code>.</p>
+    <p>It is an AI assistant built into Snowsight's Analyst interface that reads your table schemas, column names, data samples, and recent query history, then generates a Semantic View — a native Snowflake object stored in your database schema, just like a regular view. It includes dimensions, measures, table relationships, and verified sample queries — with zero manual YAML editing required. You review, refine, and save it directly to <code>CARELON_LAB_DB.PAYER</code>.</p>
   </div>
 
   <h3>Step 4a — Open Cortex Analyst</h3>
   <ol>
     <li>In Snowsight, navigate to <strong>AI & ML → Analyst</strong> in the left navigation.</li>
-    <li>The page will load showing a "No Database selected" dropdown in the centre. Click it and select <code>ELEVANCE_LAB_DB</code>, then select the <code>PAYER</code> schema. This is required before Autopilot can discover your tables.</li>
+    <li>The page will load showing a "No Database selected" dropdown in the centre. Click it and select <code>CARELON_LAB_DB</code>, then select the <code>PAYER</code> schema. This is required before Autopilot can discover your tables.</li>
   </ol>
 
   <div class="callout warn">
     <div class="callout-title">Check your active role before proceeding</div>
-    <p>The role selector is in the top-right corner of the Analyst page. It must be set to <code>ELEVANCE_LAB_ROLE</code> — not <code>ACCOUNTADMIN</code> or <code>PUBLIC</code>. Autopilot will only see the tables and stages granted to the active role.</p>
+    <p>The role selector is in the top-right corner of the Analyst page. It must be set to <code>CARELON_LAB_ROLE</code> — not <code>ACCOUNTADMIN</code> or <code>PUBLIC</code>. Autopilot will only see the tables and stages granted to the active role.</p>
   </div>
 
   <h3>Step 4b — Run Autopilot on Your Payer Tables</h3>
   <ol>
     <li>Click <strong>Create with Autopilot</strong> in the top-right corner of the Analyst page.</li>
     <li><strong>Provide context</strong> (Step 1 of wizard): optionally import a Tableau export or SQL file to seed the view. Skip this for now — click Next.</li>
-    <li><strong>Name your semantic view</strong> (Step 2 of wizard): enter exactly <code>MEMBER_INTELLIGENCE</code> and confirm the database is <code>ELEVANCE_LAB_DB</code> and schema is <code>PAYER</code>. This name is referenced throughout the rest of the lab — do not change it.</li>
+    <li><strong>Name your semantic view</strong> (Step 2 of wizard): enter exactly <code>MEMBER_INTELLIGENCE</code> and confirm the database is <code>CARELON_LAB_DB</code> and schema is <code>PAYER</code>. This name is referenced throughout the rest of the lab — do not change it.</li>
     <li><strong>Select tables</strong> (Step 3 of wizard): add all four lab tables:
       <ul>
-        <li><code>ELEVANCE_LAB_DB.PAYER.MEMBERS</code></li>
-        <li><code>ELEVANCE_LAB_DB.PAYER.MEDICAL_CLAIMS</code></li>
-        <li><code>ELEVANCE_LAB_DB.PAYER.PHARMACY_CLAIMS</code></li>
-        <li><code>ELEVANCE_LAB_DB.PAYER.PROVIDERS</code></li>
+        <li><code>CARELON_LAB_DB.PAYER.MEMBERS</code></li>
+        <li><code>CARELON_LAB_DB.PAYER.MEDICAL_CLAIMS</code></li>
+        <li><code>CARELON_LAB_DB.PAYER.PHARMACY_CLAIMS</code></li>
+        <li><code>CARELON_LAB_DB.PAYER.PROVIDERS</code></li>
       </ul>
     </li>
     <li><strong>Select columns</strong> (Step 4 of wizard): review the column list. Leave <em>Sample data</em> and <em>Add AI-generated descriptions</em> checked — these improve the quality of the generated view.</li>
@@ -628,15 +628,15 @@ td code { font-size: 11.5px; }
   <h3>Step 4d — Save and Test</h3>
   <ol>
     <li>Give the semantic view the name <code>MEMBER_INTELLIGENCE</code>.</li>
-    <li>Set the save location to schema <code>ELEVANCE_LAB_DB.PAYER</code> — Autopilot creates a native Snowflake view object here, not a file.</li>
-    <li>Click <strong>Save</strong>. The view is now a first-class object in your database: <code>ELEVANCE_LAB_DB.PAYER.MEMBER_INTELLIGENCE</code>.</li>
+    <li>Set the save location to schema <code>CARELON_LAB_DB.PAYER</code> — Autopilot creates a native Snowflake view object here, not a file.</li>
+    <li>Click <strong>Save</strong>. The view is now a first-class object in your database: <code>CARELON_LAB_DB.PAYER.MEMBER_INTELLIGENCE</code>.</li>
     <li>In the test panel on the right, try this question: <em>"What are the top 5 chronic conditions by total paid amount?"</em> You should see a SQL query generated and a data table returned.</li>
   </ol>
 
   <div class="code-block">
     <div class="code-header"><span class="lang">SQL</span><span class="desc">Fallback: upload the pre-built YAML if Autopilot is unavailable</span></div>
-    <pre><code><span class="kw">COPY FILES INTO</span> @ELEVANCE_LAB_DB.PAYER.SEMANTIC_MODELS
-<span class="kw">FROM</span> @ELEVANCE_LAB_REPO/branches/main/assets/semantic_models/
+    <pre><code><span class="kw">COPY FILES INTO</span> @CARELON_LAB_DB.PAYER.SEMANTIC_MODELS
+<span class="kw">FROM</span> @CARELON_LAB_REPO/branches/main/assets/semantic_models/
 FILES = (<span class="str">'member_intelligence.yaml'</span>);</code></pre>
   </div>
   <p><em>Note: If using the YAML fallback, upload it via <strong>Create new → Upload YAML</strong> in the Analyst UI, and the agent tool in Step 6 must reference the semantic model stage file path instead of the semantic view object.</em></p>
@@ -658,12 +658,12 @@ FILES = (<span class="str">'member_intelligence.yaml'</span>);</code></pre>
   <p>The policy documents live in the lab GitHub repo. Run the following SQL to copy them from the Git repository stage into your internal <code>POLICY_DOCS</code> stage:</p>
 
   <div class="code-block">
-    <div class="code-header"><span class="lang">SQL</span><span class="desc">Copy policy docs to internal stage — run as ELEVANCE_LAB_ROLE</span></div>
-    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
-<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Copy policy docs to internal stage — run as CARELON_LAB_ROLE</span></div>
+    <pre><code><span class="kw">USE ROLE</span> CARELON_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> CARELON_LAB_WH;
+<span class="kw">USE DATABASE</span> CARELON_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
 
 <span class="kw">COPY FILES INTO</span> @POLICY_DOCS
-  <span class="kw">FROM</span> @ELEVANCE_LAB_REPO/branches/main/assets/documents/
+  <span class="kw">FROM</span> @CARELON_LAB_REPO/branches/main/assets/documents/
   FILES = (<span class="str">'formulary_guidelines.txt'</span>, <span class="str">'medical_benefits_summary.txt'</span>,
           <span class="str">'quality_stars_measures.txt'</span>, <span class="str">'pa_denial_letter.pdf'</span>);
 
@@ -676,7 +676,7 @@ FILES = (<span class="str">'member_intelligence.yaml'</span>);</code></pre>
     <li><code>formulary_guidelines.txt</code> — drug formulary tiers, PA requirements, GLP-1 and specialty drug rules, step therapy, appeals</li>
     <li><code>medical_benefits_summary.txt</code> — coverage rules for preventive care, specialist visits, mental health, PT, DME, cost-sharing tables</li>
     <li><code>quality_stars_measures.txt</code> — HEDIS/Stars measure definitions, thresholds, member eligibility criteria, care gap methodology</li>
-    <li><code>pa_denial_letter.pdf</code> — a synthetic prior authorization denial letter (<a href="https://github.com/sfc-gh-gkatireddy/elevance-ai-lab/raw/main/assets/documents/pa_denial_letter.pdf" target="_blank">view PDF</a>) — used in Step 5d</li>
+    <li><code>pa_denial_letter.pdf</code> — a synthetic prior authorization denial letter (<a href="https://github.com/sfc-gh-gkatireddy/carelon-ai-lab/raw/main/assets/documents/pa_denial_letter.pdf" target="_blank">view PDF</a>) — used in Step 5d</li>
   </ul>
 
   <h3>Step 5b — Create the Cortex Search Service</h3>
@@ -684,9 +684,9 @@ FILES = (<span class="str">'member_intelligence.yaml'</span>);</code></pre>
 
   <div class="code-block">
     <div class="code-header"><span class="lang">SQL</span><span class="desc">Cortex Search setup</span></div>
-    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE;
-<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
-<span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
+    <pre><code><span class="kw">USE ROLE</span> CARELON_LAB_ROLE;
+<span class="kw">USE DATABASE</span> CARELON_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+<span class="kw">USE WAREHOUSE</span> CARELON_LAB_WH;
 
 <span class="comment">-- Parse staged policy docs into a searchable table (one row per line)</span>
 <span class="comment">-- pattern skips the PDF: it is binary, and Step 5d reads it with AI_EXTRACT instead</span>
@@ -701,7 +701,7 @@ FILES = (<span class="str">'member_intelligence.yaml'</span>);</code></pre>
 <span class="kw">CREATE OR REPLACE CORTEX SEARCH SERVICE</span> BENEFIT_POLICY_SEARCH
   <span class="kw">ON</span> content
   ATTRIBUTES doc_name
-  WAREHOUSE = ELEVANCE_LAB_WH
+  WAREHOUSE = CARELON_LAB_WH
   TARGET_LAG = <span class="str">'1 hour'</span>
   EMBEDDING_MODEL = <span class="str">'snowflake-arctic-embed-m-v1.5'</span>
 <span class="kw">AS</span> (
@@ -717,11 +717,11 @@ FILES = (<span class="str">'member_intelligence.yaml'</span>);</code></pre>
   <h3>Step 5c — Test the Search Service (Optional)</h3>
   <div class="code-block">
     <div class="code-header"><span class="lang">SQL</span><span class="desc">Optional validation</span></div>
-    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
-<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+    <pre><code><span class="kw">USE ROLE</span> CARELON_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> CARELON_LAB_WH;
+<span class="kw">USE DATABASE</span> CARELON_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
 
 <span class="kw">SELECT</span> SNOWFLAKE.CORTEX.SEARCH_PREVIEW(
-  <span class="str">'ELEVANCE_LAB_DB.PAYER.BENEFIT_POLICY_SEARCH'</span>,
+  <span class="str">'CARELON_LAB_DB.PAYER.BENEFIT_POLICY_SEARCH'</span>,
   <span class="str">'{"query": "prior authorization for GLP-1 medications", "columns": ["content"], "limit": 3}'</span>
 );</code></pre>
   </div>
@@ -734,14 +734,14 @@ FILES = (<span class="str">'member_intelligence.yaml'</span>);</code></pre>
     <li><code>AI_CLASSIFY</code> takes a text input and assigns it to one of a set of categories you define. For claims data, this means auto-categorizing service types, flagging high-risk encounters, or triaging appeals — without writing rules or training a model.</li>
   </ul>
 
-  <p>You staged a synthetic PA denial letter in Step 5a alongside the policy documents. Open it to see what you're extracting from: <a href="https://github.com/sfc-gh-gkatireddy/elevance-ai-lab/raw/main/assets/documents/pa_denial_letter.pdf" target="_blank">view the PDF</a>. It contains a member ID, diagnosis, HbA1c, step therapy status, and a full denial reason — the kind of document a utilization management team processes hundreds of times a day.</p>
+  <p>You staged a synthetic PA denial letter in Step 5a alongside the policy documents. Open it to see what you're extracting from: <a href="https://github.com/sfc-gh-gkatireddy/carelon-ai-lab/raw/main/assets/documents/pa_denial_letter.pdf" target="_blank">view the PDF</a>. It contains a member ID, diagnosis, HbA1c, step therapy status, and a full denial reason — the kind of document a utilization management team processes hundreds of times a day.</p>
 
   <p>Run the following query. It will take 1–3 minutes as Snowflake parses the PDF and extracts the fields. Start it running, then continue to Step 6 — by the time you finish creating your agent, the results will be waiting in your query tab.</p>
 
   <div class="code-block">
-    <div class="code-header"><span class="lang">SQL</span><span class="desc">AI_EXTRACT from PA denial letter — run as ELEVANCE_LAB_ROLE, continue to Step 6 while it runs</span></div>
-    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> ELEVANCE_LAB_WH;
-<span class="kw">USE DATABASE</span> ELEVANCE_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">AI_EXTRACT from PA denial letter — run as CARELON_LAB_ROLE, continue to Step 6 while it runs</span></div>
+    <pre><code><span class="kw">USE ROLE</span> CARELON_LAB_ROLE; <span class="kw">USE WAREHOUSE</span> CARELON_LAB_WH;
+<span class="kw">USE DATABASE</span> CARELON_LAB_DB; <span class="kw">USE SCHEMA</span> PAYER;
 
 <span class="kw">SELECT</span> AI_EXTRACT(
   TO_FILE(<span class="str">'@POLICY_DOCS'</span>, <span class="str">'pa_denial_letter.pdf'</span>),
@@ -785,18 +785,18 @@ FILES = (<span class="str">'member_intelligence.yaml'</span>);</code></pre>
 
   <div class="coco-block">
     <div class="coco-header"><span class="lang">COCO PROMPT</span><span class="desc">Create agent — paste into CoCo in Snowsight</span></div>
-    <pre><code>Create a Snowflake Cortex Agent for a healthcare payer (Elevance) in schema ELEVANCE_LAB_DB.AGENTS. Create it in exactly that schema — do not use SNOWFLAKE_INTELLIGENCE.AGENTS.
+    <pre><code>Create a Snowflake Cortex Agent for a healthcare payer (Carelon) in schema CARELON_LAB_DB.AGENTS. Create it in exactly that schema — do not use SNOWFLAKE_INTELLIGENCE.AGENTS.
 
 The agent has access to two tools:
   1. Cortex Analyst tool using semantic view at:
-     ELEVANCE_LAB_DB.PAYER.MEMBER_INTELLIGENCE
+     CARELON_LAB_DB.PAYER.MEMBER_INTELLIGENCE
      Description: Member 360 data — medical claims, pharmacy claims, members, providers. Use for structured questions about cost, utilization, care gaps, and adherence.
   2. Cortex Search tool using service:
-     ELEVANCE_LAB_DB.PAYER.BENEFIT_POLICY_SEARCH
+     CARELON_LAB_DB.PAYER.BENEFIT_POLICY_SEARCH
      Description: Benefit policy and formulary documents. Use for questions about coverage rules, PA requirements, HEDIS/Stars criteria.
 
 In addition, create a custom tool for the agent:
-  3. Create a SQL UDF named ELEVANCE_LAB_DB.PAYER.CLASSIFY_CLAIM that takes two VARCHAR inputs (service_type, icd10_code) and uses AI_CLASSIFY to categorize the claim into one of these clinical categories: ['Preventive Care', 'Chronic Disease Management', 'Acute/Emergency', 'Surgical', 'Mental Health', 'Routine Follow-up'] The UDF should build a description string from the inputs and pass it to AI_CLASSIFY with those categories. Then add this UDF as a generic tool on the agent so it can classify claims on demand during a conversation.
+  3. Create a SQL UDF named CARELON_LAB_DB.PAYER.CLASSIFY_CLAIM that takes two VARCHAR inputs (service_type, icd10_code) and uses AI_CLASSIFY to categorize the claim into one of these clinical categories: ['Preventive Care', 'Chronic Disease Management', 'Acute/Emergency', 'Surgical', 'Mental Health', 'Routine Follow-up'] The UDF should build a description string from the inputs and pass it to AI_CLASSIFY with those categories. Then add this UDF as a generic tool on the agent so it can classify claims on demand during a conversation.
 
 Also add the built-in data_to_chart tool so the agent can visualize results:
   4. data_to_chart — no resources needed, just the tool_spec. In the orchestration instructions, tell the agent to return a chart alongside the table whenever a result has several rows and a numeric measure. Include a <chart_customization> block inside instructions.orchestration so the charts are on-brand rather than default Vega colors:
@@ -828,11 +828,11 @@ Also generate:
      - "Pull the top 5 members by total cost of care, classify their highest-cost claim, and tell me what the plan says about coverage for that service type."
   c) A display name and persona appropriate for a payer organization
 
-Use warehouse ELEVANCE_LAB_WH for the Analyst tool. Include it as an execution_environment on the Analyst tool_resources entry — the agent errors without it.
+Use warehouse CARELON_LAB_WH for the Analyst tool. Include it as an execution_environment on the Analyst tool_resources entry — the agent errors without it.
 
 Finally, after the CREATE AGENT statement, also generate the statement that registers the agent on the Snowflake CoWork object so it appears in CoWork:
   ALTER SNOWFLAKE INTELLIGENCE SNOWFLAKE_INTELLIGENCE_OBJECT_DEFAULT
-    ADD AGENT ELEVANCE_LAB_DB.AGENTS.&lt;agent_name&gt;;</code></pre>
+    ADD AGENT CARELON_LAB_DB.AGENTS.&lt;agent_name&gt;;</code></pre>
   </div>
 
   <div class="callout info">
@@ -845,8 +845,8 @@ Finally, after the CREATE AGENT statement, also generate the statement that regi
   <p>Confirm registration worked before moving on — this takes seconds and saves a confusing dead end in Step 7:</p>
 
   <div class="code-block">
-    <div class="code-header"><span class="lang">SQL</span><span class="desc">Verify agent registration — run as ELEVANCE_LAB_ROLE</span></div>
-    <pre><code><span class="kw">USE ROLE</span> ELEVANCE_LAB_ROLE;
+    <div class="code-header"><span class="lang">SQL</span><span class="desc">Verify agent registration — run as CARELON_LAB_ROLE</span></div>
+    <pre><code><span class="kw">USE ROLE</span> CARELON_LAB_ROLE;
 
 <span class="kw">SHOW AGENTS IN SNOWFLAKE INTELLIGENCE</span>
   SNOWFLAKE_INTELLIGENCE_OBJECT_DEFAULT;</code></pre>
@@ -860,7 +860,7 @@ Finally, after the CREATE AGENT statement, also generate the statement that regi
 
 <span class="comment">-- Register it using the path shown above</span>
 <span class="kw">ALTER SNOWFLAKE INTELLIGENCE</span> SNOWFLAKE_INTELLIGENCE_OBJECT_DEFAULT
-  <span class="kw">ADD AGENT</span> ELEVANCE_LAB_DB.AGENTS.&lt;your_agent_name&gt;;</code></pre>
+  <span class="kw">ADD AGENT</span> CARELON_LAB_DB.AGENTS.&lt;your_agent_name&gt;;</code></pre>
   </div>
 
   <div class="callout tip">
@@ -893,7 +893,7 @@ Finally, after the CREATE AGENT statement, also generate the statement that regi
   <h4>Route 1 — Snowflake CoWork directly</h4>
   <ol>
     <li>Go to <a href="https://ai.snowflake.com" target="_blank">ai.snowflake.com</a>, or in Snowsight navigate to <strong>AI & ML → Agents</strong> and open the Snowflake CoWork tab.</li>
-    <li>Make sure you are signed in with the correct role (<code>ACCOUNTADMIN</code> or <code>ELEVANCE_LAB_ROLE</code>).</li>
+    <li>Make sure you are signed in with the correct role (<code>ACCOUNTADMIN</code> or <code>CARELON_LAB_ROLE</code>).</li>
     <li>In the left panel, you should see the agent you just created. Click on it to open a new conversation.</li>
   </ol>
 
@@ -1009,7 +1009,7 @@ Finally, after the CREATE AGENT statement, also generate the statement that regi
   <h3>What You Built Today</h3>
   <ul>
     <li>A synthetic payer data foundation — four tables covering members, medical claims, pharmacy, and providers</li>
-    <li>A base ontology for the payer domain, expressed as a semantic view (<code>ELEVANCE_LAB_DB.PAYER.MEMBER_INTELLIGENCE</code>) — entity classes, typed relationships, business vocabulary, and enumerated taxonomies, generated and refined with Autopilot</li>
+    <li>A base ontology for the payer domain, expressed as a semantic view (<code>CARELON_LAB_DB.PAYER.MEMBER_INTELLIGENCE</code>) — entity classes, typed relationships, business vocabulary, and enumerated taxonomies, generated and refined with Autopilot</li>
     <li>A Cortex Search service over benefit policy and formulary documents — enabling RAG over unstructured content</li>
     <li>Structured extraction from a PDF — <code>AI_EXTRACT</code> pulled member ID, drug, diagnosis code, denial reason, and appeal deadline out of a prior authorization denial letter in a single SQL call</li>
     <li>A custom <code>AI_CLASSIFY</code> tool (<code>CLASSIFY_CLAIM</code>) that categorizes claims into clinical risk categories — and is wired into the agent, so it can classify on demand mid-conversation</li>
@@ -1045,7 +1045,7 @@ Finally, after the CREATE AGENT statement, also generate the statement that regi
 
 <footer class="sf-footer">
   <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="11" fill="#29B5E8"/><path fill="white" d="M7 16l5-10 5 10-5-3z"/></svg>
-  <span>Built on Snowflake Cortex AI · Elevance AI Lab — Hands-On Lab</span>
+  <span>Built on Snowflake Cortex AI · Carelon AI Lab — Hands-On Lab</span>
 </footer>
 
 </main>

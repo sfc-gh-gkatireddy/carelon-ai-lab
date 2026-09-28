@@ -1,4 +1,4 @@
-# Elevance AI Lab — Build a Member Intelligence Agent on Snowflake
+# Carelon AI Lab — Build a Member Intelligence Agent on Snowflake
 
 Hands-on lab for building an agentic AI experience on Snowflake for a
 healthcare payer: structured claims analytics (Cortex Analyst), RAG over
@@ -6,12 +6,12 @@ benefit policy documents (Cortex Search), AI document extraction
 (AI_EXTRACT), claim classification (AI_CLASSIFY), all orchestrated by a
 Cortex Agent and surfaced in Snowflake CoWork.
 
-**Lab guide:** https://sfc-gh-gkatireddy.github.io/elevance-ai-lab/
+**Lab guide:** https://sfc-gh-gkatireddy.github.io/carelon-ai-lab/
 
 ## Repository structure
 
 ```
-elevance-ai-lab/
+carelon-ai-lab/
 ├── index.html                    # the entire lab guide (GitHub Pages)
 ├── README.md
 └── assets/
@@ -40,7 +40,7 @@ serves as the data source. Attendees create a Snowflake Git Repository
 object pointing at this repo, then run:
 
 ```sql
-EXECUTE IMMEDIATE FROM @ELEVANCE_LAB_REPO/branches/main/assets/sql/setup.sql;
+EXECUTE IMMEDIATE FROM @CARELON_LAB_REPO/branches/main/assets/sql/setup.sql;
 ```
 
 which loads the CSVs and creates the full lab environment. No ZIP
@@ -50,7 +50,7 @@ downloads, no external file hosting.
 
 1. Repo Settings → Pages
 2. Source: Deploy from a branch — `main` / `(root)`
-3. Site goes live at `sfc-gh-gkatireddy.github.io/elevance-ai-lab/`
+3. Site goes live at `sfc-gh-gkatireddy.github.io/carelon-ai-lab/`
 
 ## Data disclaimer
 

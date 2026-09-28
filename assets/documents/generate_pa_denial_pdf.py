@@ -67,7 +67,7 @@ def simple_pdf(path, blocks):
 
 blocks = [
     ("Blue Advantage Pharmacy Benefit Management", "F2", 14),
-    ("Elevance Health - Prior Authorization Determination Notice", "F1", 10),
+    ("Carelon Health - Prior Authorization Determination Notice", "F1", 10),
     ("", "F1", 8),
     ("NOTICE: REQUEST FOR PRIOR AUTHORIZATION - DENIED", "F2", 12),
     ("", "F1", 8),

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Synthetic payer dataset generator for the Elevance AI Lab.
+Synthetic payer dataset generator for the Carelon AI Lab.
 Produces 4 CSVs (members, medical claims, pharmacy claims, providers)
 modelled on a commercial health plan population. 100% synthetic - no real
 member, patient, or PHI data. Stdlib only.

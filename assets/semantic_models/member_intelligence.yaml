@@ -1,6 +1,6 @@
 name: MEMBER_INTELLIGENCE
 description: >
-  Member 360 semantic view for the Elevance AI Lab. Covers members, medical
+  Member 360 semantic view for the Carelon AI Lab. Covers members, medical
   claims, pharmacy claims, and providers for a synthetic commercial health
   plan population. Use this model for structured questions about cost of
   care, utilization, care gaps, and medication adherence.
@@ -9,7 +9,7 @@ tables:
   - name: MEMBERS
     description: Health plan enrollees with demographics, plan, and chronic condition flags.
     base_table:
-      database: ELEVANCE_LAB_DB
+      database: CARELON_LAB_DB
       schema: PAYER
       table: MEMBERS
     columns:
@@ -81,7 +81,7 @@ tables:
   - name: MEDICAL_CLAIMS
     description: Medical claim lines with diagnosis, procedure, and amounts.
     base_table:
-      database: ELEVANCE_LAB_DB
+      database: CARELON_LAB_DB
       schema: PAYER
       table: MEDICAL_CLAIMS
     columns:
@@ -157,7 +157,7 @@ tables:
   - name: PHARMACY_CLAIMS
     description: Prescription fills with drug, class, and paid amounts.
     base_table:
-      database: ELEVANCE_LAB_DB
+      database: CARELON_LAB_DB
       schema: PAYER
       table: PHARMACY_CLAIMS
     columns:
@@ -219,7 +219,7 @@ tables:
   - name: PROVIDERS
     description: Providers with specialty, network status, and cost per visit.
     base_table:
-      database: ELEVANCE_LAB_DB
+      database: CARELON_LAB_DB
       schema: PAYER
       table: PROVIDERS
     columns:
