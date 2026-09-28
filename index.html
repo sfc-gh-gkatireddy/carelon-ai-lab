@@ -993,18 +993,28 @@ Finally, after the CREATE AGENT statement, also generate the statement that regi
   <p>An artifact is not a screenshot. It stores the query and the chart specification, so it re-runs against live data when you open it later — and it re-runs under each viewer's credentials. Share one with a colleague and they see the same chart filtered through their own permissions, which is what makes this safe to pass around in a payer setting. Your saved artifacts live in the artifacts hub in the left nav.</p>
 
   <h3>Automate a Recurring Query</h3>
-  <p>Some questions are worth asking every day — cost trends, denial spikes, care gap counts. Instead of remembering to ask your agent each morning, you can turn any CoWork conversation into a <strong>scheduled automation</strong> that runs on a cadence and delivers the results to you automatically.</p>
+  <p>Some questions are worth asking every day — cost trends, denial spikes, care gap counts. Instead of remembering to ask your agent each morning, you can turn any question into a <strong>scheduled automation</strong> that runs on a cadence and delivers the results to you automatically.</p>
 
-  <p>Try it now with this example:</p>
+  <p>There are two ways to set up an automation:</p>
+
+  <h4>Option A — Ask CoWork directly in the chat</h4>
+  <p>Simply tell your agent to set up the automation in natural language. For example, type:</p>
+  <div class="query-card">
+    <div class="q-text">Every weekday at 8 AM, run 'Show me the top 10 members by total medical spend this month' and send me the results.</div>
+    <div class="q-tags"><span class="q-tag starter">AUTOMATION</span><span class="q-tag analyst">ANALYST</span></div>
+  </div>
+  <p>CoWork will create the scheduled automation for you — no additional UI needed.</p>
+
+  <h4>Option B — Use the Automations panel</h4>
   <ol>
-    <li>Ask your agent: <em>"Show me the top 10 members by total medical spend this month."</em></li>
-    <li>Once you get a response, click the <strong>Automate</strong> button (clock icon) on the response card.</li>
-    <li>Set the schedule — for example, <strong>Daily at 8:00 AM</strong>.</li>
-    <li>Choose where the results should be delivered — CoWork will surface them in your <strong>Automations</strong> tab in the left nav, and optionally notify you via email.</li>
-    <li>Click <strong>Save</strong>.</li>
+    <li>In CoWork, click <strong>Automations</strong> in the left navigation panel.</li>
+    <li>Click <strong>Create Automation</strong>.</li>
+    <li>Enter a question — e.g. <em>"Show me the top 10 members by total medical spend this month."</em></li>
+    <li>Set the schedule (e.g. daily at 8:00 AM) and delivery preferences.</li>
+    <li>Save.</li>
   </ol>
 
-  <p>Every morning at 8 AM, CoWork will re-run the query against live claims data and have the fresh results waiting for you — no SQL, no scheduling infrastructure, no analyst ticket. The automation runs under your credentials, so row-access policies and column masking apply automatically.</p>
+  <p>Every morning, CoWork will re-run the query against live claims data and have fresh results waiting for you — no SQL, no scheduling infrastructure, no analyst ticket. The automation runs under your credentials, so row-access policies and column masking apply automatically.</p>
 
   <div class="callout tip">
     <div class="callout-title">Good candidates for automation</div>
